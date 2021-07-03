@@ -12,7 +12,7 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 
 body {
 	font-family: $font-family-sans-serif;
-	background-color: #f8fafb;
+	background-color: #fff;
 }
 p {
 	color: darken(#ccc, 10%);
@@ -35,7 +35,11 @@ h2 {
 	font-size: 20px;
 }
 
-.content {
+.half {
+	&, & .container > .row {
+		height: 100vh;
+	}
+	
 	.bg {
 		@include media-breakpoint-down(md) {
 			height: 500px;
@@ -47,31 +51,17 @@ h2 {
 			width: 100%;
 		}
 		.form-group	{
-			overflow: hidden;
 			margin-bottom: 0;
-			// border: 1px solid #efefef;
+			border: 1px solid #efefef;
 			padding: 15px 15px;
 			border-bottom: none;
-			position: relative;
-			background: #edf2f5;
-			border-bottom: 1px solid darken(#edf2f5, 2%);
-			label {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				transition: .3s all ease;
-			}
-			
-			input {
-				background: transparent;
-			}
-
 			&.first {
 				border-top-left-radius: 7px;
 				border-top-right-radius: 7px;
 			}
 			&.last {
-				// border-bottom: 1px solid #efefef;
+				// border-top: none;
+				border-bottom: 1px solid #efefef;
 				border-bottom-left-radius: 7px;
 				border-bottom-right-radius: 7px;
 			}
@@ -80,14 +70,6 @@ h2 {
 				display: block;
 				margin-bottom: 0;
 				color: darken(#ccc, 10%);
-			}
-			&.focus {
-				background: $white;
-			}
-			&.field--not-empty {
-				label {
-					margin-top: -20px;
-				}
 			}
 		}
 		.form-control {
@@ -118,49 +100,6 @@ h2 {
 		position: relative;
 		top: 2px;
 		font-size: 14px;
-	}
-}
-
-.social-login {
-	a {
-		
-		text-decoration: none;
-		
-		position: relative;
-		text-align: center;
-		color: $white;
-		margin-bottom: 10px;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		display: inline-block;
-		span {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-		&:hover {
-			color: $white;
-		}
-		&.facebook {
-			background: #3b5998;
-			&:hover {
-				background: darken(#3b5998, 5%);
-			}
-		}
-		&.twitter {
-			background: #1da1f2;
-			&:hover {
-				background: darken(#1da1f2, 5%);
-			}
-		}
-		&.google {
-			background: #ea4335;
-			&:hover {
-				background: darken(#ea4335, 5%);
-			}
-		}
 	}
 }
 

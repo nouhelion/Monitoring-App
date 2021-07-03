@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/yare-yare/MEME#readme",
   "dependencies": {
-    "jquery": "^3.6.0"
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "mysql": "^2.18.1"
   }
 }
