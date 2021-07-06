@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,20 +14,10 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 </head>
 <body>
@@ -34,23 +25,23 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(images/royy.png);"></div>
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="" method="POST">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Nom d'Utilisateur</span>
+                        <i class="fa fa-user"></i>
 						<input class="input100" type="text" name="username" placeholder="Entrer votre Nom d'Utilisateur">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100">Mot de passe</span>
-						<input class="input100" type="password" name="pass" placeholder="Entrer votre Mot de passe">
+						<i class="fa fa-lock"></i>
+						<input class="input100" type="password" name="passwo_log" placeholder="Entrer votre Mot de passe">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Authentification
-						</button>
+						<input type="Submit" class="login100-form-btn" value="Authentification">
 					</div>
 				</form>
 			</div>
@@ -73,6 +64,30 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	<?php 
+    require('db.php');
+    session_start();
+    if(isset($_POST['username'])){
+        $username = stripslashes($_REQUEST['username']);
+        $username = mysqli_real_escape_string($link,$username);
+        $password = stripslashes($_REQUEST['passwo_log']);
+        $password = mysqli_real_escape_string($link,$password);
+        $query = "SELECT * FROM `admins` WHERE username='$username' and password='$password'";
+        $result = mysqli_query($link, $query) ;
+        $rows = mysqli_num_rows($result);
+        if($rows==1){
+            $_SESSION['username'] = $username;
+            header("Location: result.php");
+        } else{
+            echo "<div id='loginpage'>
+            <p>Username/password is incorrect.</p>";
+        }
+    }
+    ?>
+	 <script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </body>
 </html>
