@@ -63,11 +63,7 @@ a {
   margin-bottom: 32px;
 }
 
-#overview,
-#register {
-  padding-top: 14rem;
-  padding-bottom: 14rem;
-}
+
 
 #detail, #video,
 #speakers, 
@@ -84,13 +80,7 @@ footer {
   text-align: center;
 }
 
-#overview h3,
-#detail h3, #video h3,
-#register h3,
-#venue h3,
-#contact h3 {
-    padding-bottom: 12px;
-}
+
 
 #intro .btn,
 #contact .btn {
@@ -205,7 +195,7 @@ footer {
 }
 
 .custom-navbar .nav li a {
-    color: #ddd;
+  color: rgb(129, 129, 129);
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.6px;
@@ -262,7 +252,7 @@ footer {
     Intro section              
 -----------------------------------------*/
 #intro {
-    background: url('../images/intro-bg.jpg') 50% 0 repeat-y fixed;
+  background: url('../images/intro.jpeg') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -302,41 +292,40 @@ footer {
 /*---------------------------------------
     Regsiter section              
 -----------------------------------------*/
-#register {
-    background: url('../images/register-bg.jpg') 50% 0 repeat-y fixed;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    color: #ffffff;
+
+
+/*---------------------------------------
+   Venue section              
+-----------------------------------------*/
+#venue {
+  background: url('../images/venue-bg.jpg') 50% 0 repeat-y fixed;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
-#register .form-control {
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 0px;
-  color: #ffffff;
-  margin-bottom: 16px;
+#venue p {
+padding-top: 12px;
+padding-bottom: 18px;
 }
 
-#register input {
-  height: 45px;
+
+/*---------------------------------------
+   Program section              
+-----------------------------------------*/
+#program {
+  
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  color: #000000;
 }
 
-#register input[type="submit"] {
-  background: #f2545f;
-  border-radius: 100px;
-  border: none;
-  color: #ffffff;
-  letter-spacing: 2px;
-  height: 50px;
-  margin-top: 12px;
-  transition: all 0.4s ease-in-out;
-}
 
-#register input[type="submit"]:hover {
-  background: #ffffff;
-  color: #222;
-}
+
+
+
 
 
 

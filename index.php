@@ -78,7 +78,7 @@
 		$rows = mysqli_num_rows($result);
 		if ($rows == 1) {
 			$_SESSION['username'] = $username;
-			header("Location: page.php");
+			header("Location: home.php");
 		} else {
 			echo "<div id='loginpage'>
             <p>Username/password is incorrect.</p>";
