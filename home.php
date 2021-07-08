@@ -11,7 +11,7 @@ http://www.templatemo.com/tm-486-new-event
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -80,7 +80,7 @@ http://www.templatemo.com/tm-486-new-event
 		<div class="row">
 
 			<div class="col-md-12 col-sm-12">
-				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Gestion des autorisations</h1>
+				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Gestion des Autorisations</h1>
 				<a href="EnergieSolaire.php" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Energie solaire</a>
 				<a href="energieEolienne.php" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Energie Eolienne</a>
 				<a href="EnergieHydro.php" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Energie Hydroelectrique</a>

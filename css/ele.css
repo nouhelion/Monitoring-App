@@ -193,70 +193,68 @@ background-color: #222;
 Navigation Links section              
 -----------------------------------------*/
 .custom-navbar {
-margin-bottom: 0;
-background-color: #101010;
-}
-
-.custom-navbar .navbar-brand {
-color: #ffffff;
-font-weight: 600;
-font-size: 3rem;
-line-height: 40px;
-}
-
-.custom-navbar .nav li a {
-color: rgb(129, 129, 129);
-font-size: 12px;
-font-weight: 500;
-letter-spacing: 0.6px;
-text-transform: uppercase;
-line-height: 40px;
-transition: all 0.4s ease-in-out;
-}
-
-.custom-navbar .nav li a:hover {
-background: transparent;
-color: #66ccff;
-}
-
-.custom-navbar .navbar-nav > li > a:hover,
-.custom-navbar .navbar-nav > li > a:focus {
-background-color: transparent;
-}
-
-.custom-navbar .nav li.active > a {
-background-color: transparent;
-color: #66ccff;
-}
-
-.custom-navbar .navbar-toggle {
-border: none;
-padding-top: 10px;
-}
-
-.custom-navbar .navbar-toggle {
-background-color: transparent;
-}
-
-.custom-navbar .navbar-toggle .icon-bar {
-background: #ffffff;
-border-color: transparent;
-}
-
-@media(min-width:768px) {
-.custom-navbar {
-    padding: 20px 0;
-    border-bottom: 0;
-    background: 0 0; 
-}
-.custom-navbar.top-nav-collapse {
-    background: #101010;
-    padding: 0;
-}
-
-}
-
-
+    margin-bottom: 0;
+    background-color: #101010;
+    }
+    
+    .custom-navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 40px;
+    }
+    
+    .custom-navbar .nav li a {
+            color: rgb(129, 129, 129);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    line-height: 40px;
+    transition: all 0.4s ease-in-out;
+    }
+    
+    .custom-navbar .nav li a:hover {
+    background: transparent;
+    color: #66ccff;
+    }
+    
+    .custom-navbar .navbar-nav > li > a:hover,
+    .custom-navbar .navbar-nav > li > a:focus {
+    background-color: transparent;
+    }
+    
+    .custom-navbar .nav li.active > a {
+    background-color: transparent;
+    color: #66ccff;
+    }
+    
+    .custom-navbar .navbar-toggle {
+    border: none;
+    padding-top: 10px;
+    }
+    
+    .custom-navbar .navbar-toggle {
+    background-color: transparent;
+    }
+    
+    .custom-navbar .navbar-toggle .icon-bar {
+    background: #ffffff;
+    border-color: transparent;
+    }
+    
+    @media(min-width:768px) {
+    .custom-navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        background: 0 0; 
+    }
+    .custom-navbar.top-nav-collapse {
+        background: #101010;
+        padding: 0;
+    }
+    
+    }
 
 /*---------------------------------------
 Intro section              
@@ -391,3 +389,193 @@ color: rgb(243, 233, 233);
 }
 
 
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+input {
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    padding: 5px;
+}
+
+select {
+    padding: 5px;
+}
+
+.big-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 65%;
+}
+
+form>* {
+    margin-top: 30px;
+}
+
+/* first form */
+
+.form-container {
+    height: 100%;
+    width: 80%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 151px;
+    padding-bottom: 196px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
+	border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 20px;
+
+}
+.first-form{
+	color: black;
+}
+.first-form>select {
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.form-container>* {
+    background-color: white;
+}
+
+.form-select-title {
+    width: 100%;
+    display: flex;
+}
+
+.form-input-numero {
+    width: 20%;
+}
+.form-input-dev {
+    width: 79%;
+}
+.form-input-loc {
+    width: 69%;
+}
+.form-input-nom {
+    width: 100%;
+}
+.form-input-env {
+    width: 100%;
+}
+.form-input-pui {
+    width: 25%;
+}
+
+.form-select-reg {
+    width: 74%;
+}
+
+/* second form */
+
+.form-container-right {
+    
+    width: 80%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    background-color: #4053be;
+    color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
+
+}
+
+.second-form>input {
+	background-color: #4053be;
+	color: white;
+}
+
+.second-form>select {
+    background-color: #4053be;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: white;
+}
+
+.second-form>select>option {
+    background-color: white;
+	color: black;
+}
+
+.second-form>select>option:first-child {
+	color: black;
+}
+
+.second-form>input[type="text"]::placeholder {
+    color: #fff;
+}
+
+.form-input-address {
+    width: 100%;
+}
+
+.form-input-infos {
+    width: 100%;
+}
+
+.form-input-zip {
+    width: 38%;
+}
+
+.form-select-place {
+    width: 60%;
+}
+
+.form-select-country {
+    width: 100%;
+}
+
+.form-input-code {
+    width: 38%;
+}
+
+.form-input-phone {
+    width: 60%;
+}
+
+.form-input-email {
+    width: 100%;
+}
+
+.form-check {
+    background-color: #4735d5;
+    border: none;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 5px 20px;
+    background-color: #95a1e5;
+    border: 1px solid #95a1e5;
+    color: white;
+}

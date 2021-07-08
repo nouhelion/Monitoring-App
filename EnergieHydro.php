@@ -11,7 +11,7 @@ http://www.templatemo.com/tm-486-new-event
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -56,14 +56,10 @@ http://www.templatemo.com/tm-486-new-event
 		<div class="collapse navbar-collapse">
 
 			<ul class="nav navbar-nav navbar-right">
-                <li><a href="home.php" class="smoothScroll">Home</a></li>
+				<li><a href="home.php" class="smoothScroll">Home</a></li>
+				<li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
 				<li><a href="#overview" class="smoothScroll">Rechercher</a></li>
 				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
-				<li><a href="#program" class="smoothScroll">Programs</a></li>
-				<li><a href="#register" class="smoothScroll">Register</a></li>
-				<li><a href="#venue" class="smoothScroll">Venue</a></li>
-				<li><a href="#sponsors" class="smoothScroll">Sponsors</a></li>
-				<li><a href="#contact" class="smoothScroll">Contact</a></li>
 			</ul>
 
 		</div>
