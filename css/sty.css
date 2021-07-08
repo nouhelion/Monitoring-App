@@ -34,7 +34,7 @@ select {
 }
 
 form {
-    width: 65%;
+    width: 50%;
 }
 
 form>* {
@@ -44,8 +44,7 @@ form>* {
 /* first form */
 
 .form-container {
-    height: 100%;
-    width: 80%;
+    width: 50%;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -56,9 +55,6 @@ form>* {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
-	border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-bottom: 20px;
 
 }
 .first-form{
@@ -78,40 +74,33 @@ form>* {
     display: flex;
 }
 
-.form-input-numero {
-    width: 20%;
-}
-.form-input-dev {
-    width: 79%;
-}
-.form-input-loc {
-    width: 61%;
-}
-.form-input-nom {
-    width: 100%;
-}
-.form-input-env {
-    width: 100%;
-}
-.form-input-pui {
-    width: 25%;
+.form-input-name {
+    width: 49%;
 }
 
-.form-select-reg {
-    width: 74%;
+.form-input-company {
+    width: 100%;
+}
+
+.form-input-business {
+    width: 60%;
+}
+
+.form-select-employees {
+    width: 38%;
 }
 
 /* second form */
 
 .form-container-right {
-    
-    width: 80%;
+    height: 100%;
+    width: 50%;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 150px;
-    background-color: #4053be;
+    background-color: #4735d5;
     color: #fff;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -121,12 +110,11 @@ form>* {
 }
 
 .second-form>input {
-	background-color: #4053be;
-	color: white;
+    background-color: #4735d5;
 }
 
 .second-form>select {
-    background-color: #4053be;
+    background-color: #4735d5;
     border: none;
     border-bottom: 1px solid gray;
     color: white;
@@ -185,7 +173,7 @@ form>* {
 .btn {
     border-radius: 10px;
     padding: 5px 20px;
-    background-color: #95a1e5;
-    border: 1px solid #95a1e5;
-    color: white;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
 }

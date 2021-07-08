@@ -137,40 +137,55 @@
             <div class="form-container">
                 <h2 class="form-title">General Information</h2>
                 <form class="first-form">
-                    
-					<input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
-                    <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
-                    <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
-                    <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
-					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
-                            <option value="">Région</option>
-                            <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
-                            <option value="Oriental">Oriental</option>
-                            <option value="Fès - Meknès">Fès - Meknès</option>
-                            <option value="Rabat-Salé-Kénitra">Rabat-Salé-Kénitra</option>
-                            <option value="Béni Mellal-Khénifra">Béni Mellal-Khénifra</option>
-                            <option value="Casablanca-Settat">Casablanca-Settat</option>
-                            <option value="Marrakech-Safi">Marrakech-Safi</option>
-                            <option value="Drâa-Tafilalet">Drâa-Tafilalet</option>
-                            <option value="Souss-Massa">Souss-Massa</option>
-                            <option value="Guelmim-Oued Noun">Guelmim-Oued Noun</option>
-                            <option value="Laâyoune-Sakia El Hamra">Laâyoune-Sakia El Hamra</option>
-                            <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
-                        </select>
-						  <script type="text/javascript" language="JavaScript">
-                                document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
-                          </script>
-					    <noscript>
-						<select name="Province" id="Province"  class="form-select-reg" required>
-                            <option value="">Selectionner province</option>
-                            <option value="Oued Ed Dahab">Oued Ed Dahab</option>
-                            <option value="Aousserd">Aousserd</option>
-                        </select>
-						</noscript>
-						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
-					<input name="Depot au MEME" type="text" class="form-input-nom" id="Depot au MEME" placeholder="Dépôt au MEME">
-					<input name="Envoi du dossier à l'ONEE" type="text" class="form-input-env" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE">
-					<input name="Etat D'avancement" type="text" class="form-input-env" id="Etat D'avancement" placeholder="Etat D'avancement">
+                    <select name="title" placeholder="title" class="form-select-title">
+                        <option value="">test</option>
+                        <option value="">test2</option>
+                        <option value="">test3</option>
+                    </select>
+                    <input type="text" placeholder="first name" class="form-input-name first-name" />
+                    <input type="text" placeholder="last name" class="form-input-name last-name" />
+                    <select name="position" placeholder="position" class="form-select-title">
+                        <option value="">test</option>
+                        <option value="">test2</option>
+                        <option value="">test3</option>
+                    </select>
+                    <input type="text" placeholder="company" class="form-input-company" />
+                    <input type="text" placeholder="business area" class="form-input-business" />
+                    <select name="employees" placeholder="employees" class="form-select-employees" />
+                    >
+                    <option value="">test</option>
+                    <option value="">test2</option>
+                    <option value="">test3</option>
+                    </select>
+                </form>
+            </div>
+            <div class="form-container-right">
+                <h2>Contact Details</h2>
+                <form class="second-form">
+                    <input type="text" placeholder="Street + Nr" class="form-input-address">
+                    <input type="text" placeholder="Additional information" class="form-input-infos">
+                    <input type="text" placeholder="Zip code" class="form-input-zip">
+                    <select name="place" placeholder="Place" class="form-select-place" />
+                    <option value="">test</option>
+                    <option value="">test2</option>
+                    <option value="">test3</option>
+                    </select>
+                    <select name="country" placeholder="country" class="form-select-country" />
+                    >
+                    <option value="">test</option>
+                    <option value="">test2</option>
+                    <option value="">test3</option>
+                    </select>
+                    <input type="text" placeholder="code +" class="form-input-code">
+                    <input type="text" placeholder="phone number" class="form-input-phone">
+                    <input type="text" placeholder="email" class="form-input-email">
+                    <div class="form-check-rules">
+                        <input type="checkbox" name="rules" id="rules" class="form-check">
+                        <label for="rules">
+                            test test test test test test
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
                 </form>
             </div>
         </div>
