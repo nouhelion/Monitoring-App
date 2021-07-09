@@ -216,8 +216,8 @@ http://www.templatemo.com/tm-486-new-event
 <!-- =========================
     PROGRAM SECTION   
 ============================== -->
+<section id="ajouter" class="parallax-section">
 
-<div id=ajouter>
 <div class="big-container">
         <div class="container">
             <div class="form-container">
@@ -262,8 +262,7 @@ http://www.templatemo.com/tm-486-new-event
             </div>
         </div>
     </div>
-
-</div>
+</section>
 
 
 

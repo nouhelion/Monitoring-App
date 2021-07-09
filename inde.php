@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 	<!-- Main Style Css -->
     <link rel="stylesheet" href="css/sty.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script language="javascript" type="text/javascript">
     function dynamicdropdown(listindex)
     {
@@ -139,10 +140,10 @@
                 <div class="form-container">
                     <h2 class="form-title">General Information</h2>
                     <div class="first-form">
-                    <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro"required>
-                    <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur" required>
+                    <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
+                    <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
                     <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
-					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
+					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                             <option value="">Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
@@ -161,7 +162,7 @@
                                 document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
                           </script>
 					    <noscript>
-						<select name="Province" id="Province"  class="form-select-prov" required>
+						<select name="Province" id="Province"  style="width: 35px;" required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
@@ -174,22 +175,27 @@
                         <input name="Co2 evite TCO2/an" type="text" class="form-input-co2" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
                         <input name="Depot a la DEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
 				        <input name="Envoi du dossier a l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du dossier a l'ONEE"> 
-                        <input name="Réponse ONEE" type="text" class="form-input-rep" id="Réponse ONEE" placeholder="Réponse ONEE">                   
+                        <input name="Réponse ONEE" type="text" style="width:49%;" id="Réponse ONEE" placeholder="Réponse ONEE">                   
+                        <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">
+                        <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
+                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
                     </div>
                 </div>
                 <div class="form-container-right">
-                    <h2>Contact Details</h2>
                  <div class="second-form">
+                
+                 <button class="btn_"><i class="fa fa-plus"></i></button>
+                 <button class="btn_"><i class="fa fa-trash"></i></button>
+                 <br>
+                    <input name="Avis de l'ONEE" type="text" class="form-input-aviss" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
+                    <input name="Envoi du dossier au departement eau" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:53%;" id="Envoi du dossier au departement eau" placeholder="Envoi du dossier au département Eau">
+                    <input name="Reponse Departement de l'eau" type="text" style="width:100%;" id="Reponse du Departement de l'eau" placeholder="Réponse du Departement de l'Eau">
                     <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">
-                    <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-date" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
-                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-date" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
-                    <input name="Avis de l'ONEE" type="text" class="form-input-avis" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
-                    <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME">   
+                    <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
+                    <input name="Envoi du complement du dossier à l'ABH" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ABH" placeholder="Envoi du complément du dossier à l'ABH">
+                    <input name="Avis Agence Bassin" type="text" class="form-input-avis" id="Avis Agence Bassin" placeholder="Avis Agence Bassin">
+                    <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME"> 
                     <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
-                    <input name="Coordonnées Lambert(m)	" type="text" class="form-input-coo" id="Coordonnées Lambert(m)" placeholder="Coordonnées Lambert(m)">    
-                    <input name="Coordonnees Geographique" type="text" class="form-input-geo" id="Coordonnées Géographique" placeholder="Coordonnées Géographique">
-                    <input name="Echelle de la carte geographique" type="text" class="form-input-egeo" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
-                    <input name="Investissement du projet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du projet">
                     <button type="submit" class="btn">Submit</button>
                  </div>
                 </div>

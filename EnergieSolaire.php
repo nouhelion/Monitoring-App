@@ -219,8 +219,8 @@ http://www.templatemo.com/tm-486-new-event
         <form>
             <div class="container">
                 <div class="form-container">
+                    <h2 class="form-title">Informations Générales</h2>
                     <div class="first-form">
-					<h2 class="form-title">General Information</h2>
                     <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro"required>
                     <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur" required>
                     <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
@@ -243,7 +243,7 @@ http://www.templatemo.com/tm-486-new-event
                                 document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
                           </script>
 					    <noscript>
-						<select name="Province" id="Province"  class="form-select-prov" required>
+						<select name="Province" id="Province"  style="width:35%;" required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
@@ -262,8 +262,8 @@ http://www.templatemo.com/tm-486-new-event
                 <div class="form-container-right">
                  <div class="second-form">
                     <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">
-                    <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-date" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
-                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-date" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
+                    <input name="Depot du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
+                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
                     <input name="Avis de l'ONEE" type="text" class="form-input-avis" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
                     <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME">   
                     <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
@@ -283,7 +283,7 @@ http://www.templatemo.com/tm-486-new-event
 	</div>
 </div>
 </section>
-</h2>
+
 
 
 
