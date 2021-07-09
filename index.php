@@ -76,13 +76,15 @@
 		$query = "SELECT * FROM `admins` WHERE username='$username' and password='$password'";
 		$result = mysqli_query($link, $query);
 		$rows = mysqli_num_rows($result);
-		if ($rows == 1) {
+		if ($rows == 1) 
+		{
 			$_SESSION['username'] = $username;
 			header("Location: home.php");
-		} else {
-			echo "<div id='loginpage'>
+		} else 
+		{
+            echo "<div id='loginpage'>
             <p>Username/password is incorrect.</p>";
-		}
+        }
 	}
 	?>
 	<script>

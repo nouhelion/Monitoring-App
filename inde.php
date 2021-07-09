@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -133,62 +134,67 @@
 </head>
 <body >
 	<div class="big-container">
-        <div class="container">
-            <div class="form-container">
-                <h2 class="form-title">General Information</h2>
-                <form class="first-form">
-                    <select name="title" placeholder="title" class="form-select-title">
-                        <option value="">test</option>
-                        <option value="">test2</option>
-                        <option value="">test3</option>
-                    </select>
-                    <input type="text" placeholder="first name" class="form-input-name first-name" />
-                    <input type="text" placeholder="last name" class="form-input-name last-name" />
-                    <select name="position" placeholder="position" class="form-select-title">
-                        <option value="">test</option>
-                        <option value="">test2</option>
-                        <option value="">test3</option>
-                    </select>
-                    <input type="text" placeholder="company" class="form-input-company" />
-                    <input type="text" placeholder="business area" class="form-input-business" />
-                    <select name="employees" placeholder="employees" class="form-select-employees" />
-                    >
-                    <option value="">test</option>
-                    <option value="">test2</option>
-                    <option value="">test3</option>
-                    </select>
-                </form>
-            </div>
-            <div class="form-container-right">
-                <h2>Contact Details</h2>
-                <form class="second-form">
-                    <input type="text" placeholder="Street + Nr" class="form-input-address">
-                    <input type="text" placeholder="Additional information" class="form-input-infos">
-                    <input type="text" placeholder="Zip code" class="form-input-zip">
-                    <select name="place" placeholder="Place" class="form-select-place" />
-                    <option value="">test</option>
-                    <option value="">test2</option>
-                    <option value="">test3</option>
-                    </select>
-                    <select name="country" placeholder="country" class="form-select-country" />
-                    >
-                    <option value="">test</option>
-                    <option value="">test2</option>
-                    <option value="">test3</option>
-                    </select>
-                    <input type="text" placeholder="code +" class="form-input-code">
-                    <input type="text" placeholder="phone number" class="form-input-phone">
-                    <input type="text" placeholder="email" class="form-input-email">
-                    <div class="form-check-rules">
-                        <input type="checkbox" name="rules" id="rules" class="form-check">
-                        <label for="rules">
-                            test test test test test test
-                        </label>
+        <form>
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="form-title">General Information</h2>
+                    <div class="first-form">
+                    <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro"required>
+                    <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur" required>
+                    <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
+					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
+                            <option value="">Région</option>
+                            <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
+                            <option value="Oriental">Oriental</option>
+                            <option value="Fès - Meknès">Fès - Meknès</option>
+                            <option value="Rabat-Salé-Kénitra">Rabat-Salé-Kénitra</option>
+                            <option value="Béni Mellal-Khénifra">Béni Mellal-Khénifra</option>
+                            <option value="Casablanca-Settat">Casablanca-Settat</option>
+                            <option value="Marrakech-Safi">Marrakech-Safi</option>
+                            <option value="Drâa-Tafilalet">Drâa-Tafilalet</option>
+                            <option value="Souss-Massa">Souss-Massa</option>
+                            <option value="Guelmim-Oued Noun">Guelmim-Oued Noun</option>
+                            <option value="Laâyoune-Sakia El Hamra">Laâyoune-Sakia El Hamra</option>
+                            <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
+                        </select>
+						  <script type="text/javascript" language="JavaScript">
+                                document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
+                          </script>
+					    <noscript>
+						<select name="Province" id="Province"  class="form-select-prov" required>
+                            <option value="">Selectionner province</option>
+                            <option value="Oued Ed Dahab">Oued Ed Dahab</option>
+                            <option value="Aousserd">Aousserd</option>
+                        </select>
+						</noscript>
+						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
+                        <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
+                        <input name="Productible previsionnel" type="text" class="form-input-prod" id="Productible prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
+                        <input name="Source energie" type="text" class="form-input-sou" id="Source energie" placeholder="Source énergie">
+                        <input name="Co2 evite TCO2/an" type="text" class="form-input-co2" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
+                        <input name="Depot a la DEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
+				        <input name="Envoi du dossier a l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du dossier a l'ONEE"> 
+                        <input name="Réponse ONEE" type="text" class="form-input-rep" id="Réponse ONEE" placeholder="Réponse ONEE">                   
                     </div>
+                </div>
+                <div class="form-container-right">
+                    <h2>Contact Details</h2>
+                 <div class="second-form">
+                    <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">
+                    <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-date" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
+                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-date" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
+                    <input name="Avis de l'ONEE" type="text" class="form-input-avis" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
+                    <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME">   
+                    <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
+                    <input name="Coordonnées Lambert(m)	" type="text" class="form-input-coo" id="Coordonnées Lambert(m)" placeholder="Coordonnées Lambert(m)">    
+                    <input name="Coordonnees Geographique" type="text" class="form-input-geo" id="Coordonnées Géographique" placeholder="Coordonnées Géographique">
+                    <input name="Echelle de la carte geographique" type="text" class="form-input-egeo" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
+                    <input name="Investissement du projet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du projet">
                     <button type="submit" class="btn">Submit</button>
-                </form>
+                 </div>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

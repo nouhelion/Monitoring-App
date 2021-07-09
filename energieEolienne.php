@@ -181,6 +181,7 @@ http://www.templatemo.com/tm-486-new-event
 				<li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
 				<li><a href="#overview" class="smoothScroll">Rechercher</a></li>
 				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
+                <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
 			</ul>
 
 		</div>
@@ -226,7 +227,6 @@ http://www.templatemo.com/tm-486-new-event
 					<input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
                     <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
                     <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
-                    <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
 					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
                             <option value="">Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
@@ -246,16 +246,17 @@ http://www.templatemo.com/tm-486-new-event
                                 document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
                           </script>
 					    <noscript>
-						<select name="Province" id="Province"  class="form-select-reg" required>
+						<select name="Province" id="Province"  class="form-select-prov" required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
                         </select>
 						</noscript>
 						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
+                        <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
 					<input name="Depot au MEME" type="text" class="form-input-nom" id="Depot au MEME" placeholder="Dépôt au MEME">
-					<input name="Envoi du dossier à l'ONEE" type="text" class="form-input-env" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE">
-					<input name="Etat D'avancement" type="text" class="form-input-env" id="Etat D'avancement" placeholder="Etat D'avancement">
+					<input name="Envoi du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-env" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE">
+					<input name="Etat D'avancement" type="text"  class="form-input-env" id="Etat D'avancement" placeholder="Etat D'avancement">
 					<button type="submit" class="btn">Ajouter Le Projet</button>
 				</form>
             </div>

@@ -484,11 +484,13 @@ form>* {
     width: 100%;
 }
 .form-input-pui {
-    width: 25%;
+    width: 30%;
 }
-
+.form-input-prov {
+    width: 60%;
+}
 .form-select-reg {
-    width: 74%;
+    width: 57%;
 }
 
 /* second form */

@@ -60,6 +60,7 @@ http://www.templatemo.com/tm-486-new-event
 				<li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
 				<li><a href="#overview" class="smoothScroll">Rechercher</a></li>
 				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
+				<li><a href="#speakers" class="smoothScroll">Reporting</a></li>
 			</ul>
 
 		</div>
