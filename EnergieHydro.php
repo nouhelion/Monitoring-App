@@ -214,7 +214,7 @@ http://www.templatemo.com/tm-486-new-event
         <form>
             <div class="container">
                 <div class="form-container">
-                    <h2 class="form-title">General Information</h2>
+				<h2 class="form-title">Informations Générales</h2>
                     <div class="first-form">
                     <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
                     <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
