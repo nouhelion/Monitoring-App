@@ -217,7 +217,7 @@ http://www.templatemo.com/tm-486-new-event
 				<h2 class="form-title">Informations Générales</h2>
                     <div class="first-form">
                     <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
-                    <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
+                    <input name="Demandeur" type="text" class="form-input-dev" id="Demandeur" placeholder="Demandeur">
                     <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du Projet">
 					<select name="Region" id="Region"  style="width:50%;" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                             <option value="">Région</option>
@@ -238,7 +238,7 @@ http://www.templatemo.com/tm-486-new-event
                                 document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner Province</option></select>')
                           </script>
 					    <noscript>
-						<select name="Province" id="Province"  style="width:49%;" required>
+						<select name="province" id="Province"  style="width:49%;" required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
@@ -272,8 +272,8 @@ http://www.templatemo.com/tm-486-new-event
                     <input name="Avis Agence Bassin" type="text" class="form-input-avis" id="Avis Agence Bassin" placeholder="Avis Agence Bassin">
                     <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME"> 
                     <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
-                    <input name="CoordonneesGeographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
-                    <input name="Investissementduprojet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du Projet (MDH)">
+                    <input name="Coordonnees Geographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
+                    <input name="Investissement du projet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du Projet (MDH)">
                     <button type="submit" class="btn">Submit</button>
                  </div>
                 </div>
