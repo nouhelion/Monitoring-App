@@ -1,3 +1,42 @@
+<?php
+    require_once('db.php');
+    if(isset($_POST['submit']))
+    {
+        $Numero = mysqli_real_escape_string($link, $_REQUEST['Numero']);
+        $Demandeur = mysqli_real_escape_string($link, $_REQUEST['Demandeur']);
+        $Nomduprojet= mysqli_real_escape_string($link, $_REQUEST['Nomduprojet']);
+        $Region = mysqli_real_escape_string($link, $_REQUEST['Region']);
+        $province = mysqli_real_escape_string($link, $_REQUEST['province']);
+        $Localite = mysqli_real_escape_string($link, $_REQUEST['Localite']);
+        $Puissance = mysqli_real_escape_string($link, $_REQUEST['Puissance']);
+        $Productibleprevisionnel = mysqli_real_escape_string($link, $_REQUEST['Productibleprevisionnel']);
+        $Sourceenergie= mysqli_real_escape_string($link, $_REQUEST['Sourceenergie']);
+        $Co2eviteTCO2an = mysqli_real_escape_string($link, $_REQUEST['Co2eviteTCO2an']);
+        $DepotalaDEREE = mysqli_real_escape_string($link, $_REQUEST['DepotalaDEREE']);
+        $EnvoidudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoidudossieraONEE']);
+        $ReponseONEE= mysqli_real_escape_string($link, $_REQUEST['ReponseONEE']);
+        $NotificationduDemandeurpourcomplementdudossier = mysqli_real_escape_string($link, $_REQUEST['NotificationduDemandeurpourcomplementdudossier']);
+        $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotducomplementdudossierparledeveloppeur']);
+        $EnvoiducomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoiducomplementdudossieraONEE']);
+        $AvisdeONEE = mysqli_real_escape_string($link, $_REQUEST['AvisdeONEE']);
+        $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
+        $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
+        $CoordonneesLambert = mysqli_real_escape_string($link, $_REQUEST['CoordonneesLambert']);
+        $CoordonneesGeographique = mysqli_real_escape_string($link, $_REQUEST['CoordonneesGeographique']);
+        $Echelledelacartegeographique= mysqli_real_escape_string($link, $_REQUEST['Echelledelacartegeographique']);
+        $Investissementduprojet = mysqli_real_escape_string($link, $_REQUEST['Investissementduprojet']);
+        $sql = "INSERT INTO `energiesolaire`(`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Source energie`, `Co2 evite TCO2/an`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Notification du Demandeur pour complement du dossier`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier à l'ONEE`, `Avis de l'ONEE`, `Avis MEME`, `Observations`, `Coordonnees Lambert`, `Coordonnees Geographique`, `Echelle de la carte geographique`, `Investissement du projet`) values
+         ('$Numero','$Demandeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$Productibleprevisionnel',
+          '$Sourceenergie','$Co2eviteTCO2an','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE','$NotificationduDemandeurpourcomplementdudossier',
+          '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$AvisdeONEE','$AvisMEME','$Observations',
+          '$CoordonneesLambert','$CoordonneesGeographique','$Echelledelacartegeographique','$Investissementduprojet')";
+        if (mysqli_query($link, $sql)) {
+          header("Location: EnergieSolaire.php");
+        } else {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -216,15 +255,15 @@ http://www.templatemo.com/tm-486-new-event
 ============================== -->
 <section id="ajouter" class="parallax-section">
 <div class="big-container">
-        <form>
+        <form action="" method="post">
             <div class="container">
                 <div class="form-container">
                     <h2 class="form-title">Informations Générales</h2>
                     <div class="first-form">
                     <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro"required>
-                    <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur" required>
-                    <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
-					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
+                    <input name="Demandeur" type="text" class="form-input-dev" id="Demandeur" placeholder="Demandeur" required>
+                    <input name="Nomduprojet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
+					<select name="Region" id="Region"  style="width:50%;" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
                             <option value="">Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
@@ -240,10 +279,10 @@ http://www.templatemo.com/tm-486-new-event
                             <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
                         </select>
 						  <script type="text/javascript" language="JavaScript">
-                                document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
+                                document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner province</option></select>')
                           </script>
 					    <noscript>
-						<select name="Province" id="Province"  style="width:35%;" required>
+						<select name="province" id="Province"  style="width:49%;" required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
@@ -251,27 +290,28 @@ http://www.templatemo.com/tm-486-new-event
 						</noscript>
 						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
                         <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
-                        <input name="Productible previsionnel" type="text" class="form-input-prod" id="Productible prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
-                        <input name="Source energie" type="text" class="form-input-sou" id="Source energie" placeholder="Source énergie">
-                        <input name="Co2 evite TCO2/an" type="text" class="form-input-co2" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
-                        <input name="Depot a la DEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
-				        <input name="Envoi du dossier a l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du dossier a l'ONEE"> 
-                        <input name="Réponse ONEE" type="text" class="form-input-rep" id="Réponse ONEE" placeholder="Réponse ONEE">                   
+                        <input name="Productibleprevisionnel" type="text" class="form-input-prod" id="Productible prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
+                        <input name="Sourceenergie" type="text" class="form-input-sou" id="Source energie" placeholder="Source énergie">
+                        <input name="Co2eviteTCO2an" type="text" class="form-input-co2" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
+                        <input name="DepotalaDEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
+				        <input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du dossier a l'ONEE"> 
+                        <input name="ReponseONEE" type="text" class="form-input-rep" id="Réponse ONEE" placeholder="Réponse ONEE">
+                        <input name="NotificationduDemandeurpourcomplementdudossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">                   
                     </div>
                 </div>
                 <div class="form-container-right">
                  <div class="second-form">
-                    <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">
-                    <input name="Depot du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
-                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
-                    <input name="Avis de l'ONEE" type="text" class="form-input-avis" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
-                    <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME">   
+                    
+                    <input name="Depotducomplementdudossierparledeveloppeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
+                    <input name="EnvoiducomplementdudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
+                    <input name="AvisdeONEE" type="text" class="form-input-avis" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
+                    <input name="AvisMEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME">   
                     <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
-                    <input name="Coordonnées Lambert(m)	" type="text" class="form-input-coo" id="Coordonnées Lambert(m)" placeholder="Coordonnées Lambert(m)">    
-                    <input name="Coordonnees Geographique" type="text" class="form-input-geo" id="Coordonnées Géographique" placeholder="Coordonnées Géographique">
-                    <input name="Echelle de la carte geographique" type="text" class="form-input-egeo" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
-                    <input name="Investissement du projet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du projet">
-                    <button type="submit" class="btn">Submit</button>
+                    <input name="CoordonneesLambert" type="text" style="width:100%;" id="Coordonnées Lambert" placeholder="Coordonnées Lambert (m)">    
+                    <input name="CoordonneesGeographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
+                    <input name="Echelledelacartegeographique" type="text" class="form-input-egeo" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
+                    <input name="Investissementduprojet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du projet (MDH)">
+                    <button type="submit" name="submit"class="btn">Ajouter Le Projet</button>
                  </div>
                 </div>
             </div>

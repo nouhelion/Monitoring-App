@@ -401,7 +401,7 @@ color: rgb(243, 233, 233);
 
 input {
     border: none;
-    border-bottom: 1px solid gray;
+    
     outline: none;
     padding: 5px;
 }
@@ -450,6 +450,9 @@ form>* {
     border-bottom-right-radius: 20px;
     padding-bottom: 20px;
 
+}
+.form-container input{
+    border-bottom: 1px solid gray;
 }
 .first-form{
 	color: black;
@@ -511,7 +514,9 @@ form>* {
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
 
 }
-
+.form-container-right input {
+    border-bottom: 1px solid white;
+}
 .second-form>input {
 	background-color: #4053be;
 	color: white;

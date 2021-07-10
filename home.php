@@ -81,7 +81,7 @@ http://www.templatemo.com/tm-486-new-event
 
 			<div class="col-md-12 col-sm-12">
 				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Gestion des Autorisations</h1>
-				<a href="EnergieSolaire.php" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Energie solaire</a>
+				<a href="EnergieSolaire.php" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Energie Solaire</a>
 				<a href="energieEolienne.php" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Energie Eolienne</a>
 				<a href="EnergieHydro.php" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Energie Hydroelectrique</a>
 			</div>

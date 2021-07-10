@@ -30,7 +30,7 @@ http://www.templatemo.com/tm-486-new-event
         switch (listindex)
         {
         case "Rabat-Salé-Kénitra" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Rabat");
             document.getElementById("province").options[2]=new Option("Salé");
 			document.getElementById("province").options[3]=new Option("Skhirate, Témara");
@@ -40,7 +40,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[7]=new Option("Sidi Slimane");
             break;
         case "Casablanca-Settat" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Casablanca");
             document.getElementById("province").options[2]=new Option("Mohammédia");
             document.getElementById("province").options[3]=new Option("El Jadida");
@@ -52,7 +52,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[9]=new Option("Sidi Bennour");
             break;
 		case "Fès - Meknès" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Fès");
             document.getElementById("province").options[2]=new Option("Meknès");
             document.getElementById("province").options[3]=new Option("El Hajeb");
@@ -64,7 +64,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[9]=new Option("Taza");
             break;
 		case "Marrakech-Safi" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Marrakech");
             document.getElementById("province").options[2]=new Option("Chichaoua");
             document.getElementById("province").options[3]=new Option("Al Haouz");
@@ -75,7 +75,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[8]=new Option("Youssoufia");
             break;
 		case "Tanger – Tétouan – Al Hoceima" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Tanger, Assilah");
             document.getElementById("province").options[2]=new Option("M’diq, Fnideq");
             document.getElementById("province").options[3]=new Option("Tétouan");
@@ -86,7 +86,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[8]=new Option("Ouezzane");
             break;
 		case "Oriental" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Oujda, Angad");
             document.getElementById("province").options[2]=new Option("Nador");
             document.getElementById("province").options[3]=new Option("Driouch");
@@ -97,7 +97,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[8]=new Option("Figuig");
             break;
 		case "Béni Mellal-Khénifra" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Béni, Mellal");
             document.getElementById("province").options[2]=new Option("Azilal");
             document.getElementById("province").options[3]=new Option("Fquih Ben Salah");
@@ -105,7 +105,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[5]=new Option("Khouribga");
             break;
 		case "Drâa-Tafilalet" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Errachidia");
             document.getElementById("province").options[2]=new Option("Ouarzazate");
             document.getElementById("province").options[3]=new Option("Midelt");
@@ -113,7 +113,7 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[5]=new Option("Zagora");
             break;
 		case "Souss-Massa" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Agadir Ida, Outanane");
             document.getElementById("province").options[2]=new Option("Inezgane, Aït Melloul");
             document.getElementById("province").options[3]=new Option("Chtouka, Aït Baha");
@@ -122,21 +122,21 @@ http://www.templatemo.com/tm-486-new-event
 			document.getElementById("province").options[6]=new Option("Tata");
             break;
 		case "Guelmim-Oued Noun" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Guelmim");
             document.getElementById("province").options[2]=new Option("Assa-Zag");
             document.getElementById("province").options[3]=new Option("Tan Tan");
 			document.getElementById("province").options[4]=new Option("Sidi Ifni");
             break;
 		case "Laâyoune-Sakia El Hamra" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Laâyoune");
             document.getElementById("province").options[2]=new Option("Boujdour");
             document.getElementById("province").options[3]=new Option("Tarfaya");
 			document.getElementById("province").options[4]=new Option("Es-Semara");
             break;
 		case "Dakhla-Oued Ed Dahab" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
+            document.getElementById("province").options[0]=new Option("Selectionner Province");
             document.getElementById("province").options[1]=new Option("Oued Ed Dahab");
             document.getElementById("province").options[2]=new Option("Aousserd");
             break;
@@ -218,8 +218,8 @@ http://www.templatemo.com/tm-486-new-event
                     <div class="first-form">
                     <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
                     <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
-                    <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
-					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                    <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du Projet">
+					<select name="Region" id="Region"  style="width:50%;" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                             <option value="">Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
@@ -235,10 +235,10 @@ http://www.templatemo.com/tm-486-new-event
                             <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
                         </select>
 						  <script type="text/javascript" language="JavaScript">
-                                document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
+                                document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner Province</option></select>')
                           </script>
 					    <noscript>
-						<select name="Province" id="Province"  style="width: 35px;" required>
+						<select name="Province" id="Province"  style="width:49%;" required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
@@ -246,15 +246,15 @@ http://www.templatemo.com/tm-486-new-event
 						</noscript>
 						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
                         <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
-                        <input name="Productible previsionnel" type="text" class="form-input-prod" id="Productible prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
-                        <input name="Source energie" type="text" class="form-input-sou" id="Source energie" placeholder="Source énergie">
-                        <input name="Co2 evite TCO2/an" type="text" class="form-input-co2" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
-                        <input name="Depot a la DEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
-				        <input name="Envoi du dossier a l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du dossier a l'ONEE"> 
+                        <input name="Productible previsionnel" type="text" class="form-input-prod" id="Productible Prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
+                        <input name="Source energie" type="text" class="form-input-sou" id="Source energie" placeholder="Source Énergie">
+                        <input name="Co2 evite TCO2/an" type="text" style="width:49%;" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
+                        <input name="Depot a la DEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
+				        <input name="Envoi du dossier a l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE"> 
                         <input name="Réponse ONEE" type="text" style="width:49%;" id="Réponse ONEE" placeholder="Réponse ONEE">                   
-                        <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">
-                        <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
-                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
+                        <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur Pour Complément du Dossier">
+                        <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
+                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du Complément du Dossier à l'ONEE">
                     </div>
                 </div>
                 <div class="form-container-right">
@@ -264,14 +264,16 @@ http://www.templatemo.com/tm-486-new-event
                  <button class="btn_"><i class="fa fa-trash"></i></button>
                  <br>
                     <input name="Avis de l'ONEE" type="text" class="form-input-aviss" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
-                    <input name="Envoi du dossier au departement eau" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:53%;" id="Envoi du dossier au departement eau" placeholder="Envoi du dossier au département Eau">
+                    <input name="Envoi du dossier au departement eau" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:53%;" id="Envoi du dossier au departement eau" placeholder="Envoi du Dossier Au Département Eau">
                     <input name="Reponse Departement de l'eau" type="text" style="width:100%;" id="Reponse du Departement de l'eau" placeholder="Réponse du Departement de l'Eau">
-                    <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">
-                    <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
-                    <input name="Envoi du complement du dossier à l'ABH" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ABH" placeholder="Envoi du complément du dossier à l'ABH">
+                    <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur Pour Complément du Dossier">
+                    <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
+                    <input name="Envoi du complement du dossier à l'ABH" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ABH" placeholder="Envoi du Complément du Dossier à l'ABH">
                     <input name="Avis Agence Bassin" type="text" class="form-input-avis" id="Avis Agence Bassin" placeholder="Avis Agence Bassin">
                     <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME"> 
                     <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
+                    <input name="CoordonneesGeographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
+                    <input name="Investissementduprojet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du Projet (MDH)">
                     <button type="submit" class="btn">Submit</button>
                  </div>
                 </div>

@@ -1,3 +1,27 @@
+<?php
+    require_once('db.php');
+    if(isset($_POST['submit']))
+    {
+        $Numero = mysqli_real_escape_string($link, $_REQUEST['Numero']);
+        $Developpeur = mysqli_real_escape_string($link, $_REQUEST['Developpeur']);
+        $Nomduprojet= mysqli_real_escape_string($link, $_REQUEST['Nomduprojet']);
+        $Region = mysqli_real_escape_string($link, $_REQUEST['Region']);
+        $province = mysqli_real_escape_string($link, $_REQUEST['province']);
+        $Localite = mysqli_real_escape_string($link, $_REQUEST['Localite']);
+        $Puissance = mysqli_real_escape_string($link, $_REQUEST['Puissance']);
+        $DepotauMEME = mysqli_real_escape_string($link, $_REQUEST['DepotauMEME']);
+        $EnvoidudossieraONEE= mysqli_real_escape_string($link, $_REQUEST['EnvoidudossieraONEE']);
+        $Etatavancement = mysqli_real_escape_string($link, $_REQUEST['Etatavancement']);
+        $Investissementduprojet = mysqli_real_escape_string($link, $_REQUEST['Investissementduprojet']);
+        $sql = "INSERT INTO `energieeolienne`(`Numero`, `Developpeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Depot au MEME`, `Envoi du dossier a ONEE`, `Etat avancement`, `Investissement du projet`) 
+        VALUES ('$Numero','$Developpeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$DepotauMEME', '$EnvoidudossieraONEE','$Etatavancement','$Investissementduprojet')";
+        if (mysqli_query($link, $sql)) {
+          header("Location: energieEolienne.php");
+        } else {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -222,12 +246,12 @@ http://www.templatemo.com/tm-486-new-event
         <div class="container">
             <div class="form-container">
                 <h2 class="form-title">Informations Générales</h2>
-                <form class="first-form">
+                <form class="first-form" action="" method="post">
                     
 					<input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
                     <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
-                    <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
-					<select name="Region" id="Region"  class="form-select-reg" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
+                    <input name="Nomduprojet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
+					<select name="Region" id="Region"  style="width:50%;" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
                             <option value="">Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
@@ -243,10 +267,10 @@ http://www.templatemo.com/tm-486-new-event
                             <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
                         </select>
 						  <script type="text/javascript" language="JavaScript">
-                                document.write('<select name="province" id="province"><option value="">Selectionner province</option></select>')
+                                document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner province</option></select>')
                           </script>
 					    <noscript>
-						<select name="Province" id="Province"  class="form-select-prov" required>
+						<select name="province" id="Province" style="width:50%;" >
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
@@ -254,10 +278,12 @@ http://www.templatemo.com/tm-486-new-event
 						</noscript>
 						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
                         <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
-					<input name="Depot au MEME" type="text" class="form-input-nom" id="Depot au MEME" placeholder="Dépôt au MEME">
-					<input name="Envoi du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-env" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE">
-					<input name="Etat D'avancement" type="text"  class="form-input-env" id="Etat D'avancement" placeholder="Etat D'avancement">
-					<button type="submit" class="btn">Ajouter Le Projet</button>
+					<input name="DepotauMEME" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot au MEME" placeholder="Dépôt au MEME">
+					<input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:49%;" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE">
+                    <input name="Etatavancement" type="text"  class="form-input-env" id="Etat D'avancement" placeholder="Etat D'avancement">
+                    <input name="Investissementduprojet" type="text" style="width:100%;" id="Investissement du projet" placeholder="Investissement du projet (MDH)">
+					<br>
+                    <button type="submit" name="submit" class="btn">Ajouter Le Projet</button>
 				</form>
             </div>
         </div>

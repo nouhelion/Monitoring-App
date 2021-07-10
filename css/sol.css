@@ -401,7 +401,6 @@ color: rgb(243, 233, 233);
 
 input {
     border: none;
-    border-bottom: 1px solid gray;
     outline: none;
     padding: 5px;
 }
@@ -451,7 +450,9 @@ select {
     border-top-left-radius: 20px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
 }
-
+.form-container input{
+    border-bottom: 1px solid gray;
+}
 .first-form>select {
     border: none;
     border-bottom: 1px solid gray;
@@ -564,7 +565,9 @@ select {
     background-color: #4053be;
     color: white;
 }
-
+.form-container-right input {
+    border-bottom: 1px solid white;
+}
 .second-form>select {
     background-color: #4053be;
     border: none;
