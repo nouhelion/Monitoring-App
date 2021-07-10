@@ -1,3 +1,49 @@
+<?php
+    require_once('db.php');
+    if(isset($_POST['submit']))
+    {
+        $Numero = mysqli_real_escape_string($link, $_REQUEST['Numero']);
+        $Demandeur = mysqli_real_escape_string($link, $_REQUEST['Demandeur']);
+        $Nomduprojet= mysqli_real_escape_string($link, $_REQUEST['Nomduprojet']);
+        $Region = mysqli_real_escape_string($link, $_REQUEST['Region']);
+        $province = mysqli_real_escape_string($link, $_REQUEST['province']);
+        $Localite = mysqli_real_escape_string($link, $_REQUEST['Localite']);
+        $Puissance = mysqli_real_escape_string($link, $_REQUEST['Puissance']);
+        $Productibleprevisionnel = mysqli_real_escape_string($link, $_REQUEST['Productibleprevisionnel']);
+        $Sourceenergie= mysqli_real_escape_string($link, $_REQUEST['Sourceenergie']);
+        $Co2eviteTCO2an = mysqli_real_escape_string($link, $_REQUEST['Co2eviteTCO2an']);
+        $DepotalaDEREE = mysqli_real_escape_string($link, $_REQUEST['DepotalaDEREE']);
+        $EnvoidudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoidudossieraONEE']);
+        $ReponseONEE= mysqli_real_escape_string($link, $_REQUEST['ReponseONEE']);
+        $NotificationduDemandeurpour1ercomplementdudossier = mysqli_real_escape_string($link, $_REQUEST['NotificationduDemandeurpour1ercomplementdudossier']);
+        $Depotdu1ercomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotdu1ercomplementdudossierparledeveloppeur']);
+        $Envoidu1ercomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['Envoidu1ercomplementdudossieraONEE']);
+        $AvisdeONEE = mysqli_real_escape_string($link, $_REQUEST['AvisdeONEE']);
+        $Envoidudossieraudepartementeau = mysqli_real_escape_string($link, $_REQUEST['Envoidudossieraudepartementeau']);
+        $ReponseDepartementdeeau= mysqli_real_escape_string($link, $_REQUEST['ReponseDepartementdeeau']);
+        $NotificationduDemandeurpourcomplementdudossier = mysqli_real_escape_string($link, $_REQUEST['NotificationduDemandeurpourcomplementdudossier']);
+        $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotducomplementdudossierparledeveloppeur']);
+        $EnvoiducomplementdudossieraABH = mysqli_real_escape_string($link, $_REQUEST['EnvoiducomplementdudossieraABH']);
+        $AvisAgenceBassin= mysqli_real_escape_string($link, $_REQUEST['AvisAgenceBassin']);
+        $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
+        $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
+        $CoordonneesGeographique = mysqli_real_escape_string($link, $_REQUEST['CoordonneesGeographique']);
+        $Investissementduprojet = mysqli_real_escape_string($link, $_REQUEST['Investissementduprojet']);
+        $sql = "INSERT INTO `energiehydroelectrique`(`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Source energie`, `Co2 evite TCO2/an`, `Depot a la DEREE`,
+         `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Notification du Demandeur pour 1er complement du dossier`, `Depot du 1er complement du dossier par le developpeur`, `Envoi du 1er complement du dossier à l'ONEE`, 
+         `Avis de l'ONEE`, `Envoi du dossier au departement eau`, `Reponse Departement de l'eau`, `Notification du Demandeur pour complément du dossier`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier à l'ABH`, `Avis Agence Bassin`, `Avis MEME`, `Observations`, `Coordonnees Geographique`, `Investissement du projet`) VALUES 
+         ('$Numero','$Demandeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$Productibleprevisionnel',
+          '$Sourceenergie','$Co2eviteTCO2an','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE','$NotificationduDemandeurpour1ercomplementdudossier',
+          '$Depotdu1ercomplementdudossierparledeveloppeur','$Envoidu1ercomplementdudossieraONEE','$AvisdeONEE','$Envoidudossieraudepartementeau',
+          '$ReponseDepartementdeeau','$NotificationduDemandeurpourcomplementdudossier','$Depotducomplementdudossierparledeveloppeur', 
+          '$EnvoiducomplementdudossieraABH','$AvisAgenceBassin','$AvisMEME','$Observations','$CoordonneesGeographique','$Investissementduprojet')";
+        if (mysqli_query($link, $sql)) {
+          header("Location: EnergieHydro.php");
+        } else {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -211,7 +257,7 @@ http://www.templatemo.com/tm-486-new-event
 ============================== -->
 <section id="ajouter" class="parallax-section">
 <div  class="big-container">
-        <form>
+        <form action="" method="post">
             <div class="container">
                 <div class="form-container">
 				<h2 class="form-title">Informations Générales</h2>
@@ -246,35 +292,33 @@ http://www.templatemo.com/tm-486-new-event
 						</noscript>
 						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
                         <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
-                        <input name="Productible previsionnel" type="text" class="form-input-prod" id="Productible Prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
-                        <input name="Source energie" type="text" class="form-input-sou" id="Source energie" placeholder="Source Énergie">
-                        <input name="Co2 evite TCO2/an" type="text" style="width:49%;" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
-                        <input name="Depot a la DEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
-				        <input name="Envoi du dossier a l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE"> 
-                        <input name="Reponse ONEE" type="text" style="width:49%;" id="Réponse ONEE" placeholder="Réponse ONEE">                   
-                        <input name="Notification du Demandeur pour 1er  complement du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour 1er complement du dossier" placeholder="Notification du Demandeur Pour 1er Complément du Dossier">
-                        <input name="Depot du 1er complement du dossier par le developpeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
-                    <input name="Envoi du 1er complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE">
+                        <input name="Productibleprevisionnel" type="text" class="form-input-prod" id="Productible Prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
+                        <input name="Sourceenergie" type="text" class="form-input-sou" id="Source energie" placeholder="Source Énergie">
+                        <input name="Co2eviteTCO2an" type="text" style="width:49%;" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
+                        <input name="DepotalaDEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
+				        <input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE"> 
+                        <input name="ReponseONEE" type="text" style="width:49%;" id="Réponse ONEE" placeholder="Réponse ONEE">                   
+                        <input name="NotificationduDemandeurpour1ercomplementdudossier" type="text" class="form-input-nom" id="Notification du Demandeur pour 1er complement du dossier" placeholder="Notification du Demandeur Pour 1er Complément du Dossier">
+                        <input name="Depotdu1ercomplementdudossierparledeveloppeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
+                    <input name="Envoidu1ercomplementdudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE">
                     </div>
                 </div>
                 <div class="form-container-right">
                  <div class="second-form">
                 
-                 <button class="btn_"><i class="fa fa-plus"></i></button>
-                 <button class="btn_"><i class="fa fa-trash"></i></button>
-                 <br>
-                    <input name="Avis de l'ONEE" type="text" class="form-input-aviss" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
-                    <input name="Envoi du dossier au departement eau" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:53%;" id="Envoi du dossier au departement eau" placeholder="Envoi du Dossier Au Département Eau">
-                    <input name="Reponse Departement de l'eau" type="text" style="width:100%;" id="Reponse du Departement de l'eau" placeholder="Réponse du Departement de l'Eau">
-                    <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur Pour Complément du Dossier">
-                    <input name="Depot du complement du dossier par le developpeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
-                    <input name="Envoi du complement du dossier à l'ABH" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ABH" placeholder="Envoi du Complément du Dossier à l'ABH">
-                    <input name="Avis Agence Bassin" type="text" class="form-input-avis" id="Avis Agence Bassin" placeholder="Avis Agence Bassin">
-                    <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME"> 
+                
+                    <input name="AvisdeONEE" type="text" class="form-input-aviss" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
+                    <input name="Envoidudossieraudepartementeau" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:53%;" id="Envoi du dossier au departement eau" placeholder="Envoi du Dossier Au Département Eau">
+                    <input name="ReponseDepartementdeeau" type="text" style="width:100%;" id="Reponse du Departement de l'eau" placeholder="Réponse du Departement de l'Eau">
+                    <input name="NotificationduDemandeurpourcomplementdudossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur Pour Complément du Dossier">
+                    <input name="Depotducomplementdudossierparledeveloppeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
+                    <input name="EnvoiducomplementdudossieraABH" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ABH" placeholder="Envoi du Complément du Dossier à l'ABH">
+                    <input name="AvisAgenceBassin" type="text" class="form-input-avis" id="Avis Agence Bassin" placeholder="Avis Agence Bassin">
+                    <input name="AvisMEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME"> 
                     <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
-                    <input name="Coordonnees Geographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
-                    <input name="Investissement du projet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du Projet (MDH)">
-                    <button type="submit" class="btn">Submit</button>
+                    <input name="CoordonneesGeographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
+                    <input name="Investissementduprojet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du Projet (MDH)">
+                    <button type="submit" name="submit" class="btn">Submit</button>
                  </div>
                 </div>
             </div>
