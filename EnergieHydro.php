@@ -305,8 +305,9 @@ http://www.templatemo.com/tm-486-new-event
                 </div>
                 <div class="form-container-right">
                  <div class="second-form">
-                
-                
+                 <button class="btn_"><i class="fa fa-plus"></i></button>
+                 <button class="btn_"><i class="fa fa-trash"></i></button>
+                 <br>
                     <input name="AvisdeONEE" type="text" class="form-input-aviss" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
                     <input name="Envoidudossieraudepartementeau" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:53%;" id="Envoi du dossier au departement eau" placeholder="Envoi du Dossier Au Département Eau">
                     <input name="ReponseDepartementdeeau" type="text" style="width:100%;" id="Reponse du Departement de l'eau" placeholder="Réponse du Departement de l'Eau">
