@@ -251,10 +251,10 @@ http://www.templatemo.com/tm-486-new-event
                         <input name="Co2 evite TCO2/an" type="text" style="width:49%;" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
                         <input name="Depot a la DEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
 				        <input name="Envoi du dossier a l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE"> 
-                        <input name="Réponse ONEE" type="text" style="width:49%;" id="Réponse ONEE" placeholder="Réponse ONEE">                   
-                        <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur Pour Complément du Dossier">
-                        <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
-                    <input name="Envoi du complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ONEE" placeholder="Envoi du Complément du Dossier à l'ONEE">
+                        <input name="Reponse ONEE" type="text" style="width:49%;" id="Réponse ONEE" placeholder="Réponse ONEE">                   
+                        <input name="Notification du Demandeur pour 1er  complement du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour 1er complement du dossier" placeholder="Notification du Demandeur Pour 1er Complément du Dossier">
+                        <input name="Depot du 1er complement du dossier par le developpeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
+                    <input name="Envoi du 1er complement du dossier à l'ONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE">
                     </div>
                 </div>
                 <div class="form-container-right">
@@ -267,7 +267,7 @@ http://www.templatemo.com/tm-486-new-event
                     <input name="Envoi du dossier au departement eau" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:53%;" id="Envoi du dossier au departement eau" placeholder="Envoi du Dossier Au Département Eau">
                     <input name="Reponse Departement de l'eau" type="text" style="width:100%;" id="Reponse du Departement de l'eau" placeholder="Réponse du Departement de l'Eau">
                     <input name="Notification du Demandeur pour complément du dossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur Pour Complément du Dossier">
-                    <input name="Dépôt du complément du dossier par le développeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
+                    <input name="Depot du complement du dossier par le developpeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
                     <input name="Envoi du complement du dossier à l'ABH" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du complement du dossier à l'ABH" placeholder="Envoi du Complément du Dossier à l'ABH">
                     <input name="Avis Agence Bassin" type="text" class="form-input-avis" id="Avis Agence Bassin" placeholder="Avis Agence Bassin">
                     <input name="Avis MEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME"> 
