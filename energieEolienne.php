@@ -279,7 +279,7 @@ http://www.templatemo.com/tm-486-new-event
 						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
                         <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
 					<input name="DepotauMEME" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot au MEME" placeholder="Dépôt au MEME">
-					<input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:49%;" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE">
+					<input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:49%;" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE/GRD Concerné">
                     <input name="Etatavancement" type="text"  class="form-input-env" id="Etat D'avancement" placeholder="Etat D'avancement">
                     <input name="Investissementduprojet" type="text" style="width:100%;" id="Investissement du projet" placeholder="Investissement du projet (MDH)">
 					<br>
@@ -321,14 +321,3 @@ http://www.templatemo.com/tm-486-new-event
 </body>
 </html>
 
-
-<th class="cell100 column1">Numero</th>
-									<th class="cell100 column2">Developpeur</th>
-									<th class="cell100 column3">Nom du projet</th>
-									<th class="cell100 column4">Région</th>
-									<th class="cell100 column5">Province</th>
-                                      <th class="cell100 column1">Localité</th>
-									<th class="cell100 column2">Dépôt au MEME</th>
-									<th class="cell100 column3">Envoi du dossier à l'ONEE</th>
-									<th class="cell100 column4">Etat D'avancement</th>
-									<th class="cell100 column5">Investissement du projet (MDH)</th>

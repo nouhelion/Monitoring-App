@@ -296,11 +296,11 @@ http://www.templatemo.com/tm-486-new-event
                         <input name="Sourceenergie" type="text" class="form-input-sou" id="Source energie" placeholder="Source Énergie">
                         <input name="Co2eviteTCO2an" type="text" style="width:49%;" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
                         <input name="DepotalaDEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
-				        <input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE"> 
-                        <input name="ReponseONEE" type="text" style="width:49%;" id="Réponse ONEE" placeholder="Réponse ONEE">                   
+				        <input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:57%;" id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE/GRD Concerné"> 
+                        <input name="ReponseONEE" type="text" style="width:42%;" id="Réponse ONEE" placeholder="Réponse ONEE/GRD Concerné">                   
                         <input name="NotificationduDemandeurpour1ercomplementdudossier" type="text" class="form-input-nom" id="Notification du Demandeur pour 1er complement du dossier" placeholder="Notification du Demandeur Pour 1er Complément du Dossier">
                         <input name="Depotdu1ercomplementdudossierparledeveloppeur" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
-                    <input name="Envoidu1ercomplementdudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE">
+                    <input name="Envoidu1ercomplementdudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE/GRD Concerné">
                     </div>
                 </div>
                 <div class="form-container-right">
