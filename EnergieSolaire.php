@@ -295,8 +295,7 @@ http://www.templatemo.com/tm-486-new-event
                         <input name="Co2eviteTCO2an" type="text" class="form-input-co2" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
                         <input name="DepotalaDEREE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-input-derr" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
 				        <input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:100%;" id="Envoi du dossier a l'ONEE" placeholder="Envoi du dossier a l'ONEE/GRD Concerné"> 
-                        <input name="ReponseONEE" type="text" style="width:100%;" id="Réponse ONEE" placeholder="Réponse ONEE/GRD Concerné">
-                        <input name="NotificationduDemandeurpourcomplementdudossier" type="text" class="form-input-nom" id="Notification du Demandeur pour complement du dossier" placeholder="Notification du Demandeur pour complément du dossier">                   
+                        <input name="ReponseONEE" type="text" style="width:100%;" id="Réponse ONEE" placeholder="Réponse ONEE/GRD Concerné">                   
                     </div>
                 </div>
                 <div class="form-container-right">
@@ -310,6 +309,7 @@ http://www.templatemo.com/tm-486-new-event
                     <input name="CoordonneesLambert" type="text" style="width:100%;" id="Coordonnées Lambert" placeholder="Coordonnées Lambert (m)">    
                     <input name="CoordonneesGeographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
                     <input name="Echelledelacartegeographique" type="text" class="form-input-egeo" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
+                    <input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" placeholder="Etat d'Avancement">
                     <input name="Investissementduprojet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du projet (MDH)">
                     <button type="submit" name="submit"class="btn">Ajouter Le Projet</button>
                  </div>

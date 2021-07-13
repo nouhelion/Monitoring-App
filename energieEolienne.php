@@ -298,6 +298,7 @@ http://www.templatemo.com/tm-486-new-event
                     <input name="CoordonneesLambert" type="text" style="width:100%;" id="Coordonnées Lambert" placeholder="Coordonnées Lambert (m)">    
                     <input name="CoordonneesGeographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
                     <input name="Echelledelacartegeographique" type="text" class="form-input-egeo" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
+                    <input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" placeholder="Etat d'Avancement">
                     <input name="Investissementduprojet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du projet (MDH)">
                     <button type="submit" name="submit" class="btn">Ajouter Le Projet</button>
                  </div>
