@@ -241,17 +241,16 @@ http://www.templatemo.com/tm-486-new-event
     PROGRAM SECTION   
 ============================== -->
 <section id="ajouter" class="parallax-section">
-
-<div class="big-container">
-        <div class="container">
-            <div class="form-container">
-                <h2 class="form-title">Informations Générales</h2>
-                <form class="first-form" action="" method="post">
-                    
-					<input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
-                    <input name="Developpeur" type="text" class="form-input-dev" id="Developpeur" placeholder="Développeur">
-                    <input name="Nomduprojet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du projet">
-					<select name="Region" id="Region"  style="width:50%;" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
+<div  class="big-container">
+        <form action="" method="post">
+            <div class="container">
+                <div class="form-container">
+				<h2 class="form-title">Informations Générales</h2>
+                    <div class="first-form">
+                    <input name="Numero" type="text" class="form-input-numero" id="Numero" placeholder="Numéro">
+                    <input name="Devolopeur" type="text" class="form-input-dev" id="Devolopeur" placeholder="Devolopeur">
+                    <input name="Nom du projet" type="text" class="form-input-nom" id="Nom du projet" placeholder="Nom du Projet">
+					<select name="Region" id="Region"  style="width:50%;" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                             <option value="">Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
@@ -267,10 +266,10 @@ http://www.templatemo.com/tm-486-new-event
                             <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
                         </select>
 						  <script type="text/javascript" language="JavaScript">
-                                document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner province</option></select>')
+                                document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner Province</option></select>')
                           </script>
 					    <noscript>
-						<select name="province" id="Province" style="width:50%;" >
+						<select name="province" id="Province"  style="width:49%;" required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
@@ -278,15 +277,33 @@ http://www.templatemo.com/tm-486-new-event
 						</noscript>
 						<input name="Localite" type="text" class="form-input-loc" id="Localite" placeholder="Localité">
                         <input name="Puissance" type="text" class="form-input-pui" id="Puissance" placeholder="Puissance (MW)">
-					<input name="DepotauMEME" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:50%;" id="Depot au MEME" placeholder="Dépôt au MEME">
-					<input name="EnvoidudossieraONEE" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" style="width:49%;" id="Envoi du dossier à l'ONEE" placeholder="Envoi du dossier à l'ONEE/GRD Concerné">
-                    <input name="Etatavancement" type="text"  class="form-input-env" id="Etat D'avancement" placeholder="Etat D'avancement">
-                    <input name="Investissementduprojet" type="text" style="width:100%;" id="Investissement du projet" placeholder="Investissement du projet (MDH)">
-					<br>
+                        <input name="Productibleprevisionnel" type="text" class="form-input-prod" id="Productible Prévisionnel" placeholder="Productible prévisionnel (GWh/an)">
+                        <input name="Sourceenergie" type="text" class="form-input-sou" id="Source energie" placeholder="Source Énergie">
+                        <input name="Co2eviteTCO2an" type="text" style="width:49%;" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
+                        <input name="DepotalaDEREE" type="text"  style="width:50%;" id="Depot à la DEREE" placeholder="Dépôt à la DEREE">
+				        <input name="EnvoidudossieraONEE" type="text"  style="width:57%;" id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE/GRD Concerné"> 
+                        <input name="ReponseONEE" type="text" style="width:42%;" id="Réponse ONEE" placeholder="Réponse ONEE/GRD Concerné">                   
+                        <input name="Depotdu1ercomplementdudossierparledeveloppeur" type="text"  style="width:100%;" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur">
+                    <input name="Envoidu1ercomplementdudossieraONEE" type="text"  style="width:100%;" id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE/GRD Concerné">
+                    </div>
+                </div>
+                <div class="form-container-right">
+                 <div class="second-form">
+                 <button class="btn_"><i class="fa fa-plus"></i></button>
+                 <button class="btn_"><i class="fa fa-trash"></i></button>
+                 <br>
+                    <input name="AvisdeONEE" type="text" class="form-input-aviss" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
+                    <input name="AvisMEME" type="text" class="form-input-avis" id="Avis MEMEE" placeholder="Avis MEME"> 
+                    <input name="Observations" type="text" class="form-input-obs" id="Observations" placeholder="Observations">  
+                    <input name="CoordonneesLambert" type="text" style="width:100%;" id="Coordonnées Lambert" placeholder="Coordonnées Lambert (m)">    
+                    <input name="CoordonneesGeographique" type="text" style="width:100%;" id="Coordonnées Géographique" placeholder="Coordonnées Géographiques">
+                    <input name="Echelledelacartegeographique" type="text" class="form-input-egeo" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
+                    <input name="Investissementduprojet" type="text" class="form-input-inv" id="Investissement du projet" placeholder="Investissement du projet (MDH)">
                     <button type="submit" name="submit" class="btn">Ajouter Le Projet</button>
-				</form>
+                 </div>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </section>
 

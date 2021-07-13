@@ -401,7 +401,6 @@ color: rgb(243, 233, 233);
 
 input {
     border: none;
-    
     outline: none;
     padding: 5px;
 }
@@ -417,45 +416,43 @@ select {
 }
 
 .container {
-    width: 80%;
+    margin-top: 70px;
+    margin-left: 90px;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form {
-    width: 65%;
+.first-form,
+.second-form {
+    width: 80%;
 }
 
-form>* {
+.first-form>* {
+    margin-top: 30px;
+}
+
+.second-form>* {
     margin-top: 30px;
 }
 
 /* first form */
 
 .form-container {
-    height: 100%;
-    width: 80%;
+    height: 750px;
+    width: 90%;
     flex-direction: column;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: white;
-    margin-top: 151px;
-    padding-bottom: 196px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
-	border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-bottom: 20px;
 
 }
 .form-container input{
     border-bottom: 1px solid gray;
-}
-.first-form{
-	color: black;
 }
 .first-form>select {
     border: none;
@@ -470,7 +467,6 @@ form>* {
     width: 100%;
     display: flex;
 }
-
 .form-input-numero {
     width: 20%;
 }
@@ -492,34 +488,97 @@ form>* {
 .form-input-prov {
     width: 60%;
 }
+.form-input-prod {
+    width: 60%;
+}
+.form-input-sou {
+    width: 39%;
+}
+.form-input-derr {
+    width: 50%;
+}
+.form-input-rep {
+    width: 40%;
+}
 .form-select-reg {
     width: 57%;
 }
+.form-select-co2 {
+    width: 50%;
+}
+.form-input-name {
+    width: 49%;
+}
+.form-input-obs {
+    width: 100%;
+}
+.form-input-coo {
+    width: 45%;
+}
+.form-input-geo {
+    width: 53%;
+}
+.form-input-egeo {
+    width: 100%;
+}
+.form-input-inv {
+    width: 100%;
+}
+.form-input-avis {
+    width: 49%;
+}
+.form-input-aviss {
+    width: 45%;
+}
+.form-select-date {
+    width: 100%;
+}
+.form-input-company {
+    width: 100%;
+}
 
+.form-input-business {
+    width: 60%;
+}
+
+.form-select-employees {
+    width: 38%;
+}
+.btn_ {
+    background-color: #4053be;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn_:hover {
+    background-color: RoyalBlue;
+  }
 /* second form */
 
 .form-container-right {
-    
-    width: 80%;
+    width: 90%;
+    height: 750px;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
     background-color: #4053be;
     color: #fff;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-bottom: 20px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
-
 }
 .form-container-right input {
     border-bottom: 1px solid white;
 }
 .second-form>input {
-	background-color: #4053be;
-	color: white;
+    background-color: #4053be;
+    color: white;
 }
 
 .second-form>select {
@@ -531,11 +590,11 @@ form>* {
 
 .second-form>select>option {
     background-color: white;
-	color: black;
+    color: black;
 }
 
 .second-form>select>option:first-child {
-	color: black;
+    color: black;
 }
 
 .second-form>input[type="text"]::placeholder {
@@ -582,7 +641,8 @@ form>* {
 .btn {
     border-radius: 10px;
     padding: 5px 20px;
-    background-color: #95a1e5;
-    border: 1px solid #95a1e5;
-    color: white;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    position: center;
 }
