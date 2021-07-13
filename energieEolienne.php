@@ -10,29 +10,24 @@
         $Localite = mysqli_real_escape_string($link, $_REQUEST['Localite']);
         $Puissance = mysqli_real_escape_string($link, $_REQUEST['Puissance']);
         $Productibleprevisionnel = mysqli_real_escape_string($link, $_REQUEST['Productibleprevisionnel']);
-        $Sourceenergie= mysqli_real_escape_string($link, $_REQUEST['Sourceenergie']);
         $Co2eviteTCO2an = mysqli_real_escape_string($link, $_REQUEST['Co2eviteTCO2an']);
+        $Sourceenergie= mysqli_real_escape_string($link, $_REQUEST['Sourceenergie']);
+        $CoordonneesGeographiqueCoordonneesLambert = mysqli_real_escape_string($link, $_REQUEST['CoordonneesGeographique/CoordonneesLambert']);
+        $Etatavancement = mysqli_real_escape_string($link, $_REQUEST['Etatavancement']);
+        $Investissementduprojet= mysqli_real_escape_string($link, $_REQUEST['Investissementduprojet']);
         $DepotalaDEREE = mysqli_real_escape_string($link, $_REQUEST['DepotalaDEREE']);
         $EnvoidudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoidudossieraONEE']);
         $ReponseONEE= mysqli_real_escape_string($link, $_REQUEST['ReponseONEE']);
-        $Depotdu1ercomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotdu1ercomplementdudossierparledeveloppeur']);
-        $Envoidu1ercomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['Envoidu1ercomplementdudossieraONEE']);
+        $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotducomplementdudossierparledeveloppeur']);
+        $EnvoiducomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoiducomplementdudossieraONEE']);
         $AvisdeONEE = mysqli_real_escape_string($link, $_REQUEST['AvisdeONEE']);
         $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
         $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
-        $CoordonneesLambert = mysqli_real_escape_string($link, $_REQUEST['CoordonneesLambert']);
-        $CoordonneesGeographique = mysqli_real_escape_string($link, $_REQUEST['CoordonneesGeographique']);
-        $Echelledelacartegeographique= mysqli_real_escape_string($link, $_REQUEST['Echelledelacartegeographique']);
-        $Etatavancement = mysqli_real_escape_string($link, $_REQUEST['Etatavancement']);
-        $Investissementduprojet= mysqli_real_escape_string($link, $_REQUEST['Investissementduprojet']);
-        $sql = "INSERT INTO `energieeolienne`(`Numero`, `Developpeur`, `Nom du projet`, `Region`, `Province`,
-         `Localite`, `Puissance`, `Productible previsionnel`, `Source energie`, `Co2 evite TCO2/an`, 
-         `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du 1er complement du dossier par le developpeur`,
-          `Envoi du 1er complement du dossier à l'ONEE`, `Avis de l'ONEE`, `Avis MEME`, `Observations`, `Coordonnees Lambert`, `Coordonnees Geographique`, `Echelle de la carte geographique`, `Etat avancement`, `Investissement du projet`) values
+        $sql = "INSERT INTO `energieeolienne`(`Numero`, `Developpeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du  complement du dossier à l'ONEE`, `Avis de l'ONEE`, `Avis MEME`, `Observations`) VALUES
          ('$Numero','$Developpeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$Productibleprevisionnel',
-          '$Sourceenergie','$Co2eviteTCO2an','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE',
-          '$Depotdu1ercomplementdudossierparledeveloppeur','$Envoidu1ercomplementdudossieraONEE','$AvisdeONEE',
-          '$AvisMEME','$Observations','$CoordonneesLambert','$CoordonneesGeographique','$Echelledelacartegeographique','$Etatavancement','$Investissementduprojet')";
+         '$Co2eviteTCO2an','$Sourceenergie','$CoordonneesGeographiqueCoordonneesLambert','$Investissementduprojet','$Etatavancement','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE',
+          '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$AvisdeONEE',
+          '$AvisMEME','$Observations')";
         if (mysqli_query($link, $sql)) {
           header("Location: energieEolienne.php");
         } else {
@@ -294,21 +289,20 @@ http://www.templatemo.com/tm-486-new-event
 					<th >Localité</th>
 					<th >Puissance</th>
 					<th >Productible previsionnel</th>
-					<th >Source energie</th>
 					<th >Co2 evite TCO2/an</th>
+                    <th >Source energie</th>
+					<th >Coordonnees Geographique/Coordonnees Lambert</th>
+					<th >Investissement du projet</th>
+                    <th >Etat avancement</th>
                     <th >Depot a la DEREE</th>
 					<th >Envoi du dossier a l'ONEE</th>
 					<th >Reponse ONEE</th>
-					<th >Depot du 1er complement du dossier par le developpeur</th>
-					<th >Envoi du 1er complement du dossier à l'ONEE</th>
+					<th >Depot du complement du dossier par le developpeur</th>
+					<th >Envoi du complement du dossier à l'ONEE</th>
 					<th >Avis de l'ONEE</th>
 					<th >Avis MEME</th>
 					<th >Observations</th>
-					<th >Coordonnees Lambert</th>
-					<th >Coordonnees Geographique</th>
-                    <th >Echelle de la carte geographique</th>
-					<th >Etat avancement</th>
-					<th >Investissement du projet</th>
+				
 				</tr>
 				
 				<tr>
@@ -343,21 +337,20 @@ http://www.templatemo.com/tm-486-new-event
 					<td><input name="Localite" type="text"  id="Localite" placeholder="Localité"></td>
 					<td><input name="Puissance" type="text"  id="Puissance" placeholder="Puissance (MW)"></td>
 					<td><input name="Productibleprevisionnel" type="text"  id="Productible Prévisionnel" placeholder="Productible prévisionnel (GWh/an)"></td>
-					<td><input name="Sourceenergie" type="text"  id="Source energie" placeholder="Source Énergie"></td>
                     <td> <input name="Co2eviteTCO2an" type="text"  id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an"></td>
+                    <td><input name="Sourceenergie" type="text"  id="Source energie" placeholder="Source Énergie"></td>
+                    <td><input name="CoordonneesGeographique/CoordonneesLambert" type="text"  id="Coordonnées Géographique" placeholder="Coordonnées Géographiques/Coordonnées Lambert (m)"></td> 
+                   <td><input name="Investissementduprojet" type="text"  id="Investissement du projet" placeholder="Investissement du projet (MDH)"></td> 
+                    <td><input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" placeholder="Etat d'Avancement"></td> 
                    <td><input name="DepotalaDEREE" type="text"   id="Depot à la DEREE" placeholder="Dépôt à la DEREE"></td> 
                     <td><input name="EnvoidudossieraONEE" type="text"   id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE/GRD Concerné"> </td>
                    <td><input name="ReponseONEE" type="text"  id="Réponse ONEE" placeholder="Réponse ONEE/GRD Concerné"></td> 
-                   <td><input name="Depotdu1ercomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur"></td>
-                   <td> <input name="Envoidu1ercomplementdudossieraONEE" type="text"   id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE/GRD Concerné"></td> 
+                   <td><input name="Depotducomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur"></td>
+                   <td> <input name="EnvoiducomplementdudossieraONEE" type="text"   id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE/GRD Concerné"></td> 
                    <td><input name="AvisdeONEE" type="text"  id="Avis de l'ONEE" placeholder="Avis de l'ONEE"></td>
                    <td> <input name="AvisMEME" type="text"  id="Avis MEMEE" placeholder="Avis MEME"> </td> 
                    <td> <input name="Observations" type="text" id="Observations" placeholder="Observations">  </td> 
-                   <td><input name="CoordonneesLambert" type="text"  id="Coordonnées Lambert" placeholder="Coordonnées Lambert (m)">   </td> 
-                   <td><input name="CoordonneesGeographique" type="text"  id="Coordonnées Géographique" placeholder="Coordonnées Géographiques"></td> 
-                   <td><input name="Echelledelacartegeographique" type="text"  id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique"></td>
-                   <td><input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" placeholder="Etat d'Avancement"></td> 
-                   <td><input name="Investissementduprojet" type="text"  id="Investissement du projet" placeholder="Investissement du projet (MDH)"></td> 
+                   
 				</tr>
 			</table>
             <button type="submit" name="submit" class="btn">Ajouter Le Projet</button>
