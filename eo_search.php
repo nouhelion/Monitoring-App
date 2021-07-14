@@ -49,8 +49,8 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="home.php" class="smoothScroll">Home</a></li>
-                    <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
-                    <li><a href="search_eo" class="smoothScroll">Rechercher</a></li>
+                    <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
+                    <li><a href="#search" class="smoothScroll">Rechercher</a></li>
                     <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
                     <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
                 </ul>

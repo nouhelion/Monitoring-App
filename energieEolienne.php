@@ -55,6 +55,7 @@ http://www.templatemo.com/tm-486-new-event
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Main Style Css -->
 
     <!-- Main css -->
@@ -179,6 +180,31 @@ http://www.templatemo.com/tm-486-new-event
             }
             return true;
         }
+        $(document).ready(function () {
+    
+     var myform = $('#myform'),
+         iter = 2;
+     $('#btnAddCol').click(function () {
+         myform.find('tr').each(function(){
+           var trow = $(this);
+             if(trow.index() === 0){
+                
+                $("#add tr th:nth-last-child(4)").after("<th>Réponse ONEE/GRD Concerné en Cas Du "+iter+" Complément</th>");
+                $("#add tr th:nth-last-child(4)").after("<th>Dépôt du "+iter+" Complément du Dossier Par le Développeur</th>");
+                $("#add tr th:nth-last-child(4)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ONEE/GRD Concerné</th>");
+             }else{
+                 
+                 $("#add tr td:nth-last-child(4)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE" ></td>');
+                 $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'complementdudossierparledeveloppeur" type="text" id="Envoi du complement du dossier a ONEE" ></td>');
+                 $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'complementdudossieraONEE" type="text" id="Envoidu'+iter+'complementdudossieraONEE" ></td>');
+                } 
+            
+         });
+         iter += 1;
+     });
+ });
+
+
     </script>
 
 </head>
@@ -257,7 +283,7 @@ http://www.templatemo.com/tm-486-new-event
 ============================== -->
 <br><br>
 <section id="ajouter" class="parallax-section">
-<form  method="post" action="">
+<form  method="post" action="" id="myform">
     <table id="add">
 				<tr>
                 <th>Numéro</th>
@@ -277,16 +303,17 @@ http://www.templatemo.com/tm-486-new-event
                     <th>Envoi du Dossier à l'ONEE/GRD Concerné</th>
                     <th>Réponse ONEE/GRD Concerné</th>
                     <th>Dépôt du Complément du Dossier Par le Développeur</th>
-                    <th>Envoi du Complément du Dossier à l'ONEE/GRD Concerné</th>
+                    <th>Envoi du Complément du Dossier à l'ONEE/GRD Concerné<button type="button" class="btn" id="btnAddCol"><i class="fa fa-plus" aria-hidden="true"></i></button></th>
+                    
                     <th>Avis de l'ONEE</th>
                     <th>Avis MEME</th>
                     <th>Observations</th>
 				</tr>
 				<tr>
 					<td><input name="Numero" type="text"  id="Numero" ></td>
-					<td><input name="Demandeur" type="text"  id="Demandeur"></td>
+					<td><input name="Developpeur" type="text"  id="Developpeur"></td>
 					<td><input name="Nomduprojet" type="text"  id="Nom du projet" ></td>
-					<td><select name="Region" id="Region"  onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
+					<td><select name="Region" id="Region"  onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" >
                             <option value="">Selectionner Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
@@ -323,13 +350,14 @@ http://www.templatemo.com/tm-486-new-event
                     <td><input name="EnvoidudossieraONEE" type="text"   id="Envoi du dossier a l'ONEE" > </td>
                    <td><input name="ReponseONEE" type="text"  id="Réponse ONEE" ></td> 
                    <td><input name="Depotducomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" ></td>
-                   <td> <input name="EnvoiducomplementdudossieraONEE" type="text"   id="Envoi du 1er complement du dossier à l'ONEE" ></td> 
+                   <td> <input name="EnvoiducomplementdudossieraONEE" type="text"   id="Envoi du  complement du dossier à l'ONEE" ></td> 
                    <td><input name="AvisdeONEE" type="text"  id="Avis de l'ONEE" ></td>
                    <td> <input name="AvisMEME" type="text"  id="Avis MEMEE" > </td> 
                    <td> <input name="Observations" type="text" id="Observations" >  </td> 
 				</tr>
 			</table>
-            <button type="submit" name="submit" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            
+            <input type="submit" name="submit" value='Ajouter Un Projet' class="btn"></input>
     </form>
 </section>
 
