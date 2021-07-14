@@ -28,7 +28,7 @@
         $AvisAgenceBassin= mysqli_real_escape_string($link, $_REQUEST['AvisAgenceBassin']);
         $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
         $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
-        $sql = "INSERT INTO `energiehydroelectrique`(`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du  complement du dossier par le developpeur`, `Envoi du  complement du dossier à l'ONEE`, `Avis de l'ONEE`, `Envoi du dossier au departement eau`, `Reponse Departement de l'eau`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier à l'ABH`, `Avis Agence Bassin`, `Avis MEME`, `Observations`) VALUES 
+        $sql = "INSERT INTO `energiehydroelectrique`(`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du  complement du dossier par le developpeur`, `Envoi du  complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Envoi du dossier au departement eau`, `Reponse Departement de l'eau`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ABH`, `Avis Agence Bassin`, `Avis MEME`, `Observations`) VALUES 
          ('$Numero','$Demandeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$Productibleprevisionnel',
          '$Co2eviteTCO2an','$Sourceenergie','$CoordonneesGeographiqueCoordonneesLambert','$Investissementduprojet','$Etatavancement','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE',
           '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$AvisdeONEE','$Envoidudossieraudepartementeau',
@@ -222,7 +222,7 @@ http://www.templatemo.com/tm-486-new-event
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="home.php" class="smoothScroll">Home</a></li>
 				<li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
-				<li><a href="#overview" class="smoothScroll">Rechercher</a></li>
+				<li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
 				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
 				<li><a href="#speakers" class="smoothScroll">Reporting</a></li>
 			</ul>

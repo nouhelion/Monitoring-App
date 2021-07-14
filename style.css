@@ -1,0 +1,11 @@
+.contain {
+	width: 1650px;
+	padding: 2em;
+	margin-left: 20px;
+}
+
+.bold-blue {
+	font-weight: bold;
+	color: #0277BD;
+}
+
