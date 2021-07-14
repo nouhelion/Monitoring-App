@@ -37,280 +37,257 @@
     ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!--
+    <!--
 Gestion des autorisation
 http://www.templatemo.com/tm-486-new-event
 -->
-<title>Ministere des mines, de l'energie et de l'environnement</title>
-<meta name="description" content="">
-<meta name="author" content="">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/owl.theme.css">
-<link rel="stylesheet" href="css/owl.carousel.css">
-	<!-- Main Style Css -->
-    
-<!-- Main css -->
-<link rel="stylesheet" href="css/ele.css">
+    <title>Ministere des mines, de l'energie et de l'environnement</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Main Style Css -->
 
-<!-- Google Font -->
-<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
-<script language="javascript" type="text/javascript">
-    function dynamicdropdown(listindex)
-    {
-        switch (listindex)
-        {
-        case "Rabat-Salé-Kénitra" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Rabat");
-            document.getElementById("province").options[2]=new Option("Salé");
-			document.getElementById("province").options[3]=new Option("Skhirate, Témara");
-			document.getElementById("province").options[4]=new Option("Kénitra");
-			document.getElementById("province").options[5]=new Option("Khémisset");
-			document.getElementById("province").options[6]=new Option("Sidi Kacem");
-			document.getElementById("province").options[7]=new Option("Sidi Slimane");
-            break;
-        case "Casablanca-Settat" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Casablanca");
-            document.getElementById("province").options[2]=new Option("Mohammédia");
-            document.getElementById("province").options[3]=new Option("El Jadida");
-			document.getElementById("province").options[4]=new Option("Nouaceur");
-			document.getElementById("province").options[5]=new Option("Médiouna");
-			document.getElementById("province").options[6]=new Option("Benslimane");
-			document.getElementById("province").options[7]=new Option("Berrechid");
-			document.getElementById("province").options[8]=new Option("Settat");
-			document.getElementById("province").options[9]=new Option("Sidi Bennour");
-            break;
-		case "Fès - Meknès" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Fès");
-            document.getElementById("province").options[2]=new Option("Meknès");
-            document.getElementById("province").options[3]=new Option("El Hajeb");
-			document.getElementById("province").options[4]=new Option("Ifrane");
-			document.getElementById("province").options[5]=new Option("Moulay Yaâcoub");
-			document.getElementById("province").options[6]=new Option("Séfrou");
-			document.getElementById("province").options[7]=new Option("Boulemane");
-			document.getElementById("province").options[8]=new Option("Taounate");
-			document.getElementById("province").options[9]=new Option("Taza");
-            break;
-		case "Marrakech-Safi" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Marrakech");
-            document.getElementById("province").options[2]=new Option("Chichaoua");
-            document.getElementById("province").options[3]=new Option("Al Haouz");
-			document.getElementById("province").options[4]=new Option("El Kelaâ des Sraghna");
-			document.getElementById("province").options[5]=new Option("Essaouira");
-			document.getElementById("province").options[6]=new Option("Rehamna");
-			document.getElementById("province").options[7]=new Option("Safi");
-			document.getElementById("province").options[8]=new Option("Youssoufia");
-            break;
-		case "Tanger – Tétouan – Al Hoceima" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Tanger, Assilah");
-            document.getElementById("province").options[2]=new Option("M’diq, Fnideq");
-            document.getElementById("province").options[3]=new Option("Tétouan");
-			document.getElementById("province").options[4]=new Option("Fahs, Anjra");
-			document.getElementById("province").options[5]=new Option("Larache");
-			document.getElementById("province").options[6]=new Option("Al Hoceïma");
-			document.getElementById("province").options[7]=new Option("Chefchaouen");
-			document.getElementById("province").options[8]=new Option("Ouezzane");
-            break;
-		case "Oriental" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Oujda, Angad");
-            document.getElementById("province").options[2]=new Option("Nador");
-            document.getElementById("province").options[3]=new Option("Driouch");
-			document.getElementById("province").options[4]=new Option("Jerada");
-			document.getElementById("province").options[5]=new Option("Berkane");
-			document.getElementById("province").options[6]=new Option("Taourirt");
-			document.getElementById("province").options[7]=new Option("Guercif");
-			document.getElementById("province").options[8]=new Option("Figuig");
-            break;
-		case "Béni Mellal-Khénifra" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Béni, Mellal");
-            document.getElementById("province").options[2]=new Option("Azilal");
-            document.getElementById("province").options[3]=new Option("Fquih Ben Salah");
-			document.getElementById("province").options[4]=new Option("Khénifra");
-			document.getElementById("province").options[5]=new Option("Khouribga");
-            break;
-		case "Drâa-Tafilalet" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Errachidia");
-            document.getElementById("province").options[2]=new Option("Ouarzazate");
-            document.getElementById("province").options[3]=new Option("Midelt");
-			document.getElementById("province").options[4]=new Option("Tinghir");
-			document.getElementById("province").options[5]=new Option("Zagora");
-            break;
-		case "Souss-Massa" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Agadir Ida, Outanane");
-            document.getElementById("province").options[2]=new Option("Inezgane, Aït Melloul");
-            document.getElementById("province").options[3]=new Option("Chtouka, Aït Baha");
-			document.getElementById("province").options[4]=new Option("Taroudant");
-			document.getElementById("province").options[5]=new Option("Tiznit");
-			document.getElementById("province").options[6]=new Option("Tata");
-            break;
-		case "Guelmim-Oued Noun" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Guelmim");
-            document.getElementById("province").options[2]=new Option("Assa-Zag");
-            document.getElementById("province").options[3]=new Option("Tan Tan");
-			document.getElementById("province").options[4]=new Option("Sidi Ifni");
-            break;
-		case "Laâyoune-Sakia El Hamra" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Laâyoune");
-            document.getElementById("province").options[2]=new Option("Boujdour");
-            document.getElementById("province").options[3]=new Option("Tarfaya");
-			document.getElementById("province").options[4]=new Option("Es-Semara");
-            break;
-		case "Dakhla-Oued Ed Dahab" :
-            document.getElementById("province").options[0]=new Option("Selectionner province");
-            document.getElementById("province").options[1]=new Option("Oued Ed Dahab");
-            document.getElementById("province").options[2]=new Option("Aousserd");
-            break;
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/ele.css">
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+    <script language="javascript" type="text/javascript">
+        function dynamicdropdown(listindex) {
+            switch (listindex) {
+                case "Rabat-Salé-Kénitra":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Rabat");
+                    document.getElementById("province").options[2] = new Option("Salé");
+                    document.getElementById("province").options[3] = new Option("Skhirate, Témara");
+                    document.getElementById("province").options[4] = new Option("Kénitra");
+                    document.getElementById("province").options[5] = new Option("Khémisset");
+                    document.getElementById("province").options[6] = new Option("Sidi Kacem");
+                    document.getElementById("province").options[7] = new Option("Sidi Slimane");
+                    break;
+                case "Casablanca-Settat":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Casablanca");
+                    document.getElementById("province").options[2] = new Option("Mohammédia");
+                    document.getElementById("province").options[3] = new Option("El Jadida");
+                    document.getElementById("province").options[4] = new Option("Nouaceur");
+                    document.getElementById("province").options[5] = new Option("Médiouna");
+                    document.getElementById("province").options[6] = new Option("Benslimane");
+                    document.getElementById("province").options[7] = new Option("Berrechid");
+                    document.getElementById("province").options[8] = new Option("Settat");
+                    document.getElementById("province").options[9] = new Option("Sidi Bennour");
+                    break;
+                case "Fès - Meknès":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Fès");
+                    document.getElementById("province").options[2] = new Option("Meknès");
+                    document.getElementById("province").options[3] = new Option("El Hajeb");
+                    document.getElementById("province").options[4] = new Option("Ifrane");
+                    document.getElementById("province").options[5] = new Option("Moulay Yaâcoub");
+                    document.getElementById("province").options[6] = new Option("Séfrou");
+                    document.getElementById("province").options[7] = new Option("Boulemane");
+                    document.getElementById("province").options[8] = new Option("Taounate");
+                    document.getElementById("province").options[9] = new Option("Taza");
+                    break;
+                case "Marrakech-Safi":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Marrakech");
+                    document.getElementById("province").options[2] = new Option("Chichaoua");
+                    document.getElementById("province").options[3] = new Option("Al Haouz");
+                    document.getElementById("province").options[4] = new Option("El Kelaâ des Sraghna");
+                    document.getElementById("province").options[5] = new Option("Essaouira");
+                    document.getElementById("province").options[6] = new Option("Rehamna");
+                    document.getElementById("province").options[7] = new Option("Safi");
+                    document.getElementById("province").options[8] = new Option("Youssoufia");
+                    break;
+                case "Tanger – Tétouan – Al Hoceima":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Tanger, Assilah");
+                    document.getElementById("province").options[2] = new Option("M’diq, Fnideq");
+                    document.getElementById("province").options[3] = new Option("Tétouan");
+                    document.getElementById("province").options[4] = new Option("Fahs, Anjra");
+                    document.getElementById("province").options[5] = new Option("Larache");
+                    document.getElementById("province").options[6] = new Option("Al Hoceïma");
+                    document.getElementById("province").options[7] = new Option("Chefchaouen");
+                    document.getElementById("province").options[8] = new Option("Ouezzane");
+                    break;
+                case "Oriental":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Oujda, Angad");
+                    document.getElementById("province").options[2] = new Option("Nador");
+                    document.getElementById("province").options[3] = new Option("Driouch");
+                    document.getElementById("province").options[4] = new Option("Jerada");
+                    document.getElementById("province").options[5] = new Option("Berkane");
+                    document.getElementById("province").options[6] = new Option("Taourirt");
+                    document.getElementById("province").options[7] = new Option("Guercif");
+                    document.getElementById("province").options[8] = new Option("Figuig");
+                    break;
+                case "Béni Mellal-Khénifra":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Béni, Mellal");
+                    document.getElementById("province").options[2] = new Option("Azilal");
+                    document.getElementById("province").options[3] = new Option("Fquih Ben Salah");
+                    document.getElementById("province").options[4] = new Option("Khénifra");
+                    document.getElementById("province").options[5] = new Option("Khouribga");
+                    break;
+                case "Drâa-Tafilalet":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Errachidia");
+                    document.getElementById("province").options[2] = new Option("Ouarzazate");
+                    document.getElementById("province").options[3] = new Option("Midelt");
+                    document.getElementById("province").options[4] = new Option("Tinghir");
+                    document.getElementById("province").options[5] = new Option("Zagora");
+                    break;
+                case "Souss-Massa":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Agadir Ida, Outanane");
+                    document.getElementById("province").options[2] = new Option("Inezgane, Aït Melloul");
+                    document.getElementById("province").options[3] = new Option("Chtouka, Aït Baha");
+                    document.getElementById("province").options[4] = new Option("Taroudant");
+                    document.getElementById("province").options[5] = new Option("Tiznit");
+                    document.getElementById("province").options[6] = new Option("Tata");
+                    break;
+                case "Guelmim-Oued Noun":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Guelmim");
+                    document.getElementById("province").options[2] = new Option("Assa-Zag");
+                    document.getElementById("province").options[3] = new Option("Tan Tan");
+                    document.getElementById("province").options[4] = new Option("Sidi Ifni");
+                    break;
+                case "Laâyoune-Sakia El Hamra":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Laâyoune");
+                    document.getElementById("province").options[2] = new Option("Boujdour");
+                    document.getElementById("province").options[3] = new Option("Tarfaya");
+                    document.getElementById("province").options[4] = new Option("Es-Semara");
+                    break;
+                case "Dakhla-Oued Ed Dahab":
+                    document.getElementById("province").options[0] = new Option("Selectionner province");
+                    document.getElementById("province").options[1] = new Option("Oued Ed Dahab");
+                    document.getElementById("province").options[2] = new Option("Aousserd");
+                    break;
+            }
+            return true;
         }
-        return true;
-    }
     </script>
-      <style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
-</style>
 </head>
+
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse" class="form-v10">
 
-<!-- =========================
+    <!-- =========================
      PRE LOADER       
 ============================== -->
-<div class="preloader">
+    <div class="preloader">
 
-	<div class="sk-rotating-plane"></div>
+        <div class="sk-rotating-plane"></div>
 
-</div>
+    </div>
 
 
-<!-- =========================
+    <!-- =========================
      NAVIGATION LINKS     
 ============================== -->
 
-<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
-	<div class="container">
+    <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+        <div class="container">
 
-		<!-- navbar header -->
-		<div class="navbar-header">
-			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-			</button>
-			<img src="images/roy.png"> 
-		</div>
+            <!-- navbar header -->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <img src="images/roy.png">
+            </div>
 
-		<div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse">
 
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="home.php" class="smoothScroll">Home</a></li>
-				<li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
-				<li><a href="search_eo" class="smoothScroll">Rechercher</a></li>
-				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
-                <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
-			</ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.php" class="smoothScroll">Home</a></li>
+                    <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
+                    <li><a href="search_eo" class="smoothScroll">Rechercher</a></li>
+                    <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
+                    <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
+                </ul>
 
-		</div>
+            </div>
 
-	</div>
-</div>
+        </div>
+    </div>
 
 
-<!-- =========================
+    <!-- =========================
     INTRO SECTION   
 ============================== -->
-<section id="intro" class="parallax-section">
-	<div class="container">
-		<div class="row">
+    <section id="intro" class="parallax-section">
+        <div class="container">
+            <div class="row">
 
-		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s" >
-			<h2 style="color: black;" >Direction des Energies Renouvelables et de l'energie eolienne</h2>
-			<h4 style="color: white;" >Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</h4>
-		</div>
+                <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
+                    <h2 style="color: black;">Direction des Energies Renouvelables et de l'energie eolienne</h2>
+                    <h4 style="color: white;">Dossiers de demande d'autorisation provisoire pour le développement des
+                        projets EnR dans le cadre de la loi 13-09</h4>
+                </div>
 
-		</div>
-	</div>
-</section>
+            </div>
+        </div>
+    </section>
 
 
-<!-- =========================
+    <!-- =========================
    REGISTER SECTION   
 ============================== -->
 
-		
 
-<!-- =========================
+
+    <!-- =========================
     PROGRAM SECTION   
 ============================== -->
+<br><br>
 <section id="ajouter" class="parallax-section">
 <form  method="post" action="">
-    <table id="customers">
+    <table id="add">
 				<tr>
-					<th >Numero</th>
-					<th >Developpeur</th>
-					<th >Nom du projet</th>
-					<th >Région</th>
-					<th >Province</th>
-					<th >Localité</th>
-					<th >Puissance</th>
-					<th >Productible previsionnel</th>
-					<th >Co2 evite TCO2/an</th>
-                    <th >Source energie</th>
-					<th >Coordonnees Geographique/Coordonnees Lambert</th>
-					<th >Investissement du projet</th>
-                    <th >Etat avancement</th>
-                    <th >Depot a la DEREE</th>
-					<th >Envoi du dossier a l'ONEE</th>
-					<th >Reponse ONEE</th>
-					<th >Depot du complement du dossier par le developpeur</th>
-					<th >Envoi du complement du dossier à l'ONEE</th>
-					<th >Avis de l'ONEE</th>
-					<th >Avis MEME</th>
-					<th >Observations</th>
-				
+                <th>Numéro</th>
+                    <th>Développeur</th>
+                    <th>Nom du projet</th>
+                    <th>Région</th>
+                    <th>Province</th>
+                    <th>Localité</th>
+                    <th>Puissance (MW)</th>
+                    <th>Productible prévisionnel (GWh/an)</th>
+                    <th>Co2 évité TCO2/an</th>
+                    <th>Source Énergie</th>
+                    <th>Coordonnées Géographiques/Coordonnées Lambert (m)</th>
+                    <th>Investissement du projet (MDH)</th>
+                    <th>Etat d'Avancement</th>
+                    <th>Dépôt à la DEREE</th>
+                    <th>Envoi du Dossier à l'ONEE/GRD Concerné</th>
+                    <th>Réponse ONEE/GRD Concerné</th>
+                    <th>Dépôt du Complément du Dossier Par le Développeur</th>
+                    <th>Envoi du Complément du Dossier à l'ONEE/GRD Concerné</th>
+                    <th>Avis de l'ONEE</th>
+                    <th>Avis MEME</th>
+                    <th>Observations</th>
 				</tr>
-				
 				<tr>
-					<td><input name="Numero" type="text"  id="Numero" placeholder="Numéro"></td>
-					<td><input name="Developpeur" type="text"  id="Developpeur" placeholder="Développeur"></td>
-					<td><input name="Nomduprojet" type="text"  id="Nom du projet" placeholder="Nom du projet"></td>
+					<td><input name="Numero" type="text"  id="Numero" ></td>
+					<td><input name="Demandeur" type="text"  id="Demandeur"></td>
+					<td><input name="Nomduprojet" type="text"  id="Nom du projet" ></td>
 					<td><select name="Region" id="Region"  onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
-                            <option value="">Région</option>
+                            <option value="">Selectionner Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
                             <option value="Fès - Meknès">Fès - Meknès</option>
@@ -325,35 +302,34 @@ http://www.templatemo.com/tm-486-new-event
                             <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
                         </select></td>
 					<td><script type="text/javascript" language="JavaScript">
-                                document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner Province</option></select>')
+                                document.write('<select name="province"  id="province"><option value="">Selectionner Province</option></select>')
                           </script>
 					    <noscript>
-						<select name="province" id="Province"  style="width:49%;" required>
-                            <option value="">Selectionner province</option>
+						<select name="province" id="Province"   required>
+                            <option value="">Selectionner Province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
                         </select>
 						</noscript></td>
-					<td><input name="Localite" type="text"  id="Localite" placeholder="Localité"></td>
-					<td><input name="Puissance" type="text"  id="Puissance" placeholder="Puissance (MW)"></td>
-					<td><input name="Productibleprevisionnel" type="text"  id="Productible Prévisionnel" placeholder="Productible prévisionnel (GWh/an)"></td>
-                    <td> <input name="Co2eviteTCO2an" type="text"  id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an"></td>
-                    <td><input name="Sourceenergie" type="text"  id="Source energie" placeholder="Source Énergie"></td>
-                    <td><input name="CoordonneesGeographique/CoordonneesLambert" type="text"  id="Coordonnées Géographique" placeholder="Coordonnées Géographiques/Coordonnées Lambert (m)"></td> 
-                   <td><input name="Investissementduprojet" type="text"  id="Investissement du projet" placeholder="Investissement du projet (MDH)"></td> 
-                    <td><input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" placeholder="Etat d'Avancement"></td> 
-                   <td><input name="DepotalaDEREE" type="text"   id="Depot à la DEREE" placeholder="Dépôt à la DEREE"></td> 
-                    <td><input name="EnvoidudossieraONEE" type="text"   id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE/GRD Concerné"> </td>
-                   <td><input name="ReponseONEE" type="text"  id="Réponse ONEE" placeholder="Réponse ONEE/GRD Concerné"></td> 
-                   <td><input name="Depotducomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur"></td>
-                   <td> <input name="EnvoiducomplementdudossieraONEE" type="text"   id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE/GRD Concerné"></td> 
-                   <td><input name="AvisdeONEE" type="text"  id="Avis de l'ONEE" placeholder="Avis de l'ONEE"></td>
-                   <td> <input name="AvisMEME" type="text"  id="Avis MEMEE" placeholder="Avis MEME"> </td> 
-                   <td> <input name="Observations" type="text" id="Observations" placeholder="Observations">  </td> 
-                   
+					<td><input name="Localite" type="text"  id="Localite" ></td>
+					<td><input name="Puissance" type="text"  id="Puissance" ></td>
+					<td><input name="Productibleprevisionnel" type="text"  id="Productible Prévisionnel" ></td>
+                    <td> <input name="Co2eviteTCO2an" type="text"  id="Co2 évité TCO2/an" ></td>
+                    <td><input name="Sourceenergie" type="text"  id="Source energie" ></td>
+                    <td><input name="CoordonneesGeographique/CoordonneesLambert" type="text"  id="Coordonnées Géographique" ></td> 
+                   <td><input name="Investissementduprojet" type="text"  id="Investissement du projet" ></td> 
+                    <td><input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" ></td> 
+                   <td><input name="DepotalaDEREE" type="text"   id="Depot à la DEREE" ></td> 
+                    <td><input name="EnvoidudossieraONEE" type="text"   id="Envoi du dossier a l'ONEE" > </td>
+                   <td><input name="ReponseONEE" type="text"  id="Réponse ONEE" ></td> 
+                   <td><input name="Depotducomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" ></td>
+                   <td> <input name="EnvoiducomplementdudossieraONEE" type="text"   id="Envoi du 1er complement du dossier à l'ONEE" ></td> 
+                   <td><input name="AvisdeONEE" type="text"  id="Avis de l'ONEE" ></td>
+                   <td> <input name="AvisMEME" type="text"  id="Avis MEMEE" > </td> 
+                   <td> <input name="Observations" type="text" id="Observations" >  </td> 
 				</tr>
 			</table>
-            <button type="submit" name="submit" class="btn">Ajouter Le Projet</button>
+            <button type="submit" name="submit" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
     </form>
 </section>
 
@@ -366,25 +342,25 @@ http://www.templatemo.com/tm-486-new-event
 
 
 
-<!-- Back top -->
-<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+    <!-- Back top -->
+    <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 
-<!-- =========================
+    <!-- =========================
      SCRIPTS   
 ============================== -->
-<script src="js_/jquery.js"></script>
-<script src="js_/bootstrap.min.js"></script>
-<script src="js_/jquery.parallax.js"></script>
-<script src="js_/owl.carousel.min.js"></script>
-<script src="js_/smoothscroll.js"></script>
-<script src="js_/wow.min.js"></script>
-<script src="js_/custom.js"></script>
-<script>
-	if ( window.history.replaceState ) {
-	  window.history.replaceState( null, null, window.location.href );
-	}
-	</script>
+    <script src="js_/jquery.js"></script>
+    <script src="js_/bootstrap.min.js"></script>
+    <script src="js_/jquery.parallax.js"></script>
+    <script src="js_/owl.carousel.min.js"></script>
+    <script src="js_/smoothscroll.js"></script>
+    <script src="js_/wow.min.js"></script>
+    <script src="js_/custom.js"></script>
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
 </body>
-</html>
 
+</html>

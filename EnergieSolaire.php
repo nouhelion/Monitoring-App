@@ -57,7 +57,7 @@ http://www.templatemo.com/tm-486-new-event
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/sol.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Google Font -->
 <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
 <script language="javascript" type="text/javascript">
@@ -180,30 +180,7 @@ http://www.templatemo.com/tm-486-new-event
         return true;
     }
     </script>
-     <style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
-</style>
+     
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
@@ -275,40 +252,39 @@ http://www.templatemo.com/tm-486-new-event
 <!-- =========================
     PROGRAM SECTION   
 ============================== -->
+<br><br>
 <section id="ajouter" class="parallax-section">
 <form  method="post" action="">
-    <table id="customers">
+    <table id="add">
 				<tr>
-					<th >Numero</th>
-					<th >Developpeur</th>
-					<th >Nom du projet</th>
-					<th >Région</th>
-					<th >Province</th>
-					<th >Localité</th>
-					<th >Puissance</th>
-					<th >Productible previsionnel</th>
-					<th >Co2 evite TCO2/an</th>
-                    <th >Source energie</th>
-					<th >Coordonnees Geographique/Coordonnees Lambert</th>
-					<th >Investissement du projet</th>
-                    <th >Etat avancement</th>
-                    <th >Depot a la DEREE</th>
-					<th >Envoi du dossier a l'ONEE</th>
-					<th >Reponse ONEE</th>
-					<th >Depot du complement du dossier par le developpeur</th>
-					<th >Envoi du complement du dossier à l'ONEE</th>
-					<th >Avis de l'ONEE</th>
-					<th >Avis MEME</th>
-					<th >Observations</th>
-				
+                <th>Numéro</th>
+                    <th>Demandeur</th>
+                    <th>Nom du projet</th>
+                    <th>Région</th>
+                    <th>Province</th>
+                    <th>Localité</th>
+                    <th>Puissance (MW)</th>
+                    <th>Productible prévisionnel (GWh/an)</th>
+                    <th>Co2 évité TCO2/an</th>
+                    <th>Source Énergie</th>
+                    <th>Coordonnées Géographiques/Coordonnées Lambert (m)</th>
+                    <th>Investissement du projet (MDH)</th>
+                    <th>Etat d'Avancement</th>
+                    <th>Dépôt à la DEREE</th>
+                    <th>Envoi du Dossier à l'ONEE/GRD Concerné</th>
+                    <th>Réponse ONEE/GRD Concerné</th>
+                    <th>Dépôt du Complément du Dossier Par le Développeur</th>
+                    <th>Envoi du Complément du Dossier à l'ONEE/GRD Concerné</th>
+                    <th>Avis de l'ONEE</th>
+                    <th>Avis MEME</th>
+                    <th>Observations</th>
 				</tr>
-				
 				<tr>
-					<td><input name="Numero" type="text"  id="Numero" placeholder="Numéro"></td>
-					<td><input name="Demandeur" type="text"  id="Demandeur" placeholder="Demandeur"></td>
-					<td><input name="Nomduprojet" type="text"  id="Nom du projet" placeholder="Nom du projet"></td>
+					<td><input name="Numero" type="text"  id="Numero" ></td>
+					<td><input name="Demandeur" type="text"  id="Demandeur"></td>
+					<td><input name="Nomduprojet" type="text"  id="Nom du projet" ></td>
 					<td><select name="Region" id="Region"  onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);" required>
-                            <option value="">Région</option>
+                            <option value="">Selectionner Région</option>
                             <option value="Tanger – Tétouan – Al Hoceima">Tanger – Tétouan – Al Hoceima</option>
                             <option value="Oriental">Oriental</option>
                             <option value="Fès - Meknès">Fès - Meknès</option>
@@ -323,35 +299,34 @@ http://www.templatemo.com/tm-486-new-event
                             <option value="Dakhla-Oued Ed Dahab">Dakhla-Oued Ed Dahab</option>
                         </select></td>
 					<td><script type="text/javascript" language="JavaScript">
-                                document.write('<select name="province" style="width:49%;" id="province"><option value="">Selectionner Province</option></select>')
+                                document.write('<select name="province"  id="province"><option value="">Selectionner Province</option></select>')
                           </script>
 					    <noscript>
-						<select name="province" id="Province"  style="width:49%;" required>
+						<select name="province" id="Province"   required>
                             <option value="">Selectionner province</option>
                             <option value="Oued Ed Dahab">Oued Ed Dahab</option>
                             <option value="Aousserd">Aousserd</option>
                         </select>
 						</noscript></td>
-					<td><input name="Localite" type="text"  id="Localite" placeholder="Localité"></td>
-					<td><input name="Puissance" type="text"  id="Puissance" placeholder="Puissance (MW)"></td>
-					<td><input name="Productibleprevisionnel" type="text"  id="Productible Prévisionnel" placeholder="Productible prévisionnel (GWh/an)"></td>
-                    <td> <input name="Co2eviteTCO2an" type="text"  id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an"></td>
-                    <td><input name="Sourceenergie" type="text"  id="Source energie" placeholder="Source Énergie"></td>
-                    <td><input name="CoordonneesGeographique/CoordonneesLambert" type="text"  id="Coordonnées Géographique" placeholder="Coordonnées Géographiques/Coordonnées Lambert (m)"></td> 
-                   <td><input name="Investissementduprojet" type="text"  id="Investissement du projet" placeholder="Investissement du projet (MDH)"></td> 
-                    <td><input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" placeholder="Etat d'Avancement"></td> 
-                   <td><input name="DepotalaDEREE" type="text"   id="Depot à la DEREE" placeholder="Dépôt à la DEREE"></td> 
-                    <td><input name="EnvoidudossieraONEE" type="text"   id="Envoi du dossier a l'ONEE" placeholder="Envoi du Dossier à l'ONEE/GRD Concerné"> </td>
-                   <td><input name="ReponseONEE" type="text"  id="Réponse ONEE" placeholder="Réponse ONEE/GRD Concerné"></td> 
-                   <td><input name="Depotducomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du Complément du Dossier Par le Développeur"></td>
-                   <td> <input name="EnvoiducomplementdudossieraONEE" type="text"   id="Envoi du 1er complement du dossier à l'ONEE" placeholder="Envoi du 1er Complément du Dossier à l'ONEE/GRD Concerné"></td> 
-                   <td><input name="AvisdeONEE" type="text"  id="Avis de l'ONEE" placeholder="Avis de l'ONEE"></td>
-                   <td> <input name="AvisMEME" type="text"  id="Avis MEMEE" placeholder="Avis MEME"> </td> 
-                   <td> <input name="Observations" type="text" id="Observations" placeholder="Observations">  </td> 
-                   
+					<td><input name="Localite" type="text"  id="Localite" ></td>
+					<td><input name="Puissance" type="text"  id="Puissance" ></td>
+					<td><input name="Productibleprevisionnel" type="text"  id="Productible Prévisionnel" ></td>
+                    <td> <input name="Co2eviteTCO2an" type="text"  id="Co2 évité TCO2/an" ></td>
+                    <td><input name="Sourceenergie" type="text"  id="Source energie" ></td>
+                    <td><input name="CoordonneesGeographique/CoordonneesLambert" type="text"  id="Coordonnées Géographique" ></td> 
+                   <td><input name="Investissementduprojet" type="text"  id="Investissement du projet" ></td> 
+                    <td><input name="Etatavancement" type="text" class="form-input-inv" id="Etat avancement" ></td> 
+                   <td><input name="DepotalaDEREE" type="text"   id="Depot à la DEREE" ></td> 
+                    <td><input name="EnvoidudossieraONEE" type="text"   id="Envoi du dossier a l'ONEE" > </td>
+                   <td><input name="ReponseONEE" type="text"  id="Réponse ONEE" ></td> 
+                   <td><input name="Depotducomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" ></td>
+                   <td> <input name="EnvoiducomplementdudossieraONEE" type="text"   id="Envoi du 1er complement du dossier à l'ONEE" ></td> 
+                   <td><input name="AvisdeONEE" type="text"  id="Avis de l'ONEE" ></td>
+                   <td> <input name="AvisMEME" type="text"  id="Avis MEMEE" > </td> 
+                   <td> <input name="Observations" type="text" id="Observations" >  </td> 
 				</tr>
 			</table>
-            <button type="submit" name="submit" class="btn">Ajouter Le Projet</button>
+            <button type="submit" name="submit" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
     </form>
 </section>
 
