@@ -29,7 +29,7 @@
           '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$AvisdeONEE',
           '$AvisMEME','$Observations')";
         if (mysqli_query($link, $sql)) {
-          header("Location: energieEolienne.php");
+          header("Location: energieSolaire.php");
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }
