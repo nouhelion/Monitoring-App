@@ -51,6 +51,7 @@
                     <li><a href="home.php" class="smoothScroll">Home</a></li>
                     <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
                     <li><a href="#search" class="smoothScroll">Rechercher</a></li>
+					<li><a href="update.php" class="smoothScroll">Modifier</a></li>
                     <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
                     <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
                 </ul>
@@ -96,7 +97,7 @@
 	<thead>
 		<tr>
 			<th data-field="state" data-checkbox="true"></th>
-		    <th data-field="state" ></th>
+		   
 			<th  data-filter-control="input" data-sortable="true">Numéro</th>
 			<th  data-filter-control="input" data-sortable="true">Développeur</th>
 			<th  data-filter-control="input" data-sortable="true">Nom du projet</th>
@@ -129,12 +130,8 @@
 	 
 	  if (mysqli_num_rows($result) > 0) {
 		  while ($row = mysqli_fetch_assoc($result)) {
-			$Numero=$row['Numero']; 
 			echo "<tr>";
 			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
-			  ?>
-			  <td><a href="update.php?Numero=<?php echo $Numero; ?>">Edit</a></td>
-			  <?php
 			  echo "<td>" .$row['Numero']."</td>";
 			  echo "<td>" .$row['Developpeur']."</td>";
 			  echo "<td>" .$row['Nom du projet']."</td>";

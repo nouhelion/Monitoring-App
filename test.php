@@ -1,164 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-<!--
-Gestion des autorisation
-http://www.templatemo.com/tm-486-new-event
--->
-<title>Ministere des mines, de l'energie et de l'environnement</title>
-<meta name="description" content="">
-<meta name="author" content="">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+  <meta charset="UTF-8">
+  <title>Ministere des mines, de l'energie et de l'environnement</title>
+  <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/te.ico" />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
+<link rel='stylesheet' href='https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'><link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/owl.theme.css">
-<link rel="stylesheet" href="css/owl.carousel.css">
-
-<!-- Main css -->
-<link rel="stylesheet" href="css/style.css">
-
-<!-- Google Font -->
-<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/ele.css">
+	<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
-
-<!-- =========================
-     PRE LOADER       
-============================== -->
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse"></body>
+<!-- partial:index.partial.html -->
 <div class="preloader">
 
-	<div class="sk-rotating-plane"></div>
+        <div class="sk-rotating-plane"></div>
 
-</div>
+    </div>
 
-
-<!-- =========================
+  <!-- =========================
      NAVIGATION LINKS     
 ============================== -->
+
 <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
-	<div class="container">
+        <div class="container">
 
-		<!-- navbar header -->
-		<div class="navbar-header">
-			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-				<span class="icon icon-bar"></span>
-			</button>
-			<img src="images/roy.png" > 
-		</div>
+            <!-- navbar header -->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <img src="images/roy.png">
+            </div>
 
-		<div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse">
 
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#sol" class="smoothScroll">Home</a></li>
-				<li><a href="#overview" class="smoothScroll">choix</a></li>
-				<li><a href="#speakers" class="smoothScroll">Speakers</a></li>
-				<li><a href="#program" class="smoothScroll">Programs</a></li>
-				<li><a href="#register" class="smoothScroll">Register</a></li>
-				<li><a href="#venue" class="smoothScroll">Venue</a></li>
-				<li><a href="#sponsors" class="smoothScroll">Sponsors</a></li>
-				<li><a href="#contact" class="smoothScroll">Contact</a></li>
-			</ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.php" class="smoothScroll">Home</a></li>
+                    <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
+                    <li><a href="#search" class="smoothScroll">Rechercher</a></li>
+					<li><a href="update.php" class="smoothScroll">Modifier</a></li>
+                    <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
+                    <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
+                </ul>
 
-		</div>
+            </div>
 
-	</div>
-</div>
+        </div>
+    </div>
 
-
-<!-- =========================
+   <!-- =========================
     INTRO SECTION   
 ============================== -->
-<section id="sol" class="parallax-section">
-	<div class="container">
-		<div class="row">
+<section id="intro" class="parallax-section">
+        <div class="container">
+            <div class="row">
 
+                <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
+                    <h2 style="color: black;">Direction des Energies Renouvelables et de l'energie eolienne</h2>
+                    <h4 style="color: white;">Dossiers de demande d'autorisation provisoire pour le développement des
+                        projets EnR dans le cadre de la loi 13-09</h4>
+                </div>
 
+            </div>
+        </div>
+    </section>
 
-		</div>
-	</div>
-</section>
-
-
-<!-- =========================
-   REGISTER SECTION   
-============================== -->
-
+	<section id="search" class="parallax-section">
 		
+<div class="contain">
+<div class="search-container" >
+                 <form action="update.php" method="POST" >
+                   <input type="text" placeholder="Modifier.." name="search"  required>
+                     <button type="submit" class="btn"name="submit"><i class="fa fa-pencil-square-o" style="width=50%;" aria-hidden="true"></i></button>
+                         </form>
+                     </div>
+<div id="toolbar">
+		<select class="form-control">
+				<option value="all">Exporter Tout</option>
+				<option value="selected">Exporter La Sélection</option>
+		</select>
+		
+</div>
 
-<!-- =========================
-    PROGRAM SECTION   
-============================== -->
-<section id="program" class="parallax-section">
-	<div class="container">
-		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
-			<h2>Direction des Energies Renouvelables et de l'energie solaire		</h2>
-			<p>Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</p>
-		</div>
-
-		<div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="1s">
-			<form action="" method="post">
-                <input name="Developpeur" type="text" class="form-control" id="Developpeur" placeholder="Developpeur">
-                <input name="Numero" type="text" class="form-control" id="Numero" placeholder="Numero">
-				<input name="Developpeur" type="text" class="form-control" id="Developpeur" placeholder="Developpeur">
-				<input name="Nom du projet " type="text" class="form-control" id="Nom du projet" placeholder="Nom du projet">
-				<input name="Localité " type="text" class="form-control" id="Localité" placeholder="Localité">
-				<input name="Puissance(MW)" type="text" class="form-control" id="Puissance(MW)" placeholder="Puissance(MW)">
-				<input name="Productible prévisionnel (GWh/an)" type="text" class="form-control" id="Productible prévisionnel (GWh/an)" placeholder="Productible prévisionnel (GWh/an)">
-				<input name="Source énergie" type="text" class="form-control" id="Source énergie" placeholder="Source énergie">
-				<input name="Co2 évité TCO2/an" type="text" class="form-control" id="Co2 évité TCO2/an" placeholder="Co2 évité TCO2/an">
-				<input name="Dépôt à la DEREE" type="text" class="form-control" id="Dépôt à la DEREE" placeholder="Dépôt à la DEREE">
-				<input name="Envoi du dossier a l'ONEE" type="text" class="form-control" id="Envoi du dossier a l'ONEE" placeholder="Envoi du dossier a l'ONEE">
-				<input name="Réponse ONEE" type="text" class="form-control" id="Réponse ONEE" placeholder="Réponse ONEE">
-				<input name="Notification du Demandeur pour complément du dossier" type="text" class="form-control" id="Notification du Demandeur pour complément du dossier" placeholder="Notification du Demandeur pour complément du dossier">
-				<input name="Dépôt du complément du dossier par le développeur" type="text" class="form-control" id="Dépôt du complément du dossier par le développeur" placeholder="Dépôt du complément du dossier par le développeur">
-				<input name="Envoi du complément du dossier à l'ONEE" type="text" class="form-control" id="Envoi du complément du dossier à l'ONEE" placeholder="Envoi du complément du dossier à l'ONEE">
-				<input name="Avis de l'ONEE" type="text" class="form-control" id="Avis de l'ONEE" placeholder="Avis de l'ONEE">
-				<input name="Avis MEMEE	" type="text" class="form-control" id="Avis MEMEE	" placeholder="Avis MEMEE	">
-				<input name="Observations	" type="text" class="form-control" id="Observations" placeholder="Observations">
-				<input name="Coordonnées Lambert(m)	" type="text" class="form-control" id="Coordonnées Lambert(m)" placeholder="Coordonnées Lambert(m)">
-				<input name="Coordonnées Géographique	" type="text" class="form-control" id="Coordonnées Géographique" placeholder="Coordonnées Géographique">
-				<input name="Echelle de la carte géographique" type="text" class="form-control" id="Echelle de la carte géographique" placeholder="Echelle de la carte géographique">
-				<input name="Investissement du projet" type="text" class="form-control" id="Investissement du projet" placeholder="Investissement du projet">
-				<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
-					
-					<input name="submit" type="submit" class="form-control" id="submit" value="REGISTER">
-				</div>
-			</form>
+<table id="table" 
+			 data-toggle="table"
+			 data-search="true"
+			 data-filter-control="true" 
+			 data-show-export="true"
+			 data-click-to-select="true"
+			 data-toolbar="#toolbar">
+	<thead>
+		<tr>
+			<th data-field="state" data-checkbox="true"></th>
+		   
+			<th  data-filter-control="input" data-sortable="true">Numéro</th>
+			<th  data-filter-control="input" data-sortable="true">Développeur</th>
+			<th  data-filter-control="input" data-sortable="true">Nom du projet</th>
+			<th  data-filter-control="select" data-sortable="true">Région</th>
+			<th  data-filter-control="select" data-sortable="true">Province</th>
+			<th  data-filter-control="input" data-sortable="true">Localité</th>
+			<th  data-filter-control="input" data-sortable="true">Puissance (MW)</th>
+			<th  data-filter-control="input" data-sortable="true">Productible prévisionnel (GWh/an)</th>
+			<th  data-filter-control="input" data-sortable="true">Co2 évité TCO2/an</th>
+			<th  data-filter-control="input" data-sortable="true">Source Énergie</th>
+			<th  data-filter-control="input" data-sortable="true">Coordonnées Géographiques/Coordonnées Lambert (m)</th>
+			<th  data-filter-control="input" data-sortable="true">Investissement du projet (MDH)</th>
+			<th  data-filter-control="input" data-sortable="true">Etat d'Avancement</th>
+			<th  data-filter-control="input" data-sortable="true">Dépôt à la DEREE</th>
+			<th  data-filter-control="input" data-sortable="true">Envoi du Dossier à l'ONEE/GRD Concerné</th>
+			<th  data-filter-control="input" data-sortable="true">Réponse ONEE/GRD Concerné</th>
+			<th  data-filter-control="input" data-sortable="true">Dépôt du Complément du Dossier Par le Développeur</th>
+			<th  data-filter-control="input" data-sortable="true">Envoi du Complément du Dossier à l'ONEE/GRD Concerné</th>
+			<th  data-filter-control="input" data-sortable="true">Avis de l'ONEE</th>
+			<th  data-filter-control="input" data-sortable="true">Avis MEME</th>
+			<th  data-filter-control="input" data-sortable="true">Observations</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+			<?php
+	  require_once('db.php');
+	  $sql="SELECT *  FROM `energieeolienne`";
+	  $result = mysqli_query($link,$sql);
+	 
+	  if (mysqli_num_rows($result) > 0) {
+		  while ($row = mysqli_fetch_assoc($result)) {
+			echo "<tr>";
+			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
 			
-		</div>
-
-		<div class="col-md-1"></div>
-
-	</div>
+			echo "<td>" .$row['Numero']."</td>";
+			  echo "<td>" .$row['Developpeur']."</td>";
+			  echo "<td>" .$row['Nom du projet']."</td>";
+			  echo "<td>" .$row['Region']."</td>";
+			  echo "<td>" .$row['Province']."</td>";
+			  echo "<td>" .$row['Localite']."</td>";
+			  echo "<td>" .$row['Puissance']."</td>";
+			  echo "<td>" .$row['Productible previsionnel']."</td>";
+			  echo "<td>" .$row['Co2 evite TCO2/an']."</td>";
+			  echo "<td>" .$row['Source energie']."</td>";
+			  echo "<td>" .$row['Coordonnees Geographique/Coordonnees Lambert']."</td>";
+			  echo "<td>" .$row['Investissement du projet']."</td>";
+			  echo "<td>" .$row['Etat avancement']."</td>";
+			  echo "<td>" .$row['Depot a la DEREE']."</td>";
+			  echo "<td>" .$row["Envoi du dossier a l'ONEE"]."</td>";
+			  echo "<td>" .$row['Reponse ONEE']."</td>";
+			  echo "<td>" .$row['Depot du complement du dossier par le developpeur']."</td>";
+			  echo "<td>" .$row["Envoi du complement du dossier a l'ONEE"]."</td>";
+			  echo "<td>" .$row["Avis de l'ONEE"]."</td>";
+			  echo "<td>" .$row['Avis MEME']."</td>";
+			  echo "<td>" .$row['Observations']."</td>";
+			  echo "</tr>";
+		  }
+	  }
+	 ?>	
+		
+	</tbody>
+</table>
 </div>
 </section>
-</h2>
-
-<!-- Back top -->
-<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+    <!-- Back top -->
+    <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 
-<!-- =========================
-     SCRIPTS   
-============================== -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/editable/bootstrap-table-editable.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/export/bootstrap-table-export.js'></script>
+<script src='https://rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/filter-control/bootstrap-table-filter-control.js'></script><script  src="./script.js"></script>
 <script src="js_/jquery.js"></script>
-<script src="js_/bootstrap.min.js"></script>
-<script src="js_/jquery.parallax.js"></script>
-<script src="js_/owl.carousel.min.js"></script>
-<script src="js_/smoothscroll.js"></script>
-<script src="js_/wow.min.js"></script>
-<script src="js_/custom.js"></script>
-<script>
-	if ( window.history.replaceState ) {
-	  window.history.replaceState( null, null, window.location.href );
-	}
-	</script>
+   
+    <script src="js_/jquery.parallax.js"></script>
+    <script src="js_/owl.carousel.min.js"></script>
+    <script src="js_/smoothscroll.js"></script>
+    <script src="js_/wow.min.js"></script>
+    <script src="js_/custom.js"></script>
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
 </body>
 </html>
