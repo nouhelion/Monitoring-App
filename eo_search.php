@@ -96,6 +96,7 @@
 	<thead>
 		<tr>
 			<th data-field="state" data-checkbox="true"></th>
+		    <th data-field="state" ></th>
 			<th  data-filter-control="input" data-sortable="true">Numéro</th>
 			<th  data-filter-control="input" data-sortable="true">Développeur</th>
 			<th  data-filter-control="input" data-sortable="true">Nom du projet</th>
@@ -131,7 +132,9 @@
 			$Numero=$row['Numero']; 
 			echo "<tr>";
 			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
-			  
+			  ?>
+			  <td><a href="update.php?Numero=<?php echo $Numero; ?>">Edit</a></td>
+			  <?php
 			  echo "<td>" .$row['Numero']."</td>";
 			  echo "<td>" .$row['Developpeur']."</td>";
 			  echo "<td>" .$row['Nom du projet']."</td>";
