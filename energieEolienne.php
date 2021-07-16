@@ -21,18 +21,21 @@
         $ReponseONEE= mysqli_real_escape_string($link, $_REQUEST['ReponseONEE']);
         $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotducomplementdudossierparledeveloppeur']);
         $EnvoiducomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoiducomplementdudossieraONEE']);
-        $Reponse2ONEE= mysqli_real_escape_string($link, $_REQUEST['Reponse2ONEE']);
-        $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotdu2complementdudossierparledeveloppeur']);
-        $EnvoiducomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['Envoidu2complementdudossieraONEE']);
+        
         $AvisdeONEE = mysqli_real_escape_string($link, $_REQUEST['AvisdeONEE']);
         $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
         $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
         
-        $sql = "INSERT INTO `energieeolienne`(`Numero`, `Developpeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ONEE` ,`Reponse ONEE en Cas Du 2 Complement`, `Depot du 2 complement du dossier par le developpeur`, `Envoi du 2 complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Avis MEME`, `Observations`) VALUES
+        $sql = "INSERT INTO `energieeolienne`(`Numero`, `Developpeur`, `Nom du projet`, `Region`,
+         `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`,
+         `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`,
+          `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`,
+           `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`,
+            `Envoi du complement du dossier a l'ONEE` , `Avis de l'ONEE`,
+              `Avis MEME`, `Observations`) VALUES
          ('$Numero','$Developpeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$Productibleprevisionnel',
          '$Co2eviteTCO2an','$Sourceenergie','$CoordonneesGeographiqueCoordonneesLambert','$Investissementduprojet','$Etatavancement','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE',
-          '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$Reponse2ONEE',
-          '$Depotdu2complementdudossierparledeveloppeur','$Envoidu2complementdudossieraONEE','$AvisdeONEE',
+          '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$AvisdeONEE',
           '$AvisMEME','$Observations')";
         if (mysqli_query($link, $sql)) {
           header("Location: energieEolienne.php");
@@ -186,30 +189,7 @@ http://www.templatemo.com/tm-486-new-event
             }
             return true;
         }
-        $(document).ready(function () {
-    
-     var myform = $('#myform'),
-         iter = 2;
-     $('#btnAddCol').click(function () {
-         myform.find('tr').each(function(){
-           var trow = $(this);
-             if(trow.index() === 0){
-                
-                $("#add tr th:nth-last-child(4)").after("<th>Réponse ONEE/GRD Concerné en Cas Du "+iter+" Complément</th>");
-                $("#add tr th:nth-last-child(4)").after("<th>Dépôt du "+iter+" Complément du Dossier Par le Développeur</th>");
-                $("#add tr th:nth-last-child(4)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ONEE/GRD Concerné</th>");
-             }else{
-                 
-                 $("#add tr td:nth-last-child(4)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE" ></td>');
-                 $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'complementdudossierparledeveloppeur" type="text" id="Envoi du complement du dossier a ONEE" ></td>');
-                 $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'complementdudossieraONEE" type="text" id="Envoidu'+iter+'complementdudossieraONEE" ></td>');
-                } 
-            
-         });
-         iter += 1;
-     });
- });
- 
+     
 
     </script>
 
@@ -310,7 +290,7 @@ http://www.templatemo.com/tm-486-new-event
                     <th>Envoi du Dossier à l'ONEE/GRD Concerné</th>
                     <th>Réponse ONEE/GRD Concerné</th>
                     <th>Dépôt du Complément du Dossier Par le Développeur</th>
-                    <th>Envoi du Complément du Dossier à l'ONEE/GRD Concerné<button type="button" class="btn" id="btnAddCol"><i class="fa fa-plus" aria-hidden="true"></i></button></th>
+                    <th>Envoi du Complément du Dossier à l'ONEE/GRD Concerné</th>
                     
                     <th>Avis de l'ONEE</th>
                     <th>Avis MEME</th>

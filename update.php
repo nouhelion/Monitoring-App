@@ -236,6 +236,15 @@ require('db.php');
         $ReponseONEE= mysqli_real_escape_string($link, $_REQUEST['ReponseONEE']);
         $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotducomplementdudossierparledeveloppeur']);
         $EnvoiducomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoiducomplementdudossieraONEE']);
+        $Reponse2ONEE= mysqli_real_escape_string($link, $_REQUEST['Reponse2ONEE']);
+        $Depotdu2 = mysqli_real_escape_string($link, $_REQUEST['Depotdu2']);
+        $Envoidu2= mysqli_real_escape_string($link, $_REQUEST['Envoidu2']);
+        $Reponse3ONEE= mysqli_real_escape_string($link, $_REQUEST['Reponse3ONEE']);
+        $Depotdu3 = mysqli_real_escape_string($link, $_REQUEST['Depotdu3']);
+        $Envoidu3= mysqli_real_escape_string($link, $_REQUEST['Envoidu3']);
+        $Reponse4ONEE= mysqli_real_escape_string($link, $_REQUEST['Reponse4ONEE']);
+        $Depotdu4 = mysqli_real_escape_string($link, $_REQUEST['Depotdu4']);
+        $Envoidu4= mysqli_real_escape_string($link, $_REQUEST['Envoidu4']);
         $AvisdeONEE = mysqli_real_escape_string($link, $_REQUEST['AvisdeONEE']);
         $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
         $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
@@ -257,7 +266,15 @@ require('db.php');
         `Reponse ONEE`='$ReponseONEE',
         `Depot du complement du dossier par le developpeur`='$Depotducomplementdudossierparledeveloppeur',
         `Envoi du complement du dossier a l'ONEE`='$EnvoiducomplementdudossieraONEE',
-        
+        `Reponse ONEE en Cas Du 2 Complement`='$Reponse2ONEE',
+        `Depot du 2 complement du dossier par le developpeur`='$Depotdu2',
+        `Envoi du 2 complement du dossier a l'ONEE`='$Envoidu2',
+        `Reponse ONEE en Cas Du 3 Complement`='$Reponse3ONEE',
+        `Depot du 3 complement du dossier par le developpeur`='$Depotdu3',
+        `Envoi du 3 complement du dossier a l'ONEE`='$Envoidu3',
+        `Reponse ONEE en Cas Du 4 Complement`='$Reponse4ONEE',
+        `Depot du 4 complement du dossier par le developpeur`='$Depotdu4',
+        `Envoi du 4 complement du dossier a l'ONEE`='$Envoidu4',
         `Avis de l'ONEE`='$AvisdeONEE',
         `Avis MEME`='$AvisMEME',
         `Observations`='$Observations' 
@@ -452,8 +469,8 @@ http://www.templatemo.com/tm-486-new-event
                    test3="<?php echo $Envoidu4complementdudossieraONEE; ?>";
                   }
                 $("#add tr td:nth-last-child(4)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE" value="'+test1+'" ></td>');
-                $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'complementdudossierparledeveloppeur" type="text" id="Envoi du complement du dossier a ONEE" value="'+test2+'" ></td>');
-                $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'complementdudossieraONEE" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test3+'" ></td>');
+                $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'" type="text" id="Envoi du complement du dossier a ONEE" value="'+test2+'" ></td>');
+                $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test3+'" ></td>');
                } 
            
         });

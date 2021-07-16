@@ -113,11 +113,29 @@
 			<th  data-filter-control="input" data-sortable="true">Réponse ONEE/GRD Concerné</th>
 			<th  data-filter-control="input" data-sortable="true">Dépôt du Complément du Dossier Par le Développeur</th>
 			<th  data-filter-control="input" data-sortable="true">Envoi du Complément du Dossier à l'ONEE/GRD Concerné</th>
+			<th  data-filter-control="input" data-sortable="true">Réponse ONEE/GRD Concerné en Cas Du 2 Complément</th>
+			<th  data-filter-control="input" data-sortable="true">Dépôt du 2 Complément du Dossier Par le Développeur</th>
+			<th  data-filter-control="input" data-sortable="true">Envoi du 2 Complément du Dossier à l'ONEE/GRD Concerné</th>
+			<th  data-filter-control="input" data-sortable="true">Réponse ONEE/GRD Concerné en Cas Du 3 Complément</th>
+			<th  data-filter-control="input" data-sortable="true">Dépôt du 3 Complément du Dossier Par le Développeur</th>
+			<th  data-filter-control="input" data-sortable="true">Envoi du 3 Complément du Dossier à l'ONEE/GRD Concerné</th>
+			<th  data-filter-control="input" data-sortable="true">Réponse ONEE/GRD Concerné en Cas Du 4 Complément</th>
+			<th  data-filter-control="input" data-sortable="true">Dépôt du 4 Complément du Dossier Par le Développeur</th>
+			<th  data-filter-control="input" data-sortable="true">Envoi du 4 Complément du Dossier à l'ONEE/GRD Concerné</th>
 			<th  data-filter-control="input" data-sortable="true">Avis de l'ONEE</th>
             <th  data-filter-control="input" data-sortable="true">Envoi du Dossier Au Département Eau</th>
             <th  data-filter-control="input" data-sortable="true">Réponse du Département de l'Eau</th>
             <th  data-filter-control="input" data-sortable="true">Dépôt du Complément du Dossier Par le Développeur</th>
             <th  data-filter-control="input" data-sortable="true">Envoi du Complément du Dossier à l'ABH</th>
+			<th  data-filter-control="input" data-sortable="true">Réponse du Département de l'Eau en Cas Du 2 Complement</th>
+            <th  data-filter-control="input" data-sortable="true">Dépôt du 2 Complément du Dossier Par le Développeur</th>
+            <th  data-filter-control="input" data-sortable="true">Envoi du 2 Complément du Dossier à l'ABH</th>
+			<th  data-filter-control="input" data-sortable="true">Réponse du Département de l'Eau en Cas Du 3 Complement</th>
+            <th  data-filter-control="input" data-sortable="true">Dépôt du 3 Complément du Dossier Par le Développeur</th>
+            <th  data-filter-control="input" data-sortable="true">Envoi du 3 Complément du Dossier à l'ABH</th>
+			<th  data-filter-control="input" data-sortable="true">Réponse du Département de l'Eauen Cas Du 4 Complement</th>
+            <th  data-filter-control="input" data-sortable="true">Dépôt du 4 Complément du Dossier Par le Développeur</th>
+            <th  data-filter-control="input" data-sortable="true">Envoi du 4 Complément du Dossier à l'ABH</th>
             <th  data-filter-control="input" data-sortable="true">Avis Agence Bassin</th>
 			<th  data-filter-control="input" data-sortable="true">Avis MEME</th>
 			<th  data-filter-control="input" data-sortable="true">Observations</th>
@@ -152,11 +170,29 @@
 			  echo "<td>" .$row['Reponse ONEE']."</td>";
 			  echo "<td>" .$row['Depot du complement du dossier par le developpeur']."</td>";
 			  echo "<td>" .$row["Envoi du complement du dossier a l'ONEE"]."</td>";
+			  echo "<td>" .$row['Reponse ONEE en Cas Du 2 Complement']."</td>";
+			  echo "<td>" .$row['Depot du 2 complement du dossier par le developpeur']."</td>";
+			  echo "<td>" .$row["Envoi du 2 complement du dossier a l'ONEE"]."</td>";
+			  echo "<td>" .$row['Reponse ONEE en Cas Du 3 Complement']."</td>";
+			  echo "<td>" .$row['Depot du 3 complement du dossier par le developpeur']."</td>";
+			  echo "<td>" .$row["Envoi du 3 complement du dossier a l'ONEE"]."</td>";
+			  echo "<td>" .$row['Reponse ONEE en Cas Du 4 Complement']."</td>";
+			  echo "<td>" .$row['Depot du 4 complement du dossier par le developpeur']."</td>";
+			  echo "<td>" .$row["Envoi du 4 complement du dossier a l'ONEE"]."</td>";
 			  echo "<td>" .$row["Avis de l'ONEE"]."</td>";
               echo "<td>" .$row["Envoi du dossier au departement eau"]."</td>";
               echo "<td>" .$row["Reponse Departement de l'eau"]."</td>";
               echo "<td>" .$row["Depot du complement du dossier par le developpeur"]."</td>";
               echo "<td>" .$row["Envoi du complement du dossier a l'ABH"]."</td>";
+			  echo "<td>" .$row["Reponse Departement de l'eau en Cas Du 2 Complement"]."</td>";
+              echo "<td>" .$row["Depot du 2 complement du dossier par le developpeur/ABH"]."</td>";
+              echo "<td>" .$row["Envoi du 2 complement du dossier a l'ABH"]."</td>";
+			  echo "<td>" .$row["Reponse Departement de l'eau en Cas Du 3 Complement"]."</td>";
+              echo "<td>" .$row["Depot du 3 complement du dossier par le developpeur/ABH"]."</td>";
+              echo "<td>" .$row["Envoi du 3 complement du dossier a l'ABH"]."</td>";
+			  echo "<td>" .$row["Reponse Departement de l'eau en Cas Du 4 Complement"]."</td>";
+              echo "<td>" .$row["Depot du 4 complement du dossier par le developpeur/ABH"]."</td>";
+              echo "<td>" .$row["Envoi du 4 complement du dossier a l'ABH"]."</td>";
               echo "<td>" .$row["Avis Agence Bassin"]."</td>";
 			  echo "<td>" .$row['Avis MEME']."</td>";
 			  echo "<td>" .$row['Observations']."</td>";
