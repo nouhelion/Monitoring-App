@@ -129,7 +129,7 @@
 		
 <div class="contain">
 <div class="search-container" >
-                 <form action="update.php" method="POST" >
+                 <form action="update_eo.php" method="POST" >
                    <input type="text" placeholder="Modifier.." name="search"  required>
                      <button type="submit" class="btn"name="sus"><i class="fa fa-pencil-square-o"  aria-hidden="true"></i></button>
                          </form>
@@ -156,7 +156,7 @@
 			 data-toolbar="#toolbar">
 	<thead>
 		<tr>
-		<button type="button" class="btn" id="btnAddCol"><i class="fa fa-plus" aria-hidden="true"></i></button> 
+		 
 			<th data-field="state" data-checkbox="true"></th>
 		   
 			<th  data-filter-control="input" data-sortable="true">Numéro</th>

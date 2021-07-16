@@ -77,6 +77,17 @@
 
 	<section id="search" class="parallax-section">
 <div class="contain">
+<div class="search-container" >
+                 <form action="update_sol.php" method="POST" >
+                   <input type="text" placeholder="Modifier.." name="search"  required>
+                     <button type="submit" class="btn"name="sus"><i class="fa fa-pencil-square-o"  aria-hidden="true"></i></button>
+                         </form>
+                     </div>
+					 <?php
+					 if (isset($_POST['sus'])) {
+						$keyword = mysqli_real_escape_string($link, $_POST['search']);
+						 }
+					 ?>
 <div id="toolbar">
 		<select class="form-control">
 				<option value="all">Exporter Tout</option>
