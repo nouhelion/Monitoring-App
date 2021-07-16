@@ -214,13 +214,9 @@ require('db.php');
          $Observations=$value["Observations"];
         
         }
-         ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<?php
 
-if(isset($_POST['sub']))
+        if(isset($_POST['sub']))
     {
         $Numero = mysqli_real_escape_string($link, $_REQUEST['Numero']);
         $Developpeur = mysqli_real_escape_string($link, $_REQUEST['Developpeur']);
@@ -261,6 +257,7 @@ if(isset($_POST['sub']))
         `Reponse ONEE`='$ReponseONEE',
         `Depot du complement du dossier par le developpeur`='$Depotducomplementdudossierparledeveloppeur',
         `Envoi du complement du dossier a l'ONEE`='$EnvoiducomplementdudossieraONEE',
+        
         `Avis de l'ONEE`='$AvisdeONEE',
         `Avis MEME`='$AvisMEME',
         `Observations`='$Observations' 
@@ -271,7 +268,11 @@ if(isset($_POST['sub']))
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }
     }
-?>
+         ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <!--
 Gestion des autorisation
@@ -414,52 +415,55 @@ http://www.templatemo.com/tm-486-new-event
             }
             return true;
         }
-        $(document).ready(function () {
-    
-     var myform = $('#myform'),
-         iter = 2;
-     $('#btnAddCol').click(function () {
-         myform.find('tr').each(function(){
-           var trow = $(this);
-             if(trow.index() === 0){
-                
-                $("#add tr th:nth-last-child(4)").after("<th>Réponse ONEE/GRD Concerné en Cas Du "+iter+" Complément</th>");
-                $("#add tr th:nth-last-child(4)").after("<th>Dépôt du "+iter+" Complément du Dossier Par le Développeur</th>");
-                $("#add tr th:nth-last-child(4)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ONEE/GRD Concerné</th>");
-             }else{
-
-                 var tester ;
-                 if(iter ===2)
-                   {
-                    test1="<?php echo $Reponse2ONEE; ?>";
-                    test2="<?php echo $Depotdu2complementdudossierparledeveloppeur; ?>";
-                    test3="<?php echo $Envoidu2complementdudossieraONEE; ?>";
-                   }
-                 else if(iter ===3)
-                   {
-                    test1="<?php echo $Reponse3ONEE; ?>";
-                    test2="<?php echo $Depotdu3complementdudossierparledeveloppeur; ?>";
-                    test3="<?php echo $Envoidu3complementdudossieraONEE; ?>";
-                   }
-                   else if(iter ===4)
-                   {
-                    test1="<?php echo $Reponse4ONEE; ?>";
-                    test2="<?php echo $Depotdu4complementdudossierparledeveloppeur; ?>";
-                    test3="<?php echo $Envoidu4complementdudossieraONEE; ?>";
-                   }
-                 $("#add tr td:nth-last-child(4)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE" value="'+test1+'" ></td>');
-                 $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'complementdudossierparledeveloppeur" type="text" id="Envoi du complement du dossier a ONEE" value="'+test2+'" ></td>');
-                 $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'complementdudossieraONEE" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test3+'" ></td>');
-                } 
-            
-         });
-         iter += 1;
-     });
- });
-
-
+   
     </script>
+ <script type="text/javascript">
+             $(document).ready(function () {
+    
+    var myform = $('#myform'),
+        iter = 2;
+    $('#btnAddCol').click(function () {
+        myform.find('tr').each(function(){
+          var trow = $(this);
+            if(trow.index() === 0){
+               
+               $("#add tr th:nth-last-child(4)").after("<th>Réponse ONEE/GRD Concerné en Cas Du "+iter+" Complément</th>");
+               $("#add tr th:nth-last-child(4)").after("<th>Dépôt du "+iter+" Complément du Dossier Par le Développeur</th>");
+               $("#add tr th:nth-last-child(4)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ONEE/GRD Concerné</th>");
+            }else{
 
+                var tester ;
+                if(iter ===2)
+                  {
+                   test1="<?php echo $Reponse2ONEE; ?>";
+                   test2="<?php echo $Depotdu2complementdudossierparledeveloppeur; ?>";
+                   test3="<?php echo $Envoidu2complementdudossieraONEE; ?>";
+                  }
+                else if(iter ===3)
+                  {
+                   test1="<?php echo $Reponse3ONEE; ?>";
+                   test2="<?php echo $Depotdu3complementdudossierparledeveloppeur; ?>";
+                   test3="<?php echo $Envoidu3complementdudossieraONEE; ?>";
+                  }
+                  else if(iter ===4)
+                  {
+                   test1="<?php echo $Reponse4ONEE; ?>";
+                   test2="<?php echo $Depotdu4complementdudossierparledeveloppeur; ?>";
+                   test3="<?php echo $Envoidu4complementdudossieraONEE; ?>";
+                  }
+                $("#add tr td:nth-last-child(4)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE" value="'+test1+'" ></td>');
+                $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'complementdudossierparledeveloppeur" type="text" id="Envoi du complement du dossier a ONEE" value="'+test2+'" ></td>');
+                $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'complementdudossieraONEE" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test3+'" ></td>');
+               } 
+           
+        });
+        iter += 1;
+    });
+});
+
+
+        
+        </script>
 </head>
 
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse" class="form-v10">
@@ -607,7 +611,7 @@ http://www.templatemo.com/tm-486-new-event
                    <td> <input name="Observations" type="text" id="Observations" value="<?php echo $Observations; ?>" ></td> 
 				</tr>
 			</table>
-            
+           
             <input type="submit" name="sub" value='Modifier le Projet' class="btn"></input>
     </form>
 </section>
