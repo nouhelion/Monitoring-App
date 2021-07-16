@@ -50,7 +50,7 @@
             <ul class="nav navbar-nav navbar-right">
 				<li><a href="home.php" class="smoothScroll">Home</a></li>
 				<li><a href="EnergieHydro.php" class="smoothScroll">Ajouter Un Projet</a></li>
-				<li><a href="search" class="smoothScroll">Rechercher</a></li>
+				<li><a href="#search" class="smoothScroll">Rechercher</a></li>
 				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
 				<li><a href="#speakers" class="smoothScroll">Reporting</a></li>
 			</ul>
@@ -78,6 +78,17 @@
 
 	<section id="search" class="parallax-section">
 <div class="contain">
+<div class="search-container" >
+                 <form action="update_hyd.php" method="POST" >
+                   <input type="text" placeholder="Modifier.." name="search"  required>
+                     <button type="submit" class="btn"name="sus"><i class="fa fa-pencil-square-o"  aria-hidden="true"></i></button>
+                         </form>
+                     </div>
+					 <?php
+					 if (isset($_POST['sus'])) {
+						$keyword = mysqli_real_escape_string($link, $_POST['search']);
+						 }
+					 ?>
 <div id="toolbar">
 		<select class="form-control">
 				<option value="all">Exporter Tout</option>
@@ -182,7 +193,7 @@
 			  echo "<td>" .$row["Avis de l'ONEE"]."</td>";
               echo "<td>" .$row["Envoi du dossier au departement eau"]."</td>";
               echo "<td>" .$row["Reponse Departement de l'eau"]."</td>";
-              echo "<td>" .$row["Depot du complement du dossier par le developpeur"]."</td>";
+              echo "<td>" .$row["Depot du complement du dossier par le developpeur/ABH"]."</td>";
               echo "<td>" .$row["Envoi du complement du dossier a l'ABH"]."</td>";
 			  echo "<td>" .$row["Reponse Departement de l'eau en Cas Du 2 Complement"]."</td>";
               echo "<td>" .$row["Depot du 2 complement du dossier par le developpeur/ABH"]."</td>";

@@ -23,7 +23,7 @@
         $AvisdeONEE = mysqli_real_escape_string($link, $_REQUEST['AvisdeONEE']);
         $Envoidudossieraudepartementeau = mysqli_real_escape_string($link, $_REQUEST['Envoidudossieraudepartementeau']);
         $ReponseDepartementdeeau= mysqli_real_escape_string($link, $_REQUEST['ReponseDepartementdeeau']);
-        $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotducomplementdudossierparledeveloppeur']);
+        $DepotducomplementdudossierparledeveloppeurABH = mysqli_real_escape_string($link, $_REQUEST['DepotducomplementdudossierparledeveloppeurABH']);
         $EnvoiducomplementdudossieraABH = mysqli_real_escape_string($link, $_REQUEST['EnvoiducomplementdudossieraABH']);
         $AvisAgenceBassin= mysqli_real_escape_string($link, $_REQUEST['AvisAgenceBassin']);
         $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
@@ -32,7 +32,7 @@
          ('$Numero','$Demandeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$Productibleprevisionnel',
          '$Co2eviteTCO2an','$Sourceenergie','$CoordonneesGeographiqueCoordonneesLambert','$Investissementduprojet','$Etatavancement','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE',
           '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$AvisdeONEE','$Envoidudossieraudepartementeau',
-          '$ReponseDepartementdeeau','$Depotducomplementdudossierparledeveloppeur', 
+          '$ReponseDepartementdeeau','$DepotducomplementdudossierparledeveloppeurABH', 
           '$EnvoiducomplementdudossieraABH','$AvisAgenceBassin','$AvisMEME','$Observations')";
         if (mysqli_query($link, $sql)) {
           header("Location: EnergieHydro.php");
@@ -332,7 +332,7 @@ http://www.templatemo.com/tm-486-new-event
                    <td><input name="AvisdeONEE" type="text"  id="Avis de l'ONEE" ></td>
                    <td><input name="Envoidudossieraudepartementeau" type="text"   id="Envoi du dossier au departement eau" ></td>
                    <td><input name="ReponseDepartementdeeau" type="text" id="Reponse du Departement de l'eau" ></td>
-                   <td><input name="Depotducomplementdudossierparledeveloppeur" type="text"   id="Dépôt du complément du dossier par le développeur" ></td>
+                   <td><input name="DepotducomplementdudossierparledeveloppeurABH" type="text"   id="Dépôt du complément du dossier par le développeur" ></td>
                    <td><input name="EnvoiducomplementdudossieraABH" type="text"  id="Envoi du complement du dossier à l'ABH" ></td>
                    <td><input name="AvisAgenceBassin" type="text"  id="Avis Agence Bassin" ></td>
                    <td> <input name="AvisMEME" type="text"  id="Avis MEMEE" > </td> 
