@@ -132,7 +132,7 @@
 			$Numero=$row['Numero']; 
 			echo "<tr>";
 			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
-			echo "<td><a href=afficher.php?Numero=".$Numero.">Afficher</a></td>";
+			echo "<td><a href=update.php?Numero=".$Numero.">Afficher</a></td>";
 			  echo "<td>" .$row['Numero']."</td>";
 			  echo "<td>" .$row['Developpeur']."</td>";
 			  echo "<td>" .$row['Nom du projet']."</td>";
