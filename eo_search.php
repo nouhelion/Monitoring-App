@@ -79,12 +79,20 @@
     </section>
 
 	<section id="search" class="parallax-section">
+		
 <div class="contain">
+<div class="search-container" >
+                 <form action="update.php" method="POST" >
+                   <input type="text" placeholder="Modifier.." name="search"  required>
+                     <button type="submit" class="btn"name="submit"><i class="fa fa-pencil-square-o" style="width=50%;" aria-hidden="true"></i></button>
+                         </form>
+                     </div>
 <div id="toolbar">
 		<select class="form-control">
 				<option value="all">Exporter Tout</option>
 				<option value="selected">Exporter La Sélection</option>
 		</select>
+		
 </div>
 
 <table id="table" 
@@ -132,7 +140,8 @@
 		  while ($row = mysqli_fetch_assoc($result)) {
 			echo "<tr>";
 			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
-			  echo "<td>" .$row['Numero']."</td>";
+			
+			echo "<td>" .$row['Numero']."</td>";
 			  echo "<td>" .$row['Developpeur']."</td>";
 			  echo "<td>" .$row['Nom du projet']."</td>";
 			  echo "<td>" .$row['Region']."</td>";
