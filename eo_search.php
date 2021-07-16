@@ -96,6 +96,7 @@
 	<thead>
 		<tr>
 			<th data-field="state" data-checkbox="true"></th>
+			<th >Action</th>
 			<th  data-filter-control="input" data-sortable="true">Numéro</th>
 			<th  data-filter-control="input" data-sortable="true">Développeur</th>
 			<th  data-filter-control="input" data-sortable="true">Nom du projet</th>
@@ -128,8 +129,10 @@
 	 
 	  if (mysqli_num_rows($result) > 0) {
 		  while ($row = mysqli_fetch_assoc($result)) {
+			$Numero=$row['Numero']; 
 			echo "<tr>";
 			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
+			echo "<td><a href=afficher.php?Numero=".$Numero.">Afficher</a></td>";
 			  echo "<td>" .$row['Numero']."</td>";
 			  echo "<td>" .$row['Developpeur']."</td>";
 			  echo "<td>" .$row['Nom du projet']."</td>";
