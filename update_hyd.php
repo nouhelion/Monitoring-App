@@ -390,19 +390,19 @@ require('db.php');
         `Depot du 4 complement du dossier par le developpeur`='$Depotdu4',
         `Envoi du 4 complement du dossier a l'ONEE`='$Envoidu4',
         `Avis de l'ONEE`='$AvisdeONEE',
-        `Reponse Departement de l'eau`=`$ReponseDepartement`,
-        `Depot du complement du dossier par le developpeur/ABH`=`$DepotduABH`,
-        `Envoi du complement du dossier a l'ABH`=`$EnvoiduABH`,
-        `Reponse Departement de l'eau en Cas Du 2 Complement`=`$Reponse2Departement`,
-        `Depot du 2 complement du dossier par le developpeur/ABH`=`$Depotdu2ABH`,
-        `Envoi du 2 complement du dossier a l'ABH`=`$Envoidu2ABH`,
-        `Reponse Departement de l'eau en Cas Du 3 Complement`=`$Reponse3Departement`,
-        `Depot du 3 complement du dossier par le developpeur/ABH`=`$Depotdu3ABH`,
-        `Envoi du 3 complement du dossier a l'ABH`=`$Envoidu3ABH`,
-        `Reponse Departement de l'eau en Cas Du 4 Complement`=`$Reponse4Departement`,
-        `Depot du 4 complement du dossier par le developpeur/ABH`=`$Depotdu4ABH`,
-        `Envoi du 4 complement du dossier a l'ABH`=`$Envoidu4ABH`,
-        `Avis Agence Bassin`=`$AvisAgenceBassin`,
+        `Reponse Departement de l'eau`='$ReponseDepartement',
+        `Depot du complement du dossier par le developpeur/ABH`='$DepotduABH',
+        `Envoi du complement du dossier a l'ABH`='$EnvoiduABH',
+        `Reponse Departement de l'eau en Cas Du 2 Complement`='$Reponse2Departement',
+        `Depot du 2 complement du dossier par le developpeur/ABH`='$Depotdu2ABH',
+        `Envoi du 2 complement du dossier a l'ABH`='$Envoidu2ABH',
+        `Reponse Departement de l'eau en Cas Du 3 Complement`='$Reponse3Departement',
+        `Depot du 3 complement du dossier par le developpeur/ABH`='$Depotdu3ABH',
+        `Envoi du 3 complement du dossier a l'ABH`='$Envoidu3ABH',
+        `Reponse Departement de l'eau en Cas Du 4 Complement`='$Reponse4Departement',
+        `Depot du 4 complement du dossier par le developpeur/ABH`='$Depotdu4ABH',
+        `Envoi du 4 complement du dossier a l'ABH`='$Envoidu4ABH',
+        `Avis Agence Bassin`='$AvisAgenceBassin',
         `Avis MEME`='$AvisMEME',
         `Observations`='$Observations' 
         WHERE Numero='$Numero'";
@@ -555,7 +555,7 @@ require('db.php');
         return true;
     }
     </script>
-           <script type="text/javascript">
+   <script type="text/javascript">
              $(document).ready(function () {
     
     var myform = $('#myform'),
@@ -567,37 +567,48 @@ require('db.php');
                
                $("#add tr th:nth-last-child(9)").after("<th>Réponse ONEE/GRD Concerné en Cas Du "+iter+" Complément</th>");
                $("#add tr th:nth-last-child(9)").after("<th>Dépôt du "+iter+" Complément du Dossier Par le Développeur</th>");
-               $("#add tr th:nth-last-child(9)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ONEE/GRD Concerné</th>");
+               $("#add tr th:nth-last-child(9)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ONEE/GRD Concerné</th>");  
+               $("#add tr th:nth-last-child(12)").after("<th>Réponse du Département de l'Eau en Cas Du "+iter+" Complément</th>");
+               //$("#add tr th:nth-last-child(9)").after("<th>Dépôt du "+iter+" Complément du Dossier Par le Développeur/ABH</th>");
+               /*$("#add tr th:nth-last-child(9)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ABH</th>");*/
             }else{
-
                 if(iter ===2)
                   {
-                   test1="<?php echo $Reponse2ONEE; ?>";
+                    test1="<?php echo $Reponse2ONEE; ?>";
                    test2="<?php echo $Depotdu2complementdudossierparledeveloppeur; ?>";
                    test3="<?php echo $Envoidu2complementdudossieraONEE; ?>";
+                   
                   }
                 else if(iter ===3)
                   {
-                   test1="<?php echo $Reponse3ONEE; ?>";
+                    test1="<?php echo $Reponse3ONEE; ?>";
                    test2="<?php echo $Depotdu3complementdudossierparledeveloppeur; ?>";
                    test3="<?php echo $Envoidu3complementdudossieraONEE; ?>";
+                  
                   }
                   else if(iter ===4)
                   {
-                   test1="<?php echo $Reponse4ONEE; ?>";
+                    test1="<?php echo $Reponse4ONEE; ?>";
                    test2="<?php echo $Depotdu4complementdudossierparledeveloppeur; ?>";
                    test3="<?php echo $Envoidu4complementdudossieraONEE; ?>";
+                  
                   }
                 $("#add tr td:nth-last-child(9)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE" value="'+test1+'" ></td>');
                 $("#add tr td:nth-last-child(9)").after('<td><input name="Depotdu'+iter+'" type="text" id="Envoi du complement du dossier a ONEE" value="'+test2+'" ></td>');
-                $("#add tr td:nth-last-child(9)").after('<td><input name="Envoidu'+iter+'" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test3+'" ></td>');
-               } 
+                $("#add tr td:nth-last-child(9)").after('<td><input name="Envoidu'+iter+'" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test3+'" ></td>'); 
+                $("#add tr td:nth-last-child(12)").after('<td><input name="Reponse'+iter+'Departement" type="text" id="Reponse'+iter+'ONEE" value="'+test4+'" ></td>');
+               // $("#add tr td:nth-last-child(9)").after('<td><input name="Depotdu'+iter+'ABH" type="text" id="Envoi'+iter+'du complement du dossier a ONEE" value="'+test5+'" ></td>');
+                //$("#add tr td:nth-last-child(9)").after('<td><input name="Envoidu'+iter+'ABH" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test6+'" ></td>');
+            } 
            
         });
         iter += 1;
     });
+    
 });
+
         </script>
+          
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse"></body>
 <!-- partial:index.partial.html -->
