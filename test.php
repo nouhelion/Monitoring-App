@@ -148,7 +148,7 @@
              $(document).ready(function () {
     
     var myform = $('#myform'),
-        iter = 2,t=1;
+        iter = 2;
     $('#btnAddCol').click(function () {
         myform.find('tr').each(function(){
           var trow = $(this);
@@ -161,13 +161,40 @@
                $("#add tr th:nth-last-child(4)").after("<th>Dépôt du "+iter+" Complément du Dossier Par le Développeur/ABH</th>");
               $("#add tr th:nth-last-child(4)").after("<th>Envoi du "+iter+" Complément du Dossier à l'ABH</th>");
             }else{
-                
-                $("#add tr td:nth-last-child(9)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE"  ></td>');
-                $("#add tr td:nth-last-child(9)").after('<td><input name="Depotdu'+iter+'" type="text" id="Envoi du complement du dossier a ONEE"  ></td>');
-                $("#add tr td:nth-last-child(9)").after('<td><input name="Envoidu'+iter+'" type="text" id="Envoidu'+iter+'complementdudossieraONEE"  ></td>'); 
-                $("#add tr td:nth-last-child(4)").after('<td><input name="Reponse'+iter+'Departement" type="text" id="Reponse'+iter+'ONEE"  ></td>');
-               $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'ABH" type="text" id="Envoi'+iter+'du complement du dossier a ONEE"  ></td>');
-                $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'ABH" type="text" id="Envoidu'+iter+'complementdudossieraONEE"  ></td>');
+                if(iter ===2)
+                  {
+                    test1="<?php echo $Reponse2ONEE; ?>";
+                   test2="<?php echo $Depotdu2complementdudossierparledeveloppeur; ?>";
+                   test3="<?php echo $Envoidu2complementdudossieraONEE; ?>";
+                   test4="<?php echo $Reponse2Departement; ?>";
+                   test5="<?php echo $Depotdu2ABH; ?>";
+                   test6="<?php echo $Envoidu2ABH; ?>";
+                   
+                  }
+                else if(iter ===3)
+                  {
+                    test1="<?php echo $Reponse3ONEE; ?>";
+                   test2="<?php echo $Depotdu3complementdudossierparledeveloppeur; ?>";
+                   test3="<?php echo $Envoidu3complementdudossieraONEE; ?>";
+                   test4="<?php echo $Reponse3Departement; ?>";
+                   test5="<?php echo $Depotdu3ABH; ?>";
+                   test6="<?php echo $Envoidu3ABH; ?>";
+                  }
+                  else if(iter ===4)
+                  {
+                    test1="<?php echo $Reponse4ONEE; ?>";
+                   test2="<?php echo $Depotdu4complementdudossierparledeveloppeur; ?>";
+                   test3="<?php echo $Envoidu4complementdudossieraONEE; ?>";
+                   test4="<?php echo $Reponse4Departement; ?>";
+                   test5="<?php echo $Depotdu4ABH; ?>";
+                   test6="<?php echo $Envoidu4ABH; ?>";
+                  }
+                $("#add tr td:nth-last-child(9)").after('<td><input name="Reponse'+iter+'ONEE" type="text" id="Reponse'+iter+'ONEE" value="'+test1+'" ></td>');
+                $("#add tr td:nth-last-child(9)").after('<td><input name="Depotdu'+iter+'" type="text" id="Envoi du complement du dossier a ONEE" value="'+test2+'" ></td>');
+                $("#add tr td:nth-last-child(9)").after('<td><input name="Envoidu'+iter+'" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test3+'" ></td>'); 
+                $("#add tr td:nth-last-child(4)").after('<td><input name="Reponse'+iter+'Departement" type="text" id="Reponse'+iter+'ONEE" value="'+test4+'" ></td>');
+               $("#add tr td:nth-last-child(4)").after('<td><input name="Depotdu'+iter+'ABH" type="text" id="Envoi'+iter+'du complement du dossier a ONEE" value="'+test5+'" ></td>');
+                $("#add tr td:nth-last-child(4)").after('<td><input name="Envoidu'+iter+'ABH" type="text" id="Envoidu'+iter+'complementdudossieraONEE" value="'+test6+'" ></td>');
             } 
            
         });
@@ -258,7 +285,7 @@
                     <th>Envoi du Dossier à l'ONEE/GRD Concerné</th>
                     <th>Réponse ONEE/GRD Concerné</th>
                     <th>Dépôt du Complément du Dossier Par le Développeur</th>
-                    <th id="1">Envoi du Complément du Dossier à l'ONEE/GRD Concerné<button type="button" class="btn" id="btnAddCol"><i class="fa fa-plus" aria-hidden="true"></i></button></th>
+                    <th>Envoi du Complément du Dossier à l'ONEE/GRD Concerné<button type="button" class="btn" id="btnAddCol"><i class="fa fa-plus" aria-hidden="true"></i></button></th>
                     <th>Avis de l'ONEE</th>
                     <th>Envoi du Dossier Au Département Eau</th>
                     <th>Réponse du Département de l'Eau</th>
