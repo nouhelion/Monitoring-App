@@ -424,17 +424,18 @@ require('db.php');
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" type="image/png" href="images/icons/te.ico" />
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
-<link rel='stylesheet' href='https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'><link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/hydr.css">
-	<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Main css -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Google Font -->
+<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/hydr.css">
     <script language="javascript" type="text/javascript">
     function dynamicdropdown(listindex)
     {
@@ -554,8 +555,8 @@ require('db.php');
         }
         return true;
     }
-    </script>
-   <script type="text/javascript">
+    </script> 
+    <script type="text/javascript">
              $(document).ready(function () {
     
     var myform = $('#myform'),
@@ -614,8 +615,7 @@ require('db.php');
     
 });
 
-        </script>
-          
+        </script>         
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse"></body>
 <!-- partial:index.partial.html -->
@@ -764,24 +764,19 @@ require('db.php');
 
 
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/editable/bootstrap-table-editable.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/export/bootstrap-table-export.js'></script>
-<script src='https://rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/filter-control/bootstrap-table-filter-control.js'></script><script  src="./script.js"></script>
+ 
 <script src="js_/jquery.js"></script>
-   
-    <script src="js_/jquery.parallax.js"></script>
-    <script src="js_/owl.carousel.min.js"></script>
-    <script src="js_/smoothscroll.js"></script>
-    <script src="js_/wow.min.js"></script>
-    <script src="js_/custom.js"></script>
+<script src="js_/bootstrap.min.js"></script>
+<script src="js_/jquery.parallax.js"></script>
+<script src="js_/owl.carousel.min.js"></script>
+<script src="js_/smoothscroll.js"></script>
+<script src="js_/wow.min.js"></script>
+<script src="js_/custom.js"></script>
     <script>
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);
         }
     </script>
+       
 </body>
 </html>
