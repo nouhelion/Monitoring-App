@@ -12,6 +12,7 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
 <link rel='stylesheet' href='https://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'><link rel="stylesheet" href="./style.css">
+<a target="_blank" href="https://icons8.com/icon/5SjCmls8VHtY/settings"></a><a target="_blank" href="https://icons8.com"></a>
 <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -106,7 +107,7 @@
 	<thead>
 		<tr>
 			<th data-field="state" data-checkbox="true"></th>
-			<th  data-filter-control="input" data-sortable="true">Numéro</th>
+			<th style='background-color:green;' data-filter-control="input" data-sortable="true">Numéro</th>
 			<th  data-filter-control="input" data-sortable="true">Demandeur</th>
 			<th  data-filter-control="input" data-sortable="true">Nom du projet</th>
 			<th  data-filter-control="select" data-sortable="true">Région</th>
@@ -161,9 +162,9 @@
 	 
 	  if (mysqli_num_rows($result) > 0) {
 		  while ($row = mysqli_fetch_assoc($result)) {
-			echo "<tr>";
-			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
-			  echo "<td>" .$row['Numero']."</td>";
+			  echo "<tr>";
+			  echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
+			  echo "<td >" .$row['Numero']."</td>";
 			  echo "<td>" .$row['Demandeur']."</td>";
 			  echo "<td>" .$row['Nom du projet']."</td>";
 			  echo "<td>" .$row['Region']."</td>";
