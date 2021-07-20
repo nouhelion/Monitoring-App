@@ -48,11 +48,7 @@
 <html lang="en">
 
 <head>
-    <!--
-Gestion des autorisation
-http://www.templatemo.com/tm-486-new-event
--->
-    <title>Ministere des mines, de l'energie et de l'environnement</title>
+    <title>Ministère des Mines, de l'Énergie et de l'Environement</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="UTF-8">

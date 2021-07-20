@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--
-Gestion des autorisation
-http://www.templatemo.com/tm-486-new-event
--->
-<title>Ministere des mines, de l'energie et de l'environnement</title>
+
+<title>Ministère des Mines, de l'Énergie et de l'Environement</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <meta charset="UTF-8">
@@ -50,20 +47,13 @@ http://www.templatemo.com/tm-486-new-event
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<img src="images/roy.png" > 
+			<img src="images/roy.png" alt="">
 		</div>
 
 		<div class="collapse navbar-collapse">
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#intro" class="smoothScroll">Home</a></li>
-				<li><a href="#overview" class="smoothScroll">choix</a></li>
-				<li><a href="#speakers" class="smoothScroll">Speakers</a></li>
-				<li><a href="#program" class="smoothScroll">Programs</a></li>
-				<li><a href="#register" class="smoothScroll">Register</a></li>
-				<li><a href="#venue" class="smoothScroll">Venue</a></li>
-				<li><a href="#sponsors" class="smoothScroll">Sponsors</a></li>
-				<li><a href="#contact" class="smoothScroll">Contact</a></li>
 			</ul>
 
 		</div>
@@ -103,7 +93,7 @@ http://www.templatemo.com/tm-486-new-event
 ============================== -->
 
 <!-- Back top -->
-<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
 
 
 <!-- =========================

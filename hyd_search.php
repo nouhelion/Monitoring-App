@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Ministere des mines, de l'energie et de l'environnement</title>
+    <title>Ministère des Mines, de l'Énergie et de l'Environement</title>
   <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="UTF-8">
