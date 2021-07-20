@@ -69,8 +69,8 @@
             <div class="row">
 
             <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s" >
-			<h2 style="color: black;" style="text-align: center;">Direction des Energies Renouvelables et de l'energie hydroelectrique		</h2>
-			<h4 style="color:white;" style="text-align: center;">Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</h4>
+			<h2  style="text-align: center; color: black;">Direction des Energies Renouvelables et de l'energie hydroelectrique		</h2>
+			<h4 >Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</h4>
 		</div>
 
             </div>
@@ -82,7 +82,7 @@
 <div class="search-container" >
                  <form action="update_hyd.php" method="POST" >
                    <input type="text" placeholder="Modifier.." name="search"  required>
-                     <button type="submit" class="btn"name="sus"><i class="fa fa-pencil-square-o"  aria-hidden="true"></i></button>
+                     <button type="submit" class="btn" name="sus"><i class="fa fa-pencil-square-o"  aria-hidden="true"></i></button>
                          </form>
                      </div>
 					 <?php
