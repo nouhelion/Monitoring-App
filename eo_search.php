@@ -130,7 +130,7 @@
 <div class="search-container" >
                  <form action="update_eo.php" method="POST" >
                    <input type="text" placeholder="Modifier.." name="search"  required>
-                     <button type="submit" class="btn"name="sus"><i class="fa fa-pencil-square-o"  aria-hidden="true"></i></button>
+                     <button type="submit" class="btn" name="sus"><i class="fa fa-pencil-square-o"  aria-hidden="true"></i></button>
                          </form>
                      </div>
 					 <?php
