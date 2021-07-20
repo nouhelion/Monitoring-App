@@ -191,7 +191,7 @@
 
 </head>
 
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse" class="form-v10">
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse" >
 
     <!-- =========================
      PRE LOADER       

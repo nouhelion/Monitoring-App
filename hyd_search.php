@@ -155,7 +155,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		
+
 			<?php
 	  require_once('db.php');
 	  $sql="SELECT *  FROM `energiehydroelectrique`";
