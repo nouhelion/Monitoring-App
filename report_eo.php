@@ -1,9 +1,13 @@
 <?php
 include("diagram_eo/region_auto.php");
+include("diagram_eo/region_cours.php");
+include("diagram_eo/region_refus.php");
 $quer="SELECT * FROM region_auto";
 $result2=mysqli_query($link,$quer);
 $quer3="SELECT * FROM region_cours";
 $result3=mysqli_query($link,$quer3);
+$quer4="SELECT * FROM region_refus";
+$result4=mysqli_query($link,$quer4);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +49,7 @@ $result3=mysqli_query($link,$quer3);
                 ?>
             ]);
             var options1 = {
-                title: 'Les Projets Autorisées par Regions',
+                title: 'Les Projets Autorisées par Régions',
                 is3D: true,
             };
             var chart1 = new google.visualization.PieChart(document.getElementById('region_auto'));
@@ -61,11 +65,27 @@ $result3=mysqli_query($link,$quer3);
                 ?>
             ]);
             var options2 = {
-                title: 'Les Projets En cours par Regions',
+                title: 'Les Projets En cours par Régions',
                 is3D: true,
             };
             var chart2 = new google.visualization.PieChart(document.getElementById('region_cours'));
             chart2.draw(data2, options2);
+
+            var data3 = google.visualization.arrayToDataTable([
+                ['Regions', 'nombre de Projets Refusé'],
+                <?php
+                while($ch=mysqli_fetch_assoc($result4))
+                {
+                    echo "['".$ch['nom']."',".$ch['nbr']."],";
+                }
+                ?>
+            ]);
+            var options3 = {
+                title: 'Les Projets Refusés par Régions',
+                is3D: true,
+            };
+            var chart3 = new google.visualization.PieChart(document.getElementById('region_refus'));
+            chart3.draw(data3, options3);
         }
     </script>
 
@@ -112,7 +132,7 @@ $result3=mysqli_query($link,$quer3);
                             <i class="fa fa-angle-down" style="color:rgb(129, 129, 129);" aria-hidden="true"></i>
                         </button>
                         <div class="dropdown-content">
-                            <a href="#autorise">Link 1</a>
+                            <a href="#region">Par Région</a>
                             <a href="#">Link 2</a>
                             <a href="#">Link 3</a>
                         </div>
@@ -155,10 +175,11 @@ PROGRAM SECTION
 <br><br>
 
 <section id="report" class="parallax-section">
-   <table id="autorise">
+   <table id="region">
       <tr>
           <td> <div id="region_auto" style="width: 500px; height: 500px;"></div></td>
           <td> <div id="region_cours" style="width: 500px; height: 500px;"></div></td>
+          <td> <div id="region_refus" style="width: 500px; height: 500px;"></div></td>
       </tr>
    </table>
 </section>
