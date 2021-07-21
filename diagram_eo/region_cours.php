@@ -9,7 +9,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $TTA = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
        SET 
            nbr = '$TTA'
        WHERE
@@ -23,7 +23,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $O = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
       SET 
           nbr = '$O'
       WHERE
@@ -37,7 +37,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $FM = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
       SET 
           nbr = '$FM'
       WHERE
@@ -51,7 +51,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $RSK = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
       SET 
           nbr = '$RSK'
       WHERE
@@ -65,7 +65,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $BMK = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
       SET 
           nbr = '$BMK'
       WHERE
@@ -79,7 +79,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $CS = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
       SET 
           nbr = '$CS'
       WHERE
@@ -93,7 +93,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $MS = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
       SET 
           nbr = '$MS'
       WHERE
@@ -107,7 +107,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $DT = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
      SET 
          nbr = '$DT'
      WHERE
@@ -121,7 +121,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $SM = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
      SET 
          nbr = '$SM'
      WHERE
@@ -135,7 +135,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $GON = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
      SET 
          nbr = '$GON'
      WHERE
@@ -149,7 +149,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $LSH = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
      SET 
          nbr = '$LSH'
      WHERE
@@ -163,7 +163,7 @@ if ($link) {
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $DOD = $values['total'];
-    $sql = "UPDATE region_cours 
+    $sql = "UPDATE region_eo_cours 
      SET 
          nbr = '$DOD'
      WHERE

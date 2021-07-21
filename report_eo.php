@@ -2,16 +2,15 @@
 include("diagram_eo/region_auto.php");
 include("diagram_eo/region_cours.php");
 include("diagram_eo/region_refus.php");
-$quer="SELECT * FROM region_auto";
+$quer="SELECT * FROM region_eo_auto";
 $result2=mysqli_query($link,$quer);
-$quer3="SELECT * FROM region_cours";
+$quer3="SELECT * FROM region_eo_cours";
 $result3=mysqli_query($link,$quer3);
-$quer4="SELECT * FROM region_refus";
+$quer4="SELECT * FROM region_eo_refus";
 $result4=mysqli_query($link,$quer4);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Ministère des Mines, de l'Énergie et de l'Environement</title>
     <meta name="description" content="">
