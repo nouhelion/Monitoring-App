@@ -1,7 +1,9 @@
 <?php
 include("diagram_eo/region_auto.php");
-$quer="SELECT * FROM region";
+$quer="SELECT * FROM region_auto";
 $result2=mysqli_query($link,$quer);
+$quer3="SELECT * FROM region_cours";
+$result3=mysqli_query($link,$quer3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,12 +32,11 @@ $result2=mysqli_query($link,$quer);
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
 
+        google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-            //regions
-            var d = google.visualization.arrayToDataTable([
-                ['Regions', 'nombre de Projets'],
+            var data1 = google.visualization.arrayToDataTable([
+                ['Regions', 'nombre de Projets Autorisées'],
                 <?php
                 while($ch=mysqli_fetch_assoc($result2))
                 {
@@ -43,27 +44,28 @@ $result2=mysqli_query($link,$quer);
                 }
                 ?>
             ]);
-            var opt = {
-                title: 'Les projets par regions'
+            var options1 = {
+                title: 'Les Projets Autorisées par Regions',
+                is3D: true,
             };
-            var ch = new google.visualization.PieChart(document.getElementById('region'));
-            ch.draw(d, opt);
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Work',     11],
-                ['Eat',      2],
-                ['Commute',  2],
-                ['Watch TV', 2],
-                ['Sleep',    7]
+            var chart1 = new google.visualization.PieChart(document.getElementById('region_auto'));
+            chart1.draw(data1, options1);
+
+            var data2 = google.visualization.arrayToDataTable([
+                ['Regions', 'nombre de Projets En cours'],
+                <?php
+                while($ch=mysqli_fetch_assoc($result3))
+                {
+                    echo "['".$ch['nom']."',".$ch['nbr']."],";
+                }
+                ?>
             ]);
-
-            var options = {
-                title: 'My Daily Activities'
+            var options2 = {
+                title: 'Les Projets En cours par Regions',
+                is3D: true,
             };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-            chart.draw(data, options);
+            var chart2 = new google.visualization.PieChart(document.getElementById('region_cours'));
+            chart2.draw(data2, options2);
         }
     </script>
 
@@ -155,8 +157,8 @@ PROGRAM SECTION
 <section id="report" class="parallax-section">
    <table id="autorise">
       <tr>
-          <td> <div id="region" style="width: 600px; height: 500px;"></div></td>
-          <td> <div id="piechart" style="width: 400px; height: 300px;"></div></td>
+          <td> <div id="region_auto" style="width: 500px; height: 500px;"></div></td>
+          <td> <div id="region_cours" style="width: 500px; height: 500px;"></div></td>
       </tr>
    </table>
 </section>

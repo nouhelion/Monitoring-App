@@ -1,15 +1,15 @@
 <?php
-require('db.php');
+require_once('db.php');
 if ($link) {
     //FOR TTA
     $TTA = "Tanger – Tétouan – Al Hoceima";
     $sql = "SELECT Region, COUNT(*) as total
     FROM energieeolienne
-     where Region='$TTA' AND 'Avis MEME' LIKE '%autorisation%' ";
+     where Region='$TTA' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $TTA = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
        SET 
            nbr = '$TTA'
        WHERE
@@ -19,11 +19,11 @@ if ($link) {
     $O = "Oriental";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$O' AND 'Avis MEME' LIKE '%autorisation%' ";
+    where Region='$O' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $O = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
       SET 
           nbr = '$O'
       WHERE
@@ -33,11 +33,11 @@ if ($link) {
     $FM = "Fès - Meknès";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$FM' AND 'Avis MEME' LIKE '%autorisation%' ";
+    where Region='$FM' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $FM = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
       SET 
           nbr = '$FM'
       WHERE
@@ -47,11 +47,11 @@ if ($link) {
     $RSK = "Rabat-Salé-Kénitra";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$RSK' AND 'Avis MEME' LIKE '%autorisation%' ";
+    where Region='$RSK' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $RSK = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
       SET 
           nbr = '$RSK'
       WHERE
@@ -61,11 +61,11 @@ if ($link) {
     $BMK = "Béni Mellal-Khénifra";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$BMK' AND 'Avis MEME' LIKE '%autorisation%' ";
+    where Region='$BMK' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $BMK = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
       SET 
           nbr = '$BMK'
       WHERE
@@ -75,11 +75,11 @@ if ($link) {
     $CS = "Casablanca-Settat";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$CS' AND 'Avis MEME' LIKE '%autorisation%' ";
+    where Region='$CS' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $CS = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
       SET 
           nbr = '$CS'
       WHERE
@@ -89,11 +89,11 @@ if ($link) {
     $MS = "Marrakech-Safi";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$MS' AND 'Avis MEME' LIKE '%autorisation%' ";
+    where Region='$MS' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $MS = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
       SET 
           nbr = '$MS'
       WHERE
@@ -103,11 +103,11 @@ if ($link) {
     $DT = "Drâa-Tafilalet";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$DT' AND 'Avis MEME' LIKE '%autorisation%' ";
+   where Region='$DT' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $DT = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
      SET 
          nbr = '$DT'
      WHERE
@@ -117,11 +117,11 @@ if ($link) {
     $SM = "Souss-Massa";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$SM' AND 'Avis MEME' LIKE '%autorisation%' ";
+   where Region='$SM' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $SM = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
      SET 
          nbr = '$SM'
      WHERE
@@ -131,11 +131,11 @@ if ($link) {
     $GON = "Guelmim-Oued Noun";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$GON' AND 'Avis MEME' LIKE '%autorisation%' ";
+   where Region='$GON' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $GON = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
      SET 
          nbr = '$GON'
      WHERE
@@ -145,11 +145,11 @@ if ($link) {
     $LSH = "Laâyoune-Sakia El Hamra";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$LSH' AND 'Avis MEME' LIKE '%autorisation%'";
+   where Region='$LSH' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $LSH = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
      SET 
          nbr = '$LSH'
      WHERE
@@ -159,18 +159,15 @@ if ($link) {
     $DOD = "Dakhla-Oued Ed Dahab";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$DOD' AND 'Avis MEME' LIKE '%autorisation%' ";
+   where Region='$DOD' AND 'Avis MEME' NOT IN ('autorisation','refus')";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $DOD = $values['total'];
-    $sql = "UPDATE region_auto 
+    $sql = "UPDATE region_cours 
      SET 
          nbr = '$DOD'
      WHERE
          nom = 'Dakhla-Oued Ed Dahab'";
     mysqli_query($link, $sql);
-
 }
-
-
 ?>

@@ -99,7 +99,7 @@
                     <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
                     <li><a href="#search" class="smoothScroll">Rechercher</a></li>
                     <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
-                    <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
+                    <li><a href="report_eo.php" class="smoothScroll">Reporting</a></li>
                 </ul>
 
             </div>

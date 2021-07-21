@@ -517,7 +517,7 @@ require('db.php');
                     <li><a href="eo_search.php" class="smoothScroll">Rechercher</a></li>
                     <li><a href="#modifier" class="smoothScroll">Modifier</a></li>
                     <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
-                    <li><a href="#speakers" class="smoothScroll">Reporting</a></li>
+                    <li><a href="report_eo.php" class="smoothScroll">Reporting</a></li>
                 </ul>
 
             </div>
