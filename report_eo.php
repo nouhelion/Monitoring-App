@@ -1,5 +1,5 @@
 <?php
-include("diagram/region_eo.php");
+include("diagram_eo/region_auto.php");
 $quer="SELECT * FROM region";
 $result2=mysqli_query($link,$quer);
 ?>

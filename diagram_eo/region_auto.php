@@ -5,7 +5,7 @@ if ($link) {
     $TTA = "Tanger – Tétouan – Al Hoceima";
     $sql = "SELECT Region, COUNT(*) as total
     FROM energieeolienne
-     where Region='$TTA'";
+     where Region='$TTA' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $TTA = $values['total'];
@@ -19,7 +19,7 @@ if ($link) {
     $O = "Oriental";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$O'";
+    where Region='$O' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $O = $values['total'];
@@ -33,7 +33,7 @@ if ($link) {
     $FM = "Fès - Meknès";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$FM'";
+    where Region='$FM' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $FM = $values['total'];
@@ -47,7 +47,7 @@ if ($link) {
     $RSK = "Rabat-Salé-Kénitra";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$RSK'";
+    where Region='$RSK' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $RSK = $values['total'];
@@ -61,7 +61,7 @@ if ($link) {
     $BMK = "Béni Mellal-Khénifra";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$BMK'";
+    where Region='$BMK' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $BMK = $values['total'];
@@ -75,7 +75,7 @@ if ($link) {
     $CS = "Casablanca-Settat";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$CS'";
+    where Region='$CS' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $CS = $values['total'];
@@ -89,7 +89,7 @@ if ($link) {
     $MS = "Marrakech-Safi";
     $sql = "SELECT Region, COUNT(*) as total
    FROM energieeolienne
-    where Region='$MS'";
+    where Region='$MS' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $MS = $values['total'];
@@ -103,7 +103,7 @@ if ($link) {
     $DT = "Drâa-Tafilalet";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$DT'";
+   where Region='$DT' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $DT = $values['total'];
@@ -117,7 +117,7 @@ if ($link) {
     $SM = "Souss-Massa";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$SM'";
+   where Region='$SM' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $SM = $values['total'];
@@ -131,7 +131,7 @@ if ($link) {
     $GON = "Guelmim-Oued Noun";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$GON'";
+   where Region='$GON' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $GON = $values['total'];
@@ -145,7 +145,7 @@ if ($link) {
     $LSH = "Laâyoune-Sakia El Hamra";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$LSH'";
+   where Region='$LSH' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $LSH = $values['total'];
@@ -159,7 +159,7 @@ if ($link) {
     $DOD = "Dakhla-Oued Ed Dahab";
     $sql = "SELECT Region, COUNT(*) as total
   FROM energieeolienne
-   where Region='$DOD'";
+   where Region='$DOD' AND 'Avis MEME' LIKE '%autorisation%'";
     $result = mysqli_query($link, $sql);
     $values = mysqli_fetch_assoc($result);
     $DOD = $values['total'];
