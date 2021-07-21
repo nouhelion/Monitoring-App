@@ -1,6 +1,5 @@
 <?php
-
-require_once('db.php');
+require('db.php');
 if ($link) {
     //FOR TTA
     $TTA = "Tanger – Tétouan – Al Hoceima";

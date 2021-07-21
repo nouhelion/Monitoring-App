@@ -157,7 +157,7 @@
 		<tr>
 		 
 			<th data-field="state" data-checkbox="true"></th>
-		   
+            <th  data-filter-control="select" data-sortable="true">Situation</th>
 			<th  data-filter-control="input" data-sortable="true">Numéro</th>
 			<th  data-filter-control="input" data-sortable="true">Développeur</th>
 			<th  data-filter-control="input" data-sortable="true">Nom du projet</th>
@@ -200,8 +200,13 @@
 	  if (mysqli_num_rows($result) > 0) {
 		  while ($row = mysqli_fetch_assoc($result)) {
 			echo "<tr>";
-			echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
-			
+              echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
+              if(strpos($row['Avis MEME'], 'refus') !== false)
+              {echo "<td>Refus</td>";}
+              else if(strpos($row['Avis MEME'], 'Autorisation') !== false)
+              {echo "<td>Autorisation</td>";}
+              else
+              {echo "<td>En cours</td>";}
 			echo "<td>" .$row['Numero']."</td>";
 			  echo "<td>" .$row['Developpeur']."</td>";
 			  echo "<td>" .$row['Nom du projet']."</td>";

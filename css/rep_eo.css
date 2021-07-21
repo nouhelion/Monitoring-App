@@ -1,0 +1,740 @@
+.btn {
+    background-color: #5564bb; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 12px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    margin-left: 25px;
+}
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #66ccff}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*
+
+New Event
+
+http://www.templatemo.com/tm-486-new-event
+
+*/
+
+body {
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/*---------------------------------------
+Typorgraphy
+-----------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+h3,
+h5 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+h3 {
+    line-height: 36px;
+}
+
+h5 {
+    letter-spacing: 1px;
+    padding-top: 10px;
+}
+
+p {
+    color: #707070;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+
+
+/*---------------------------------------
+General
+-----------------------------------------*/
+.section-title {
+    margin-bottom: 32px;
+}
+
+#overview,
+#EnergieSolaire {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+}
+
+#detail,
+#video,
+#speakers,
+#program,
+#sponsors,
+#contact,
+footer {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#detail,
+#speakers,
+#sponsors,
+footer {
+    text-align: center;
+}
+
+#overview h3,
+#detail h3,
+#video h3,
+#EnergieSolaire h3,
+#venue h3,
+#contact h3 {
+    padding-bottom: 12px;
+}
+
+#intro .btn,
+#contact .btn {
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 14px 42px;
+    margin-top: 42px;
+    margin-right: 12px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#intro .btn-danger,
+#contact .btn-danger {
+    background: #f2545f;
+    border-color: transparent;
+}
+
+#contact .btn {
+    border-radius: 100px;
+}
+
+#intro .btn-danger:hover {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+#contact .btn-danger:hover {
+    background: #222;
+}
+
+#intro .btn-default:hover {
+    background: #ffffff;
+    color: #333333;
+    border-color: transparent;
+}
+
+.parallax-section {
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+
+
+/*---------------------------------------
+Preloader section
+-----------------------------------------*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #ffffff;
+}
+
+.sk-rotating-plane {
+    width: 50px;
+    height: 50px;
+    background-color: #222;
+    -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+    animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotatePlane {
+    0% {
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+@keyframes sk-rotatePlane {
+    0% {
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+
+
+/*---------------------------------------
+Navigation Links section
+-----------------------------------------*/
+.custom-navbar {
+    margin-bottom: 0;
+    background-color: #101010;
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 40px;
+}
+
+.custom-navbar .nav li a {
+    color: rgb(129, 129, 129);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    line-height: 40px;
+    transition: all 0.4s ease-in-out;
+}
+
+.custom-navbar .nav li a:hover {
+    background: transparent;
+    color: #66ccff;
+}
+
+.custom-navbar .navbar-nav>li>a:hover,
+.custom-navbar .navbar-nav>li>a:focus {
+    background-color: transparent;
+}
+
+.custom-navbar .nav li.active>a {
+    background-color: transparent;
+    color: #66ccff;
+}
+
+.custom-navbar .navbar-toggle {
+    border: none;
+    padding-top: 10px;
+}
+
+.custom-navbar .navbar-toggle {
+    background-color: transparent;
+}
+
+.custom-navbar .navbar-toggle .icon-bar {
+    background: #ffffff;
+    border-color: transparent;
+}
+
+@media(min-width:768px) {
+    .custom-navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        background: 0 0;
+    }
+
+    .custom-navbar.top-nav-collapse {
+        background: #101010;
+        padding: 0;
+    }
+
+}
+
+/*---------------------------------------
+Intro section
+-----------------------------------------*/
+#intro {
+    background: url('../images/register-bg.jpeg') 50% 0 repeat-y fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+
+
+
+/*---------------------------------------
+Overview  section
+-----------------------------------------*/
+#overview img {
+    position: relative;
+    padding-bottom: 32px;
+}
+
+
+
+
+
+
+
+/*---------------------------------------
+Regsiter section
+-----------------------------------------*/
+#EnergieSolaire {
+    background: url('../images/register-bg.jpeg') 50% 0 repeat-y fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    color: #000000;
+}
+
+#EnergieSolaire .form-control {
+    background: transparent;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+#EnergieSolaire input {
+    height: 45px;
+}
+
+#EnergieSolaire input[type="submit"] {
+    background: #743c3c;
+    border-radius: 100px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 12px;
+    transition: all 0.4s ease-in-out;
+}
+
+#EnergieSolaire input[type="submit"]:hover {
+    background: #302a2a;
+    color: rgb(243, 233, 233);
+}
+
+/*---------------------------------------
+Venue section
+-----------------------------------------*/
+#venue {
+    background: url('../images/venue-bg.jpg') 50% 0 repeat-y fixed;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#venue p {
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+
+/*---------------------------------------
+Program section
+-----------------------------------------*/
+#program {
+
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    color: #000000;
+}
+
+#program .form-control {
+    background: transparent;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+#program input {
+    height: 45px;
+}
+
+#program input[type="submit"] {
+    background: #743c3c;
+    border-radius: 100px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 12px;
+    transition: all 0.4s ease-in-out;
+}
+
+#program input[type="submit"]:hover {
+    background: #302a2a;
+    color: rgb(243, 233, 233);
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+select {
+    padding: 5px;
+}
+
+.big-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-top: 70px;
+    margin-left: 90px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-form,
+.second-form {
+    width: 80%;
+}
+
+.first-form>* {
+    margin-top: 30px;
+}
+
+.second-form>* {
+    margin-top: 30px;
+}
+
+/* first form */
+
+.form-container {
+    height: 750px;
+    width: 90%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
+
+}
+
+.form-container input {
+    border-bottom: 1px solid gray;
+}
+
+.first-form>select {
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.form-container>* {
+    background-color: white;
+}
+
+.form-select-title {
+    width: 100%;
+    display: flex;
+}
+
+.form-input-numero {
+    width: 20%;
+}
+
+.form-input-dev {
+    width: 79%;
+}
+
+.form-input-loc {
+    width: 69%;
+}
+
+.form-input-nom {
+    width: 100%;
+}
+
+.form-input-env {
+    width: 100%;
+}
+
+.form-input-pui {
+    width: 30%;
+}
+
+.form-input-prov {
+    width: 60%;
+}
+
+.form-input-prod {
+    width: 60%;
+}
+
+.form-input-sou {
+    width: 39%;
+}
+
+.form-input-derr {
+    width: 50%;
+}
+
+.form-input-rep {
+    width: 40%;
+}
+
+.form-select-reg {
+    width: 57%;
+}
+
+.form-select-co2 {
+    width: 50%;
+}
+
+.form-input-name {
+    width: 49%;
+}
+
+.form-input-obs {
+    width: 100%;
+}
+
+.form-input-coo {
+    width: 45%;
+}
+
+.form-input-geo {
+    width: 53%;
+}
+
+.form-input-egeo {
+    width: 100%;
+}
+
+.form-input-inv {
+    width: 100%;
+}
+
+.form-input-avis {
+    width: 49%;
+}
+
+.form-input-aviss {
+    width: 45%;
+}
+
+.form-select-date {
+    width: 100%;
+}
+
+.form-input-company {
+    width: 100%;
+}
+
+.form-input-business {
+    width: 60%;
+}
+
+.form-select-employees {
+    width: 38%;
+}
+
+.btn_ {
+    background-color: #4053be;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn_:hover {
+    background-color: RoyalBlue;
+}
+
+/* second form */
+
+.form-container-right {
+    width: 90%;
+    height: 750px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4053be;
+    color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.28);
+}
+
+.form-container-right input {
+    border-bottom: 1px solid white;
+}
+
+.second-form>input {
+    background-color: #4053be;
+    color: white;
+}
+
+.second-form>select {
+    background-color: #4053be;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: white;
+}
+
+.second-form>select>option {
+    background-color: white;
+    color: black;
+}
+
+.second-form>select>option:first-child {
+    color: black;
+}
+
+.second-form>input[type="text"]::placeholder {
+    color: #fff;
+}
+
+.form-input-address {
+    width: 100%;
+}
+
+.form-input-infos {
+    width: 100%;
+}
+
+.form-input-zip {
+    width: 38%;
+}
+
+.form-select-place {
+    width: 60%;
+}
+
+.form-select-country {
+    width: 100%;
+}
+
+.form-input-code {
+    width: 38%;
+}
+
+.form-input-phone {
+    width: 60%;
+}
+
+.form-input-email {
+    width: 100%;
+}
+
+.form-check {
+    background-color: #5564bb;
+    border: none;
+}
