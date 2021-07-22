@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 18, 2021 at 12:27 PM
+-- Generation Time: Jul 22, 2021 at 11:33 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -171,9 +171,15 @@ CREATE TABLE IF NOT EXISTS `energiehydroelectrique` (
 --
 
 INSERT INTO `energiehydroelectrique` (`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 2 Complement`, `Depot du 2 complement du dossier par le developpeur`, `Envoi du 2 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 3 Complement`, `Depot du 3 complement du dossier par le developpeur`, `Envoi du 3 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 4 Complement`, `Depot du 4 complement du dossier par le developpeur`, `Envoi du 4 complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Envoi du dossier au departement eau`, `Reponse Departement de l'eau`, `Depot du complement du dossier par le developpeur/ABH`, `Envoi du complement du dossier a l'ABH`, `Reponse Departement de l'eau en Cas Du 2 Complement`, `Depot du 2 complement du dossier par le developpeur/ABH`, `Envoi du 2 complement du dossier a l'ABH`, `Reponse Departement de l'eau en Cas Du 3 Complement`, `Depot du 3 complement du dossier par le developpeur/ABH`, `Envoi du 3 complement du dossier a l'ABH`, `Reponse Departement de l'eau en Cas Du 4 Complement`, `Depot du 4 complement du dossier par le developpeur/ABH`, `Envoi du 4 complement du dossier a l'ABH`, `Avis Agence Bassin`, `Avis MEME`, `Observations`) VALUES
-(22, 'gggggggg', '', 'Marrakech-Safi', 'El Kelaâ des Sraghna', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'gggggggggg', 1500, '', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'ggggg', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-17', '2021-07-17', '', '', '', '', '', '', '', '', '', 'bbbbbbbbbbbbbbb', 'ggggg', 'ggggggggggg'),
-(498, 'gggggggg', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 1500, 'gggggggg', '2021-07-10', 'hhhhhhhhhhh', 'hhhhhhh', '2021-07-17', '2021-07-10', '', '', '', '', '', '', '', '', '', 'hhhhhhhh', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-17', '2021-07-17', '', '', '', '', '', '', '', '', '', 'bbbbbbbbbbbbbbb', 'hhhhhhhh', 'ggggggggggg'),
-(666, 'gggggggg', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 0, '2147483647', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'ggggg', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'bbbbbbbbbbbbbbb', 'ggggg', 'ggggggggggg');
+(22, 'gggggggg', '', 'Marrakech-Safi', 'El Kelaâ des Sraghna', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'gggggggggg', 1500, '', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'ggggg', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-17', '2021-07-17', '', '', '', '', '', '', '', '', '', 'bbbbbbbbbbbbbbb', '', 'ggggggggggg'),
+(498, 'gggggggg', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 1500, 'gggggggg', '2021-07-10', 'hhhhhhhhhhh', 'hhhhhhh', '2021-07-17', '2021-07-10', '', '', '', '', '', '', '', '', '', 'hhhhhhhh', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-17', '2021-07-17', '', '', '', '', '', '', '', '', '', 'bbbbbbbbbbbbbbb', '', 'ggggggggggg'),
+(666, 'gggggggg', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 0, '2147483647', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'ggggg', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'bbbbbbbbbbbbbbb', '', 'ggggggggggg'),
+(27, 'AIC', 'Oum ER Rbia 1', 'Béni Mellal-Khénifra', 'Khénifra', '', 541, 4.6, 0, 'hydro', '', 0, '', '18/09/2014\r\nlettre n°9888/A', '', '', '26 /11/2014 \r\nlettre n°105/14', 'Complément du dossier lettre n°3/DI/100/2014 du 26 décembre 2014', '', '05 /02/2015 lettre n°487/DE/DEREE', '', '', '', '', '', '', '', '', '', '', '26 /11/2014 \r\nlettre n°104/14', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(28, 'AIC', 'Oum ER Rbia 2', 'Béni Mellal-Khénifra', 'Khénifra', '', 1042, 9, 0, 'hydro', '', 0, '', '18/09/2014\r\nlettre n°9888/A', '', '', '07 /11/2014 \r\nlettre n°3535/DE', 'Complément du dossier lettre n°3/DI/100/2014 du 26 décembre 2014', '', '05 /02/2015 \r\nlettre n°488/DE/DEREE', '', '', '', '', '', '', '', '', '', '', '26 /11/2014 \r\nlettre n°102/14', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(23, 'PLATINIUM POWER', 'Tafrent', 'Fès - Meknès', 'Taounate', '', 12, 0, 0, 'hydro', '', 0, '', '4/08/2014\r\nlettre n°8721/A', '', '', '15 /08/2014 \r\nlettre n°2801/DE', '', 'avis favorable sur le plan technique: lettre n°3/DI/CTR/087/2014 du 24/11/2014', '', '', 'avis favorable sur le plan technique: lettre n°3/DI/CTR/087/2014 du 24/11/2014\r\n', '15 /08/2014 lettre n°2802/DE', '', '', '', '', 'Demande refusée lettre N°4612 DRPE/CM du 17/11/2014', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'refus de la demande: lettre n°475/DE du 5 février 2015', ''),
+(24, 'PLATINIUM POWER', 'Rhafsai', 'Fès - Meknès', 'Taounate', '', 12, 0, 0, 'hydro', '', 0, '', '4/08/2014\r\nlettre n°87/A', '', '', '15 /08/2014 \r\nlettre n°2799/DE', '', 'avis favorable sur le plan technique: lettre n°3/DI/CTR/087/2014 du 24/11/2014', '', '', 'avis favorable sur le plan technique: lettre n°3/DI/CTR/087/2014 du 24/11/2014', '15 /08/2014 \r\nlettre n°2800/DE', '', '', '', '', 'Demande refusée lettre N°4612 DRPE/CM du 17/11/2014', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'refus de la demande: lettre n°/DE du 5 février 2015', ''),
+(71, 'PLATINIUM POWER', 'Melloul 1', '', '', '', 24, 0, 0, 'hydro', '', 0, '', '30/03/2017\r\nlettre n°3209/A   ', 'lettre n°1807/DEREE/DER du 24 avril 2017', '', 'Lettre n°3/DI/CTR/DOS/33/2017 du 24 mai 2017', 'Lettre n°2432/DEREE/DER du 02 juin 2017', 'lettre n°8060/A du 25/07/2017', 'Lettre n°8684/DEREE/DE du 28/08/2017', '', '', '', '', '', '', '', 'Avis favorable lettre n°3/DI/CTR/074/2017 du 20/11/2017', 'lettre n°1809/DEREE/DER du 24 avril 2017', '', '', '', '', '', '', '', '', '', '', '', '', 'Accord de principe lettre n° 5589/DRPE/DABH du 12/12/2017', 'Autorisation n°26/DEREE/MEMDD du 1er février 2018', 'le développeur a déposé des dossiers de demande de modification de capacité de 30 à 24 MW/le développeur a déposé un engagement (n°3208/A du 30/03/2017 qui a été transmis à l\'ONEE (lettre n°1865 du 28/04/2017)'),
+(72, 'PLATINIUM POWER', 'Melloul 2', '', '', '', 24, 0, 0, 'hydro', '', 0, '', '30/03/2017\r\nlettre n°3210/A', 'lettre n°1810/DEREE/DER du 24 avril 2017', '', 'Lettre n°3/DI/CTR/DOS/33/2017 du 24 mai 2017', 'Lettre n°2432/DEREE/DER du 02 juin 2017', 'lettre n°8060/A du 25/07/2017', 'Lettre n°8684/DEREE/DE du 28/08/2017', '', '', '', '', '', '', '', 'Avis favorable lettre n°3/DI/CTR/074/2017 du 20/11/2017', 'lettre n°1811/DEREE/DER du 24 avril 2017', '', '', '', '', '', '', '', '', '', '', '', '', 'Accord de principe lettre n° 5591/DRPE/DABH du 12/12/2017', 'Autorisation n°27/DEREE/MEMDD du 1er février 2018', 'le développeur a déposé des dossiers de demande de modification de capacité de 30 à 24 MW/le développeur a déposé un engagement (n°3208/A du 30/03/2017 qui a été transmis à l\'ONEE (lettre n°1865 du 28/04/2017)');
 
 -- --------------------------------------------------------
 
@@ -227,6 +233,285 @@ INSERT INTO `energiesolaire` (`Numero`, `Demandeur`, `Nom du projet`, `Region`, 
 (666, 'gggggggg', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Midelt', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 1500, 'gggggggg', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'ggggg', 'ggggg', 'ggggggggggg'),
 (563, 'gggggggg', 'bbbbbbbbbbbb', 'Marrakech-Safi', 'Essaouira', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'ggggggggggggggggg', 0, 'ggggggggggg', 'gggggggggggg', 'gggggggggggggggggggggg', 'gggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
 (5788, 'gggggggg', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Midelt', 'bbbbbbbbbbbbb', 514, 514, 514, 'bbbbbb', 'ggggggggggggggggg', 1500, 'ggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggg', 'ggggggggggggggggggg', 'ggggggggggggggggggggggg', 'gggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_eo_auto`
+--
+
+DROP TABLE IF EXISTS `region_eo_auto`;
+CREATE TABLE IF NOT EXISTS `region_eo_auto` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_eo_auto`
+--
+
+INSERT INTO `region_eo_auto` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_eo_cours`
+--
+
+DROP TABLE IF EXISTS `region_eo_cours`;
+CREATE TABLE IF NOT EXISTS `region_eo_cours` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_eo_cours`
+--
+
+INSERT INTO `region_eo_cours` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 1),
+('Rabat-Salé-Kénitra', 4),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 1),
+('Marrakech-Safi', 5),
+('Drâa-Tafilalet', 6),
+('Souss-Massa', 4),
+('Guelmim-Oued Noun', 2),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_eo_refus`
+--
+
+DROP TABLE IF EXISTS `region_eo_refus`;
+CREATE TABLE IF NOT EXISTS `region_eo_refus` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_eo_refus`
+--
+
+INSERT INTO `region_eo_refus` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_hyd_auto`
+--
+
+DROP TABLE IF EXISTS `region_hyd_auto`;
+CREATE TABLE IF NOT EXISTS `region_hyd_auto` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_hyd_auto`
+--
+
+INSERT INTO `region_hyd_auto` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_hyd_cours`
+--
+
+DROP TABLE IF EXISTS `region_hyd_cours`;
+CREATE TABLE IF NOT EXISTS `region_hyd_cours` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_hyd_cours`
+--
+
+INSERT INTO `region_hyd_cours` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_hyd_refus`
+--
+
+DROP TABLE IF EXISTS `region_hyd_refus`;
+CREATE TABLE IF NOT EXISTS `region_hyd_refus` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_hyd_refus`
+--
+
+INSERT INTO `region_hyd_refus` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_sol_auto`
+--
+
+DROP TABLE IF EXISTS `region_sol_auto`;
+CREATE TABLE IF NOT EXISTS `region_sol_auto` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_sol_auto`
+--
+
+INSERT INTO `region_sol_auto` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_sol_cours`
+--
+
+DROP TABLE IF EXISTS `region_sol_cours`;
+CREATE TABLE IF NOT EXISTS `region_sol_cours` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_sol_cours`
+--
+
+INSERT INTO `region_sol_cours` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region_sol_refus`
+--
+
+DROP TABLE IF EXISTS `region_sol_refus`;
+CREATE TABLE IF NOT EXISTS `region_sol_refus` (
+  `nom` varchar(50) NOT NULL,
+  `nbr` int NOT NULL,
+  PRIMARY KEY (`nom`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `region_sol_refus`
+--
+
+INSERT INTO `region_sol_refus` (`nom`, `nbr`) VALUES
+('Tanger – Tétouan – Al Hoceima', 0),
+('Oriental', 0),
+('Fès - Meknès', 0),
+('Rabat-Salé-Kénitra', 0),
+('Béni Mellal-Khénifra', 0),
+('Casablanca-Settat', 0),
+('Marrakech-Safi', 0),
+('Drâa-Tafilalet', 0),
+('Souss-Massa', 0),
+('Guelmim-Oued Noun', 0),
+('Laâyoune-Sakia El Hamra', 0),
+('Dakhla-Oued Ed Dahab', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,12 +1,12 @@
 <?php
-include("diagram_eo/region_eo_auto.php");
-include("diagram_eo/region_eo_cours.php");
-include("diagram_eo/region_eo_refus.php");
-$quer="SELECT * FROM region_eo_auto";
+include("diagram_hyd/region_hyd_auto.php");
+include("diagram_hyd/region_hyd_cours.php");
+include("diagram_hyd/region_hyd_refus.php");
+$quer="SELECT * FROM region_hyd_auto";
 $result2=mysqli_query($link,$quer);
-$quer3="SELECT * FROM region_eo_cours";
+$quer3="SELECT * FROM region_hyd_cours";
 $result3=mysqli_query($link,$quer3);
-$quer4="SELECT * FROM region_eo_refus";
+$quer4="SELECT * FROM region_hyd_refus";
 $result4=mysqli_query($link,$quer4);
 ?>
 <!DOCTYPE html>
@@ -24,15 +24,14 @@ $result4=mysqli_query($link,$quer4);
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Main Style Css -->
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/rep_eo.css">
+    <link rel="stylesheet" href="css/rep_hydr.css">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
 
@@ -89,11 +88,10 @@ $result4=mysqli_query($link,$quer4);
     </script>
 
 </head>
-
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse" >
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
 <!-- =========================
- PRE LOADER
+     PRE LOADER
 ============================== -->
 <div class="preloader">
 
@@ -103,9 +101,8 @@ $result4=mysqli_query($link,$quer4);
 
 
 <!-- =========================
- NAVIGATION LINKS
+     NAVIGATION LINKS
 ============================== -->
-
 <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
     <div class="container">
 
@@ -116,15 +113,15 @@ $result4=mysqli_query($link,$quer4);
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            <img src="images/roy.png">
+            <img src="images/roy.png" >
         </div>
 
         <div class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php" class="smoothScroll">Home</a></li>
-                <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
-                <li><a href="eo_search.php" class="smoothScroll">Rechercher</a></li>
+                <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
+                <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
                 <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
                 <li><div class="dropdown">
                         <button class="dropbtn"><a href="#report" class="smoothScroll">Reporting</a>
@@ -143,18 +140,16 @@ $result4=mysqli_query($link,$quer4);
     </div>
 </div>
 
-
 <!-- =========================
-INTRO SECTION
+    INTRO SECTION
 ============================== -->
 <section id="intro" class="parallax-section">
     <div class="container">
         <div class="row">
 
-            <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
-                <h2 style="color: black;">Direction des Energies Renouvelables et de l'energie eolienne</h2>
-                <h4 style="color: white;">Dossiers de demande d'autorisation provisoire pour le développement des
-                    projets EnR dans le cadre de la loi 13-09</h4>
+            <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s" >
+                <h2  style="text-align: center; color: black;">Direction des Energies Renouvelables et de l'energie hydroelectrique		</h2>
+                <h4 >Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</h4>
             </div>
 
         </div>
@@ -162,27 +157,20 @@ INTRO SECTION
 </section>
 
 
-<!-- =========================
-REGISTER SECTION
-============================== -->
-
-
 
 <!-- =========================
-PROGRAM SECTION
+    PROGRAM SECTION
 ============================== -->
 <br><br>
-
 <section id="report" class="parallax-section">
-   <table id="region">
-      <tr>
-          <td> <div id="region_auto" style="width: 500px; height: 500px;"></div></td>
-          <td> <div id="region_cours" style="width: 500px; height: 500px;"></div></td>
-          <td> <div id="region_refus" style="width: 500px; height: 500px;"></div></td>
-      </tr>
-   </table>
+    <table id="region">
+        <tr>
+            <td> <div id="region_auto" style="width: 500px; height: 500px;"></div></td>
+            <td> <div id="region_cours" style="width: 500px; height: 500px;"></div></td>
+            <td> <div id="region_refus" style="width: 500px; height: 500px;"></div></td>
+        </tr>
+    </table>
 </section>
-
 
 
 
@@ -197,7 +185,7 @@ PROGRAM SECTION
 
 
 <!-- =========================
- SCRIPTS
+     SCRIPTS
 ============================== -->
 <script src="js_/jquery.js"></script>
 <script src="js_/bootstrap.min.js"></script>
@@ -207,10 +195,9 @@ PROGRAM SECTION
 <script src="js_/wow.min.js"></script>
 <script src="js_/custom.js"></script>
 <script>
-    if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
     }
 </script>
 </body>
-
 </html>
