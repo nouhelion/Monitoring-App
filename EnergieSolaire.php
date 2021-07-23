@@ -220,7 +220,7 @@
 				<li><a href="home.php" class="smoothScroll">Home</a></li>
 				<li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
 				<li><a href="sol_search.php" class="smoothScroll">Rechercher</a></li>
-				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
+                <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge">3</span></a></li>
 				<li><a href="report_sol.php" class="smoothScroll">Reporting</a></li>
 			</ul>
 

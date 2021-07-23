@@ -7,7 +7,18 @@
     cursor: pointer; /* Mouse pointer on hover */
     margin-left: 25px;
   }
- 
+
+
+
+#badge {
+    position: absolute;
+    top: -15px;
+
+    padding: 2px 6px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
 #add {
     border-collapse: collapse;
     width: 97%;

@@ -626,7 +626,7 @@ require('db.php');
 				<li><a href="EnergieHydro.php" class="smoothScroll">Ajouter Un Projet</a></li>
                 <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
                 <li><a href="#modifier" class="smoothScroll">Modifier</a></li>
-				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
+                <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge">3</span></a></li>
                 <li><a href="report_hyd.php" class="smoothScroll">Reporting</a></li>
 			</ul>
 
