@@ -1,7 +1,5 @@
 <?php
-include("diagram_eo/region_eo_auto.php");
-include("diagram_eo/region_eo_cours.php");
-include("diagram_eo/region_eo_refus.php");
+include("db.php");
 $quer="SELECT * FROM region_eo_auto";
 $result2=mysqli_query($link,$quer);
 $quer3="SELECT * FROM region_eo_cours";

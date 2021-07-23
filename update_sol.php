@@ -279,6 +279,14 @@ require('db.php');
         `Avis MEME`='$AvisMEME',
         `Observations`='$Observations' 
         WHERE Numero='$Numero'";
+        /*graphe pour regions */
+        if(strpos($AvisMEME, 'refus') !== false)
+        {$req_m = "update region_sol_refus set nbr = nbr +1 where nom = '$Region'";}
+        else if(strpos($AvisMEME, 'Autorisation') !== false)
+        {$req_m = "update region_sol_auto set nbr = nbr +1 where nom = '$Region'";}
+        else
+        {$req_m = "update region_sol_cours set nbr = nbr +1 where nom = '$Region'";}
+        $link->query($req_m);
         if (mysqli_query($link, $sql)) {
           header("Location: EnergieSolaire.php");
         } else {
@@ -512,7 +520,7 @@ require('db.php');
 				<li><a href="sol_search.php" class="smoothScroll">Rechercher</a></li>
                 <li><a href="#modifier" class="smoothScroll">Modifier</a></li>
 				<li><a href="#speakers" class="smoothScroll">Alertes</a></li>
-				<li><a href="#speakers" class="smoothScroll">Reporting</a></li>
+				<li><a href="report_sol.php" class="smoothScroll">Reporting</a></li>
 			</ul>
 
 		</div>

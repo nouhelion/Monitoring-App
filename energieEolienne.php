@@ -21,11 +21,9 @@
         $ReponseONEE= mysqli_real_escape_string($link, $_REQUEST['ReponseONEE']);
         $Depotducomplementdudossierparledeveloppeur = mysqli_real_escape_string($link, $_REQUEST['Depotducomplementdudossierparledeveloppeur']);
         $EnvoiducomplementdudossieraONEE = mysqli_real_escape_string($link, $_REQUEST['EnvoiducomplementdudossieraONEE']);
-        
         $AvisdeONEE = mysqli_real_escape_string($link, $_REQUEST['AvisdeONEE']);
         $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
         $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
-        
         $sql = "INSERT INTO `energieeolienne`(`Numero`, `Developpeur`, `Nom du projet`, `Region`,
          `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`,
          `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`,
@@ -37,6 +35,14 @@
          '$Co2eviteTCO2an','$Sourceenergie','$CoordonneesGeographiqueCoordonneesLambert','$Investissementduprojet','$Etatavancement','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE',
           '$Depotducomplementdudossierparledeveloppeur','$EnvoiducomplementdudossieraONEE','$AvisdeONEE',
           '$AvisMEME','$Observations')";
+        /*graphe pour regions */
+        if(strpos($AvisMEME, 'refus') !== false)
+        {$req_m = "update region_eo_refus set nbr = nbr +1 where nom = '$Region'";}
+        else if(strpos($AvisMEME, 'Autorisation') !== false)
+        {$req_m = "update region_eo_auto set nbr = nbr +1 where nom = '$Region'";}
+        else
+        {$req_m = "update region_eo_cours set nbr = nbr +1 where nom = '$Region'";}
+        $link->query($req_m);
         if (mysqli_query($link, $sql)) {
           header("Location: energieEolienne.php");
         } else {

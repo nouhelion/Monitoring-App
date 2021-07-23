@@ -390,6 +390,14 @@ require('db.php');
         `Avis MEME`='$AvisMEME',
         `Observations`='$Observations' 
         WHERE Numero='$Numero'";
+        /*graphe pour regions */
+        if(strpos($AvisMEME, 'refus') !== false)
+        {$req_m = "update region_hyd_refus set nbr = nbr +1 where nom = '$Region'";}
+        else if(strpos($AvisMEME, 'Autorisation') !== false)
+        {$req_m = "update region_hyd_auto set nbr = nbr +1 where nom = '$Region'";}
+        else
+        {$req_m = "update region_hyd_cours set nbr = nbr +1 where nom = '$Region'";}
+        $link->query($req_m);
         if (mysqli_query($link, $sql)) {
           header("Location: EnergieHydro.php");
         } else {

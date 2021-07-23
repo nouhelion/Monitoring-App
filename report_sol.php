@@ -1,10 +1,10 @@
 <?php
-require('db.php');
-$quer="SELECT * FROM region_hyd_auto";
+include("db.php");
+$quer="SELECT * FROM region_sol_auto";
 $result2=mysqli_query($link,$quer);
-$quer3="SELECT * FROM region_hyd_cours";
+$quer3="SELECT * FROM region_sol_cours";
 $result3=mysqli_query($link,$quer3);
-$quer4="SELECT * FROM region_hyd_refus";
+$quer4="SELECT * FROM region_sol_refus";
 $result4=mysqli_query($link,$quer4);
 ?>
 <!DOCTYPE html>
@@ -24,12 +24,11 @@ $result4=mysqli_query($link,$quer4);
     <link rel="stylesheet" href="css/owl.carousel.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/rep_hydr.css">
-
+    <link rel="stylesheet" href="css/sol.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
 
@@ -119,7 +118,7 @@ $result4=mysqli_query($link,$quer4);
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php" class="smoothScroll">Home</a></li>
                 <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
-                <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
+                <li><a href="sol_search.php" class="smoothScroll">Rechercher</a></li>
                 <li><a href="#speakers" class="smoothScroll">Alertes</a></li>
                 <li><div class="dropdown">
                         <button class="dropbtn"><a href="#report" class="smoothScroll">Reporting</a>
@@ -138,6 +137,7 @@ $result4=mysqli_query($link,$quer4);
     </div>
 </div>
 
+
 <!-- =========================
     INTRO SECTION
 ============================== -->
@@ -146,8 +146,8 @@ $result4=mysqli_query($link,$quer4);
         <div class="row">
 
             <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s" >
-                <h2  style="text-align: center; color: black;">Direction des Energies Renouvelables et de l'energie hydroelectrique		</h2>
-                <h4 >Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</h4>
+                <h2 style="color: black;" >Direction des Energies Renouvelables et de l'energie solaire		</h2>
+                <h4 style="color: white;" >Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</h4>
             </div>
 
         </div>
@@ -155,11 +155,17 @@ $result4=mysqli_query($link,$quer4);
 </section>
 
 
+<!-- =========================
+   REGISTER SECTION
+============================== -->
+
+
 
 <!-- =========================
     PROGRAM SECTION
 ============================== -->
 <br><br>
+
 <section id="report" class="parallax-section">
     <table id="region">
         <tr>
