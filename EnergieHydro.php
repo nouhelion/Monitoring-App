@@ -227,7 +227,8 @@
 				<li><a href="home.php" class="smoothScroll">Home</a></li>
 				<li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
 				<li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
-                <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge">3</span></a></li>
+                <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
+3</span></a></li>
 				<li><a href="report_hyd.php" class="smoothScroll">Reporting</a></li>
 			</ul>
 
