@@ -170,17 +170,15 @@ REGISTER SECTION
 PROGRAM SECTION
 ============================== -->
 <br><br>
-
 <section id="report" class="parallax-section">
-   <table id="region">
-      <tr>
-          <td> <div id="region_auto" style="width: 500px; height: 500px;"></div></td>
-          <td> <div id="region_cours" style="width: 500px; height: 500px;"></div></td>
-          <td> <div id="region_refus" style="width: 500px; height: 500px;"></div></td>
-      </tr>
-   </table>
+    <table id="region">
+        <tr>
+            <td> <div id="region_auto" style="width: 500px; height: 500px;"></div></td>
+            <td> <div id="region_cours" style="width: 500px; height: 500px;"></div></td>
+            <td> <div id="region_refus" style="width: 500px; height: 500px;"></div></td>
+        </tr>
+    </table>
 </section>
-
 
 
 

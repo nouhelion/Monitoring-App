@@ -24,7 +24,7 @@ $result4=mysqli_query($link,$quer4);
     <link rel="stylesheet" href="css/owl.carousel.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/sol.css">
+    <link rel="stylesheet" href="css/rep_sol.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
