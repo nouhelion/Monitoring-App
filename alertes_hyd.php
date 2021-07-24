@@ -20,28 +20,8 @@
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        #alert {
-            border-collapse: collapse;
-            width: 100%;
 
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
-        #alert th, td {
-            text-align: left;
-            padding: 8px;
-        }
-
-        #alert tr:nth-child(even){background-color: #f2f2f2}
-
-        #alert th {
-            background-color: #04AA6D;
-            color: white;
-        }
-    </style>
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
@@ -75,7 +55,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php" class="smoothScroll">Home</a></li>
-                <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
+                <li><a href="EnergieHydro.php" class="smoothScroll">Ajouter Un Projet</a></li>
                 <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
                 <li> <a href="#alertes"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
                </span></a></li>
@@ -111,20 +91,56 @@
 ============================== -->
 <br><br>
 <section id="alertes" class="parallax-section">
-    <table id="add" style="align-items: center;">
-        <tr>
-            <th>Numéro</th>
-            <th>Genre d'Alertes</th>
+    <table id="center">
+         <tr>
+             <th>Numéro du Projet</th>
+             <th>Genre d'Alertes</th>
+             </tr>
 
+             <?php
+             require_once("db.php");
+             $today = date("Y-m-d");
+             $sqli="select * from `energiehydroelectrique` ";
+             $result=mysqli_query($link,$sqli);
+             while ($row = mysqli_fetch_assoc($result)) {
+                 $input=substr($row['Depot a la DEREE'], 0, 10);
+                 $date1=date('Y-m-d', strtotime($input. ' + 15 days'));
+                 if($date1<=$today and $row["Avis de l'ONEE"]==NULL)
+                 {
+                     echo "<tr>";
+                     echo "<td>".$row['Numero'] ."</td>";
+                     echo "<td>Avis de l'ONEE</td>";
+                     echo "</tr>";
+                 }
+                 else {
+                     $input1=substr($row["Avis de l'ONEE"], -10);
+                     $date2=date('Y-m-d', strtotime($input1. ' + 1 month'));
+                     if($date2<=$today and $row["Avis Agence Bassin"]==NULL)
+                     {
+                         echo "<tr>";
+                         echo "<td>".$row['Numero'] ."</td>";
+                         echo "<td>Avis Agence Bassin</td>";
+                         echo "</tr>";
+                     }
+                     else
+                     {
+                         $input2=substr($row["Avis Agence Bassin"], -10);
+                         $date3=date('Y-m-d', strtotime($input2. ' + 3 months'));
+                         if($date3<=$today and $row["Avis MEME"]==NULL)
+                         {
+                             echo "<tr>";
+                             echo "<td>".$row['Numero'] ."</td>";
+                             echo "<td>Avis MEME</td>";
+                             echo "</tr>";
+                         }
+                     }
+                 }
+             }
 
-        </tr>
-
-        <tr>
-            <td>Numero</td>
-            <td>genre d'alertes</td>
-
-        </tr>
+             ?>
     </table>
+
+
     <br><br>
 </section>
 

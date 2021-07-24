@@ -15,16 +15,14 @@ while ($row = mysqli_fetch_assoc($result)) {
     $date1=date('Y-m-d', strtotime($input. ' + 15 days'));
     if($date1<=$today and $row["Avis de l'ONEE"]==NULL)
     {
-        $req_m = "update alertes_hyd set nbr = nbr +1 where quoi = 'Avis ONEE'";
-        $link->query($req_m);
+        echo $row['Numero'] ."onee <br>";
     }
     else {
         $input1=substr($row["Avis de l'ONEE"], -10);
         $date2=date('Y-m-d', strtotime($input1. ' + 1 month'));
         if($date2<=$today and $row["Avis Agence Bassin"]==NULL)
         {
-            $req_m = "update alertes_hyd set nbr = nbr +1 where quoi = 'Avis Agence Bassin'";
-            $link->query($req_m);
+            echo $row['Numero'] ."abh <br>";
         }
         else
         {
@@ -32,17 +30,14 @@ while ($row = mysqli_fetch_assoc($result)) {
             $date3=date('Y-m-d', strtotime($input2. ' + 3 months'));
             if($date3<=$today and $row["Avis MEME"]==NULL)
             {
-                $req_m = "update alertes_hyd set nbr = nbr +1 where quoi = 'Avis MEME'";
-                $link->query($req_m);
+                echo $row['Numero'] ." meme <br>";
             }
-
         }
-
-
     }
-
 }
+
 ?>
+
 
 </body>
 </html>

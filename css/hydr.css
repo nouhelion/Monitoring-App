@@ -34,9 +34,9 @@ tbody>tr>td {
 }
 
 table {
+    display: block;
     overflow-x: auto;
     white-space: nowrap;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     table-layout: fixed;
@@ -69,41 +69,35 @@ table {
 }
 
 /*allert*/
-#alert {
+#center {
     border-collapse: collapse;
     width: 50%;
+    align-items:center;
 }
 
-#alert tbody>tr>td {
-    margin: 0 20px;
-}
-
-#alert td,
-#alert th {
-    border-left: 0.5px solid #656ea0;
-    border-right: 0.5px solid #656ea0;
+#center .th, td {
+    text-align: center;
     padding: 8px;
 }
 
-
-
-#alert tr:nth-child(even) {
-    background-color: #f2f2f2;
+#center td, #center th {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
+#center tr:nth-child(even){background-color: #f2f2f2;}
 
+#center tr:hover {background-color: #ddd;}
 
-#alert th {
-
+#center th {
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-align: center;
-    background-color: #5564bb;
     color: white;
+    background-color: #167cc6;
 }
 
-#alert {
-    border-bottom: 10px;
-    border-right: 10px;
-}
+
 
 
 /*

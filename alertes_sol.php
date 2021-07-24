@@ -13,20 +13,18 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Main Style Css -->
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/ele.css">
-
+    <link rel="stylesheet" href="css/sol.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
 
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse" >
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
 <!-- =========================
- PRE LOADER
+     PRE LOADER
 ============================== -->
 <div class="preloader">
 
@@ -36,9 +34,8 @@
 
 
 <!-- =========================
- NAVIGATION LINKS
+     NAVIGATION LINKS
 ============================== -->
-
 <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
     <div class="container">
 
@@ -49,18 +46,18 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            <img src="images/roy.png">
+            <img src="images/roy.png" >
         </div>
 
         <div class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php" class="smoothScroll">Home</a></li>
-                <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
-                <li><a href="eo_search.php" class="smoothScroll">Rechercher</a></li>
-                <li> <a href="#alertes"  class="smoothScroll">Alertes<span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
+                <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
+                <li><a href="sol_search.php" class="smoothScroll">Rechercher</a></li>
+                <li> <a href="#alertes"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
-                <li><a href="report_eo.php" class="smoothScroll">Reporting</a></li>
+                <li><a href="report_sol.php" class="smoothScroll">Reporting</a></li>
             </ul>
 
         </div>
@@ -70,16 +67,15 @@
 
 
 <!-- =========================
-INTRO SECTION
+    INTRO SECTION
 ============================== -->
 <section id="intro" class="parallax-section">
     <div class="container">
         <div class="row">
 
-            <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
-                <h2 style="color: black;">Direction des Energies Renouvelables et de l'energie eolienne</h2>
-                <h4 style="color: white;">Dossiers de demande d'autorisation provisoire pour le développement des
-                    projets EnR dans le cadre de la loi 13-09</h4>
+            <div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s" >
+                <h2 style="color: black;" >Direction des Energies Renouvelables et de l'energie solaire		</h2>
+                <h4 style="color: white;" >Dossiers de demande d'autorisation provisoire pour le développement des projets EnR dans le cadre de la loi 13-09</h4>
             </div>
 
         </div>
@@ -88,13 +84,13 @@ INTRO SECTION
 
 
 <!-- =========================
-REGISTER SECTION
+   REGISTER SECTION
 ============================== -->
 
 
 
 <!-- =========================
-PROGRAM SECTION
+    PROGRAM SECTION
 ============================== -->
 <br><br>
 <section id="alertes" class="parallax-section">
@@ -140,12 +136,20 @@ PROGRAM SECTION
     <br><br>
 </section>
 
+
+
+
+
+
+
+
+
 <!-- Back top -->
 <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 
 <!-- =========================
- SCRIPTS
+     SCRIPTS
 ============================== -->
 <script src="js_/jquery.js"></script>
 <script src="js_/bootstrap.min.js"></script>
@@ -155,11 +159,9 @@ PROGRAM SECTION
 <script src="js_/wow.min.js"></script>
 <script src="js_/custom.js"></script>
 <script>
-    if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
     }
 </script>
-
-
 </body>
 </html>

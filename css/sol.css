@@ -57,6 +57,38 @@ td>input {
     align-items: center;
     width: 95%;
 }
+
+/*allert*/
+#center {
+    border-collapse: collapse;
+    width: 50%;
+    align-items:center;
+}
+
+#center .th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+#center td, #center th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#center tr:nth-child(even){background-color: #f2f2f2;}
+
+#center tr:hover {background-color: #ddd;}
+
+#center th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: white;
+    background-color: #167cc6;
+}
+
+
+
 /*
 
 New Event
