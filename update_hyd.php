@@ -594,7 +594,7 @@ require('db.php');
 
         </script>         
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse"></body>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 <!-- partial:index.partial.html -->
 <div class="preloader">
 
