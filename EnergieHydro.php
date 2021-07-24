@@ -258,12 +258,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                 $req_m = "update alertes_hyd set nbr = nbr +1 where quoi = 'Avis MEME'";
                 $link->query($req_m);
             }
-
         }
-
-
     }
-
 }
 
 ?>
