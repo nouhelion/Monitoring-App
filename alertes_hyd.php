@@ -1,12 +1,3 @@
-<?php
-require('db.php');
-$quer="SELECT * FROM region_hyd_auto";
-$result2=mysqli_query($link,$quer);
-$quer3="SELECT * FROM region_hyd_cours";
-$result3=mysqli_query($link,$quer3);
-$quer4="SELECT * FROM region_hyd_refus";
-$result4=mysqli_query($link,$quer4);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,67 +15,33 @@ $result4=mysqli_query($link,$quer4);
     <link rel="stylesheet" href="css/owl.carousel.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/rep_hydr.css">
+    <link rel="stylesheet" href="css/hydr.css">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
+    <style>
+        #alert {
+            border-collapse: collapse;
+            width: 100%;
 
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data1 = google.visualization.arrayToDataTable([
-                ['Regions', 'nombre de Projets Autorisées'],
-                <?php
-                while($ch=mysqli_fetch_assoc($result2))
-                {
-                    echo "['".$ch['nom']."',".$ch['nbr']."],";
-                }
-                ?>
-            ]);
-            var options1 = {
-                title: 'Les Projets Autorisées par Régions',
-                is3D: true,
-            };
-            var chart1 = new google.visualization.PieChart(document.getElementById('region_auto'));
-            chart1.draw(data1, options1);
-
-            var data2 = google.visualization.arrayToDataTable([
-                ['Regions', 'nombre de Projets En cours'],
-                <?php
-                while($ch=mysqli_fetch_assoc($result3))
-                {
-                    echo "['".$ch['nom']."',".$ch['nbr']."],";
-                }
-                ?>
-            ]);
-            var options2 = {
-                title: 'Les Projets En cours par Régions',
-                is3D: true,
-            };
-            var chart2 = new google.visualization.PieChart(document.getElementById('region_cours'));
-            chart2.draw(data2, options2);
-
-            var data3 = google.visualization.arrayToDataTable([
-                ['Regions', 'nombre de Projets Refusé'],
-                <?php
-                while($ch=mysqli_fetch_assoc($result4))
-                {
-                    echo "['".$ch['nom']."',".$ch['nbr']."],";
-                }
-                ?>
-            ]);
-            var options3 = {
-                title: 'Les Projets Refusés par Régions',
-                is3D: true,
-            };
-            var chart3 = new google.visualization.PieChart(document.getElementById('region_refus'));
-            chart3.draw(data3, options3);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
-    </script>
 
+        #alert th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        #alert tr:nth-child(even){background-color: #f2f2f2}
+
+        #alert th {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
@@ -120,18 +77,10 @@ $result4=mysqli_query($link,$quer4);
                 <li><a href="home.php" class="smoothScroll">Home</a></li>
                 <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
                 <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
-                <li> <a href="alertes_hyd.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
-3</span></a></li>
-                <li><div class="dropdown">
-                        <button class="dropbtn"><a href="#report" class="smoothScroll">Reporting</a>
-                            <i class="fa fa-angle-down" style="color:rgb(129, 129, 129);" aria-hidden="true"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#region">Par Région</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </div> </li>
+                <li> <a href="#alertes"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
+               </span></a></li>
+
+                <li><a href="report_hyd.php" class="smoothScroll">Reporting</a></li>
             </ul>
 
         </div>
@@ -161,14 +110,22 @@ $result4=mysqli_query($link,$quer4);
     PROGRAM SECTION
 ============================== -->
 <br><br>
-<section id="report" class="parallax-section">
-    <table id="region">
+<section id="alertes" class="parallax-section">
+    <table id="add" style="align-items: center;">
         <tr>
-            <td> <div id="region_auto" style="width: 500px; height: 500px;"></div></td>
-            <td> <div id="region_cours" style="width: 500px; height: 500px;"></div></td>
-            <td> <div id="region_refus" style="width: 500px; height: 500px;"></div></td>
+            <th>Numéro</th>
+            <th>Genre d'Alertes</th>
+
+
+        </tr>
+
+        <tr>
+            <td>Numero</td>
+            <td>genre d'alertes</td>
+
         </tr>
     </table>
+    <br><br>
 </section>
 
 

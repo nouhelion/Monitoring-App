@@ -34,9 +34,9 @@ tbody>tr>td {
 }
 
 table {
-    display: block;
     overflow-x: auto;
     white-space: nowrap;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     table-layout: fixed;
@@ -63,10 +63,49 @@ table {
     border-radius: 10px;
 }
 
-td>input {
+#add td>input {
     align-items: center;
     width: 95%;
 }
+
+/*allert*/
+#alert {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+#alert tbody>tr>td {
+    margin: 0 20px;
+}
+
+#alert td,
+#alert th {
+    border-left: 0.5px solid #656ea0;
+    border-right: 0.5px solid #656ea0;
+    padding: 8px;
+}
+
+
+
+#alert tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+#alert th {
+
+    text-align: center;
+    background-color: #5564bb;
+    color: white;
+}
+
+#alert {
+    border-bottom: 10px;
+    border-right: 10px;
+}
+
+
 /*
 
 New Event
