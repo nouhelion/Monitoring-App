@@ -627,7 +627,7 @@ require('db.php');
                 <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
                 <li><a href="#modifier" class="smoothScroll">Modifier</a></li>
                 <li> <a href="alertes_hyd.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
-3</span></a></li>
+</span></a></li>
                 <li><a href="report_hyd.php" class="smoothScroll">Reporting</a></li>
 			</ul>
 

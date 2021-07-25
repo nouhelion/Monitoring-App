@@ -52,7 +52,7 @@
                     <li><a href="EnergieSolaire.php" class="smoothScroll">Ajouter Un Projet</a></li>
                     <li><a href="#search" class="smoothScroll">Rechercher</a></li>
                     <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
-3</span></a></li>
+</span></a></li>
                     <li><a href="report_sol.php" class="smoothScroll">Reporting</a></li>
                 </ul>
 

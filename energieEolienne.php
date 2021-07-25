@@ -346,8 +346,8 @@
                    <td> <input name="Observations" type="text" id="Observations" >  </td> 
 				</tr>
 			</table>
-            
-            <input type="submit" name="submit" value='Ajouter Un Projet' class="btn"></input>
+
+    <button type="submit" name="submit" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
     </form>
 </section>
 
