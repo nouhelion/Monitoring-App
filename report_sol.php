@@ -1,6 +1,6 @@
 <?php include("auth.php");?>
 <?php
-include("db.php");
+require_once("db.php");
 $quer="SELECT * FROM region_sol_auto";
 $result2=mysqli_query($link,$quer);
 $quer3="SELECT * FROM region_sol_cours";
@@ -122,7 +122,7 @@ $result4=mysqli_query($link,$quer4);
                 <li><a href="sol_search.php" class="smoothScroll">Rechercher</a></li>
                 <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
-                <li><a href="report_sol.php" class="smoothScroll">Reporting</a></li>
+                <li><a href="#report" class="smoothScroll">Reporting</a></li>
                 <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
             </ul>
 

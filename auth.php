@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+require_once("db.php");
 session_start();
 $user_check=$_SESSION["username"];
 $ses_sql= mysqli_query($link,"SELECT username FROM admins where username='$user_check'");
