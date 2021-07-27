@@ -1,4 +1,5 @@
-<?php 
+<?php include("auth.php");?>
+<?php
 require('db.php');
      if (isset($_POST['sus'])) {
          $keyword = mysqli_real_escape_string($link, $_POST['search']);
@@ -629,6 +630,7 @@ require('db.php');
                 <li> <a href="alertes_hyd.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
                 <li><a href="report_hyd.php" class="smoothScroll">Reporting</a></li>
+                <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
 			</ul>
 
             </div>

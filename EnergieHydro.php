@@ -1,3 +1,4 @@
+<?php include("auth.php");?>
 <?php
     require_once('db.php');
     if(isset($_POST['submit']))
@@ -231,6 +232,7 @@
                </span></a></li>
 
 				<li><a href="report_hyd.php" class="smoothScroll">Reporting</a></li>
+                <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
 			</ul>
 
 		</div>

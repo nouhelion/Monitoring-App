@@ -1,3 +1,4 @@
+<?php include("auth.php");?>
 <?php
 require('db.php');
 $quer="SELECT * FROM region_hyd_auto";
@@ -122,16 +123,8 @@ $result4=mysqli_query($link,$quer4);
                 <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
                 <li> <a href="alertes_hyd.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
-                <li><div class="dropdown">
-                        <button class="dropbtn"><a href="#report" class="smoothScroll">Reporting</a>
-                            <i class="fa fa-angle-down" style="color:rgb(129, 129, 129);" aria-hidden="true"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="#region">Par Région</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </div> </li>
+                <li><a href="report_sol.php" class="smoothScroll">Reporting</a></li>
+                <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
             </ul>
 
         </div>

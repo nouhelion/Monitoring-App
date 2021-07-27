@@ -1,3 +1,4 @@
+<?php include("auth.php");?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -54,6 +55,7 @@
                     <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
                     <li><a href="report_sol.php" class="smoothScroll">Reporting</a></li>
+                    <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
                 </ul>
 
             </div>

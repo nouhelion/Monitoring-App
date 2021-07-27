@@ -1,3 +1,4 @@
+<?php include("auth.php");?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -67,7 +68,7 @@
         
         </script>
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse"></body>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 <!-- partial:index.partial.html -->
 <div class="preloader">
 
@@ -95,12 +96,13 @@
             <div class="collapse navbar-collapse">
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="home.php" class="smoothScroll">Home</a></li>
+                    <li><a href="home.php" class="smoothScroll">Accueil</a></li>
                     <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
                     <li><a href="#search" class="smoothScroll">Rechercher</a></li>
                     <li> <a href="alertes_eo.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
                     <li><a href="report_eo.php" class="smoothScroll">Reporting</a></li>
+                    <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
                 </ul>
 
             </div>

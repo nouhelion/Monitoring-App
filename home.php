@@ -1,3 +1,4 @@
+<?php include("auth.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +54,8 @@
 		<div class="collapse navbar-collapse">
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#intro" class="smoothScroll">Home</a></li>
+				<li><a href="#intro" class="smoothScroll">Accueil</a></li>
+                <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
 			</ul>
 
 		</div>

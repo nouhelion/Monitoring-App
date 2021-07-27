@@ -1,3 +1,4 @@
+<?php include("auth.php");?>
 <?php
     require_once('db.php');
     if(isset($_POST['submit']))
@@ -235,6 +236,7 @@
                     <li> <a href="alertes_eo.php"  class="smoothScroll">Alertes<span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
                     <li><a href="report_eo.php" class="smoothScroll">Reporting</a></li>
+                    <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>
                 </ul>
 
             </div>
