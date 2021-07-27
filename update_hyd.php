@@ -623,7 +623,7 @@ require('db.php');
             <div class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav navbar-right">
-				<li><a href="home.php" class="smoothScroll">Home</a></li>
+				<li><a href="home.php" class="smoothScroll">Accueil</a></li>
 				<li><a href="EnergieHydro.php" class="smoothScroll">Ajouter Un Projet</a></li>
                 <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
                 <li><a href="#modifier" class="smoothScroll">Modifier</a></li>
