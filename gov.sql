@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 25, 2021 at 11:18 PM
+-- Generation Time: Jul 27, 2021 at 02:35 PM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   PRIMARY KEY (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `admins`
@@ -50,23 +50,23 @@ INSERT INTO `admins` (`username`, `password`) VALUES
 DROP TABLE IF EXISTS `energieeolienne`;
 CREATE TABLE IF NOT EXISTS `energieeolienne` (
   `Numero` int NOT NULL,
-  `Developpeur` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Nom du projet` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Region` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Province` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Localite` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Developpeur` varchar(500)   NOT NULL,
+  `Nom du projet` varchar(500)  NOT NULL,
+  `Region` varchar(500)  NOT NULL,
+  `Province` varchar(500)  NOT NULL,
+  `Localite` varchar(500)  NOT NULL,
   `Puissance` float NOT NULL,
   `Productible previsionnel` float NOT NULL,
   `Co2 evite TCO2/an` float NOT NULL,
   `Source energie` varchar(500) NOT NULL,
-  `Coordonnees Geographique/Coordonnees Lambert` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Coordonnees Geographique/Coordonnees Lambert` varchar(500)   NOT NULL,
   `Investissement du projet` float NOT NULL,
-  `Etat avancement` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Etat avancement` varchar(100)   NOT NULL,
   `Depot a la DEREE` varchar(500) NOT NULL,
   `Envoi du dossier a l'ONEE` varchar(500) NOT NULL,
   `Reponse ONEE` varchar(500) NOT NULL,
-  `Depot du complement du dossier par le developpeur` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Envoi du complement du dossier a l'ONEE` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Depot du complement du dossier par le developpeur` varchar(500)  NOT NULL,
+  `Envoi du complement du dossier a l'ONEE` varchar(500)   NOT NULL,
   `Reponse ONEE en Cas Du 2 Complement` varchar(500) NOT NULL,
   `Depot du 2 complement du dossier par le developpeur` varchar(500) NOT NULL,
   `Envoi du 2 complement du dossier a l'ONEE` varchar(500) NOT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `energieeolienne` (
   `Avis MEME` varchar(500) NOT NULL,
   `Observations` varchar(500) NOT NULL,
   PRIMARY KEY (`Numero`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+)  ;
 
 --
 -- Dumping data for table `energieeolienne`
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `energieeolienne` (
 
 INSERT INTO `energieeolienne` (`Numero`, `Developpeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 2 Complement`, `Depot du 2 complement du dossier par le developpeur`, `Envoi du 2 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 3 Complement`, `Depot du 3 complement du dossier par le developpeur`, `Envoi du 3 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 4 Complement`, `Depot du 4 complement du dossier par le developpeur`, `Envoi du 4 complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Avis MEME`, `Observations`) VALUES
 (14, 'gggggggggggggggggggggg', 'ggggggggggggggggg', 'Fès - Meknès', '', 'gggggggggggggg', 157, 0, 0, '', '', 0, '0', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(69, 'ggggggggggggggggggggggggggggg', 'gggggggggggggggggggggggggggggg', 'Rabat-Salé-Kénitra', 'Rabat', 'ggggggggggggggggggg', 154, 0, 0, '', '', 0, '0', '', '', '', '', '', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', '', '', ''),
+(69, 'ggggggggggggggggggggggggggggg', 'gggggggggggggggggggggggggggggg', 'Rabat-Salé-Kénitra', 'Rabat', 'ggggggggggggggggggg', 154, 0, 0, '', '', 0, '0', '', '', '', '', '', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', '', '', ''),
 (72, 'blalababa', 'bbbbbbbbbbbb', 'Rabat-Salé-Kénitra', 'Sidi Kacem', 'bbbbbbbbbbbbb', 514, 0, 0, '', '', 0, 'GGGGGGGGGGGGGGGGGGGGG', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (78, 'blalababa', 'bbbbbbbbbbbb', 'Rabat-Salé-Kénitra', 'Skhirate, Témara', 'bbbbbbbbbbbbb', 514, 0, 0, '', '', 1545540, 'GGGGGGGGGGGGGGGG', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (56, 'blalababa', 'bbbbbbbbbbbb', 'Souss-Massa', 'Inezgane, Aït Melloul', 'bbbbbbbbbbbbb', 514, 0, 0, '', '', 2147480000, 'gggggggg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
@@ -101,15 +101,15 @@ INSERT INTO `energieeolienne` (`Numero`, `Developpeur`, `Nom du projet`, `Region
 (578, '', 'bbbbbbbbbbbb', 'Marrakech-Safi', 'Essaouira', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 1500, 'gggggggg', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'ggggg', 'ggggg', 'ggggggggggg'),
 (49779, '', 'gggggggggggg', 'Drâa-Tafilalet', 'Midelt', 'ggggggggg', 514, 154, 154, 'ggggggggg', 'gggggggggggggg', 0, 'gggggggggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggg', 'ggggggggggggggggggg', 'ggggggggggggggggggggggg', 'gggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg'),
 (5788, 'baba', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Selectionner Province', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'ggggggggggggggggg', 0, '2147483647', 'gggggggggggg', 'gggggggggggggggggggggg', 'gggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
-(5769, 'dick', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Selectionner Province', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'ggggggggggggggggg', 2147480000, '0', 'gggggggggggg', 'gggggggggggggggggggggg', 'gggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
-(4977, 'dick', 'bbbbbbbbbbbb', 'Souss-Massa', 'Tiznit', 'bbbbbbbbbbbbb', 456, 157, 514, 'hydro', 'gggggggggggggg', 1500, 'gggggggggggggggggg', 'gggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggg', 'gggggggggg', 'gggggggggggggggggg', 'test1hhhhhhhhhhhh', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg'),
+(5769, 'test', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Selectionner Province', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'ggggggggggggggggg', 2147480000, '0', 'gggggggggggg', 'gggggggggggggggggggggg', 'gggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
+(4977, 'test', 'bbbbbbbbbbbb', 'Souss-Massa', 'Tiznit', 'bbbbbbbbbbbbb', 456, 157, 514, 'hydro', 'gggggggggggggg', 1500, 'gggggggggggggggggg', 'gggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggg', 'gggggggggg', 'gggggggggggggggggg', 'test1hhhhhhhhhhhh', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg'),
 (2222, 'blaba', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 456, 154, 514, 'hydro', 'gggggggggggggg', 1500, 'gggggggggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggg', 'ggggggggggggggggggg', '', '', '', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
 (2325, 'blaba', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Tinghir', 'bbbbbbbbbbbbb', 456, 157, 157, 'hydro', 'gggggggggggggg', 1500, 'ggggggggggg', 'gggggggggggg', 'gggggggggggggggggggggg', 'ggggggggggggggggggg', '', '', '', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg'),
-(5666, 'dick', 'bbbbbbbbbbbb', 'Casablanca-Settat', 'Médiouna', 'bbbbbbbbbbbbb', 456, 157, 514, 'hydro', 'ggggggggggggggggg', 1500, 'gggggggggggggggggg', 'hhhhhhhh', 'gggggggggggggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', 'ggggggggggg', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
+(5666, 'test', 'bbbbbbbbbbbb', 'Casablanca-Settat', 'Médiouna', 'bbbbbbbbbbbbb', 456, 157, 514, 'hydro', 'ggggggggggggggggg', 1500, 'gggggggggggggggggg', 'hhhhhhhh', 'gggggggggggggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', 'ggggggggggg', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
 (49889, 'baba', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Ouarzazate', 'bbbbbbbbbbbbb', 456, 157, 157, 'hydro', 'ggggggggggggggggg', 0, 'ggggggggggg', 'gggggggggggg', 'gggggggggggggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggggggg', 'gggggggggggggggg', 'gggggg', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg'),
-(5678, 'blaba', 'bbbbbbbbbbbb', 'Rabat-Salé-Kénitra', 'Salé', 'bbbbbbbbbbbbb', 456, 157, 154, 'hydro', 'hhhhhhhhhhh', 1500, 'ggggggggggg', 'hhhhhhhh', 'gggggggggggggggggggggg', 'ggggggggggggggggggg', '2021-07-17', 'ggggggggggggggggggggggggggggg', 'dick', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
-(5621, 'dick', 'bbbbbbbbbbbb', 'Marrakech-Safi', 'Rehamna', 'bbbbbbbbbbbbb', 514, 157, 514, 'hydro', 'ggggggggggggggggg', 0, 'ggggggggggg', 'gggggggggggg', 'ggggggggggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'gggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg'),
-(56788, 'blaba', 'gggggggggggg', 'Guelmim-Oued Noun', 'Tan Tan', 'ggggggggg', 514.078, 514.078, 514.078, 'ggggggggg', 'gggggggggggggg', 1.5, 'ggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', '', '', '', '', '', '', '', '', '', 'dick', 'gggggggggg', 'gggggggggg');
+(5678, 'blaba', 'bbbbbbbbbbbb', 'Rabat-Salé-Kénitra', 'Salé', 'bbbbbbbbbbbbb', 456, 157, 154, 'hydro', 'hhhhhhhhhhh', 1500, 'ggggggggggg', 'hhhhhhhh', 'gggggggggggggggggggggg', 'ggggggggggggggggggg', '2021-07-17', 'ggggggggggggggggggggggggggggg', 'test', '', '', '', '', '', '', '', '', 'ggggggggggggg', 'gggggggggg', 'gggggggggg'),
+(5621, 'test', 'bbbbbbbbbbbb', 'Marrakech-Safi', 'Rehamna', 'bbbbbbbbbbbbb', 514, 157, 514, 'hydro', 'ggggggggggggggggg', 0, 'ggggggggggg', 'gggggggggggg', 'ggggggggggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggggggggggg', 'gggggggggggggggg', '', '', '', '', '', '', '', '', '', 'ggggggggggggggggggg', 'ggggggggggggggg', 'gggggggggggggggggggg'),
+(56788, 'blaba', 'gggggggggggg', 'Guelmim-Oued Noun', 'Tan Tan', 'ggggggggg', 514.078, 514.078, 514.078, 'ggggggggg', 'gggggggggggggg', 1.5, 'ggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggg', 'gggggggggggggggggggg', 'ggggggggggggggggggggggg', 'ggggggggggggggggggggggggggggg', '', '', '', '', '', '', '', '', '', 'test', 'gggggggggg', 'gggggggggg');
 
 -- --------------------------------------------------------
 
@@ -120,23 +120,23 @@ INSERT INTO `energieeolienne` (`Numero`, `Developpeur`, `Nom du projet`, `Region
 DROP TABLE IF EXISTS `energiehydroelectrique`;
 CREATE TABLE IF NOT EXISTS `energiehydroelectrique` (
   `Numero` int NOT NULL,
-  `Demandeur` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Nom du projet` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Region` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Province` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Localite` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Demandeur` varchar(500)  NOT NULL,
+  `Nom du projet` varchar(500)  NOT NULL,
+  `Region` varchar(500)  NOT NULL,
+  `Province` varchar(500)  NOT NULL,
+  `Localite` varchar(500)  NOT NULL,
   `Puissance` float NOT NULL,
   `Productible previsionnel` float NOT NULL,
   `Co2 evite TCO2/an` float NOT NULL,
-  `Source energie` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Coordonnees Geographique/Coordonnees Lambert` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Source energie` varchar(500)  NOT NULL,
+  `Coordonnees Geographique/Coordonnees Lambert` varchar(500)  NOT NULL,
   `Investissement du projet` float NOT NULL,
-  `Etat avancement` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Etat avancement` varchar(500)  NOT NULL,
   `Depot a la DEREE` varchar(500) NOT NULL,
   `Envoi du dossier a l'ONEE` varchar(500) NOT NULL,
-  `Reponse ONEE` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Depot du complement du dossier par le developpeur` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Envoi du complement du dossier a l'ONEE` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Reponse ONEE` varchar(500)  NOT NULL,
+  `Depot du complement du dossier par le developpeur` varchar(500)  NOT NULL,
+  `Envoi du complement du dossier a l'ONEE` varchar(500)  NOT NULL,
   `Reponse ONEE en Cas Du 2 Complement` varchar(500) NOT NULL,
   `Depot du 2 complement du dossier par le developpeur` varchar(500) NOT NULL,
   `Envoi du 2 complement du dossier a l'ONEE` varchar(500) NOT NULL,
@@ -146,25 +146,25 @@ CREATE TABLE IF NOT EXISTS `energiehydroelectrique` (
   `Reponse ONEE en Cas Du 4 Complement` varchar(500) NOT NULL,
   `Depot du 4 complement du dossier par le developpeur` varchar(500) NOT NULL,
   `Envoi du 4 complement du dossier a l'ONEE` varchar(500) NOT NULL,
-  `Avis de l'ONEE` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Avis de l'ONEE` varchar(500)  NOT NULL,
   `Envoi du dossier au departement eau` varchar(500) NOT NULL,
-  `Reponse Departement de l'eau` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Depot du complement du dossier par le developpeur/ABH` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Envoi du complement du dossier a l'ABH` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Reponse Departement de l'eau en Cas Du 2 Complement` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Depot du 2 complement du dossier par le developpeur/ABH` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Envoi du 2 complement du dossier a l'ABH` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Reponse Departement de l'eau en Cas Du 3 Complement` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Depot du 3 complement du dossier par le developpeur/ABH` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Envoi du 3 complement du dossier a l'ABH` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Reponse Departement de l'eau en Cas Du 4 Complement` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Depot du 4 complement du dossier par le developpeur/ABH` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Envoi du 4 complement du dossier a l'ABH` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Avis Agence Bassin` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Avis MEME` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Observations` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Reponse Departement de l'eau` varchar(500)  NOT NULL,
+  `Depot du complement du dossier par le developpeur/ABH` varchar(500)  NOT NULL,
+  `Envoi du complement du dossier a l'ABH` varchar(500)  NOT NULL,
+  `Reponse Departement de l'eau en Cas Du 2 Complement` varchar(100)  NOT NULL,
+  `Depot du 2 complement du dossier par le developpeur/ABH` varchar(100)  NOT NULL,
+  `Envoi du 2 complement du dossier a l'ABH` varchar(100)  NOT NULL,
+  `Reponse Departement de l'eau en Cas Du 3 Complement` varchar(100)  NOT NULL,
+  `Depot du 3 complement du dossier par le developpeur/ABH` varchar(100)  NOT NULL,
+  `Envoi du 3 complement du dossier a l'ABH` varchar(100)  NOT NULL,
+  `Reponse Departement de l'eau en Cas Du 4 Complement` varchar(100)  NOT NULL,
+  `Depot du 4 complement du dossier par le developpeur/ABH` varchar(100)  NOT NULL,
+  `Envoi du 4 complement du dossier a l'ABH` varchar(100)  NOT NULL,
+  `Avis Agence Bassin` varchar(500)  NOT NULL,
+  `Avis MEME` varchar(500)  NOT NULL,
+  `Observations` varchar(500)  NOT NULL,
   PRIMARY KEY (`Numero`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `energiehydroelectrique`
@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `energiehydroelectrique` (
 INSERT INTO `energiehydroelectrique` (`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 2 Complement`, `Depot du 2 complement du dossier par le developpeur`, `Envoi du 2 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 3 Complement`, `Depot du 3 complement du dossier par le developpeur`, `Envoi du 3 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 4 Complement`, `Depot du 4 complement du dossier par le developpeur`, `Envoi du 4 complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Envoi du dossier au departement eau`, `Reponse Departement de l'eau`, `Depot du complement du dossier par le developpeur/ABH`, `Envoi du complement du dossier a l'ABH`, `Reponse Departement de l'eau en Cas Du 2 Complement`, `Depot du 2 complement du dossier par le developpeur/ABH`, `Envoi du 2 complement du dossier a l'ABH`, `Reponse Departement de l'eau en Cas Du 3 Complement`, `Depot du 3 complement du dossier par le developpeur/ABH`, `Envoi du 3 complement du dossier a l'ABH`, `Reponse Departement de l'eau en Cas Du 4 Complement`, `Depot du 4 complement du dossier par le developpeur/ABH`, `Envoi du 4 complement du dossier a l'ABH`, `Avis Agence Bassin`, `Avis MEME`, `Observations`) VALUES
 (22, 'gggggggg', '', 'Marrakech-Safi', 'El Kelaâ des Sraghna', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'gggggggggg', 0, '1500', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', '17-11-2014', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-17', '2021-07-17', '', '', '', '', '', '', '', '', '', '12-12-2017', 'Autorisation', 'ggggggggggg'),
 (498, 'gggggggg', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 1500, 'gggggggg', '2021-07-10', 'hhhhhhhhhhh', 'hhhhhhh', '2021-07-17', '2021-07-10', '', '', '', '', '', '', '', '', '', '17-11-2014', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-17', '2021-07-17', '', '', '', '', '', '', '', '', '', '12-12-2017', '', 'ggggggggggg'),
-(666, 'gggggggg', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 0, '2147483647', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', 'dick', '17-11-2014', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', '12-12-2017', '', 'ggggggggggg'),
+(666, 'gggggggg', 'bbbbbbbbbbbb', 'Souss-Massa', 'Taroudant', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 0, '2147483647', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', '17-11-2014', '2021-07-10', 'bbbbbbbbbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', '12-12-2017', '', 'ggggggggggg'),
 (27, 'AIC', 'Oum ER Rbia 1', 'Béni Mellal-Khénifra', 'Khénifra', '', 541, 4.6, 0, 'hydro', '', 0, '', '18-09-2014\r\nlettre n°9888/A', '', '', '26/11/2014 \r\nlettre n°105/14', 'Complément du dossier lettre n°3/DI/100/2014 du 26 décembre 2014', '', '05 /02/2015 lettre n°487/DE/DEREE', '', '', '', '', '', '', '', '', '', '', '26 /11/2014 \r\nlettre n°104/14', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (28, 'AIC', 'Oum ER Rbia 2', 'Béni Mellal-Khénifra', 'Khénifra', '', 1042, 9, 0, 'hydro', '', 0, '', '18-09-2014\r\nlettre n°9888/A', '', '', '07/11/2014 \r\nlettre n°3535/DE', 'Complément du dossier lettre n°3/DI/100/2014 du 26 décembre 2014', '', '05 /02/2015 \r\nlettre n°488/DE/DEREE', '', '', '', '', '', '', '', '', '', '', '26 /11/2014 \r\nlettre n°102/14', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (23, 'PLATINIUM POWER', 'Tafrent', 'Fès - Meknès', 'Taounate', '', 12, 0, 0, 'hydro', '', 0, '', '04-08-2014\r\n\r\nlettre n°8721/A', '', '', '15/08/2014 \r\nlettre n°2801/DE', '', 'avis favorable sur le plan technique: lettre n°3/DI/CTR/087/2014 du 24/11/2014', '', '', 'avis favorable sur le plan technique: lettre n°3/DI/CTR/087/2014 du 24/11/2014\r\n', '15 /08/2014 lettre n°2802/DE', '', '', '', '', 'Demande refusée lettre N°4612 DRPE/CM du 17-11-2014', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'refus de la demande: lettre n°475/DE du 5 février 2015', ''),
@@ -192,23 +192,23 @@ INSERT INTO `energiehydroelectrique` (`Numero`, `Demandeur`, `Nom du projet`, `R
 DROP TABLE IF EXISTS `energiesolaire`;
 CREATE TABLE IF NOT EXISTS `energiesolaire` (
   `Numero` int NOT NULL,
-  `Demandeur` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Nom du projet` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Region` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Province` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Localite` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Demandeur` varchar(500)  NOT NULL,
+  `Nom du projet` varchar(500)  NOT NULL,
+  `Region` varchar(500)  NOT NULL,
+  `Province` varchar(500)  NOT NULL,
+  `Localite` varchar(500)  NOT NULL,
   `Puissance` float NOT NULL,
   `Productible previsionnel` float NOT NULL,
   `Co2 evite TCO2/an` float NOT NULL,
-  `Source energie` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Coordonnees Geographique/Coordonnees Lambert` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Source energie` varchar(500)  NOT NULL,
+  `Coordonnees Geographique/Coordonnees Lambert` varchar(500)  NOT NULL,
   `Investissement du projet` float NOT NULL,
-  `Etat avancement` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Etat avancement` varchar(500)  NOT NULL,
   `Depot a la DEREE` varchar(500) NOT NULL,
   `Envoi du dossier a l'ONEE` varchar(500) NOT NULL,
-  `Reponse ONEE` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Reponse ONEE` varchar(500)  NOT NULL,
   `Depot du complement du dossier par le developpeur` varchar(500) NOT NULL,
-  `Envoi du complement du dossier a l'ONEE` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Envoi du complement du dossier a l'ONEE` varchar(500)  NOT NULL,
   `Reponse ONEE en Cas Du 2 Complement` varchar(500) NOT NULL,
   `Depot du 2 complement du dossier par le developpeur` varchar(500) NOT NULL,
   `Envoi du 2 complement du dossier a l'ONEE` varchar(500) NOT NULL,
@@ -218,18 +218,18 @@ CREATE TABLE IF NOT EXISTS `energiesolaire` (
   `Reponse ONEE en Cas Du 4 Complement` varchar(500) NOT NULL,
   `Depot du 4 complement du dossier par le developpeur` varchar(500) NOT NULL,
   `Envoi du 4 complement du dossier a l'ONEE` varchar(500) NOT NULL,
-  `Avis de l'ONEE` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Avis MEME` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Observations` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Avis de l'ONEE` varchar(500)  NOT NULL,
+  `Avis MEME` varchar(500)  NOT NULL,
+  `Observations` varchar(500)  NOT NULL,
   PRIMARY KEY (`Numero`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `energiesolaire`
 --
 
 INSERT INTO `energiesolaire` (`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 2 Complement`, `Depot du 2 complement du dossier par le developpeur`, `Envoi du 2 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 3 Complement`, `Depot du 3 complement du dossier par le developpeur`, `Envoi du 3 complement du dossier a l'ONEE`, `Reponse ONEE en Cas Du 4 Complement`, `Depot du 4 complement du dossier par le developpeur`, `Envoi du 4 complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Avis MEME`, `Observations`) VALUES
-(16, 'blalababa', 'bbbbbbbbbbbb', 'Oriental', 'Oujda, Angad', 'bbbbbbbbbbbbb', 514, 0, 154, 'bbbbbb', 'gggggggggg', 0, '0', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', 'did', 'did', 'did', '', '', '', '', '', 'dick', 'ggggg', 'ggggg', 'ggggggggggg'),
+(16, 'blalababa', 'bbbbbbbbbbbb', 'Oriental', 'Oujda, Angad', 'bbbbbbbbbbbbb', 514, 0, 154, 'bbbbbb', 'gggggggggg', 0, '0', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', 'did', 'did', 'did', '', '', '', '', '', 'test', 'ggggg', 'ggggg', 'ggggggggggg'),
 (79, 'HHHHHHHH', 'HHHHHHHHHHH', 'Souss-Massa', 'Chtouka, Aït Baha', 'HHHHHHHHHHHH', 154, 514, 6154, 'bbbbbb', 'gggggggggg', 2147480000, '', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'HHHHHHHHHHHHHH', 'ggggg', 'ggggggggggg'),
 (497, 'gggggggg', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Tinghir', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 1500, 'gggggggg', 'hhhhhhhh', 'hhhhhhhhhhh', 'hhhhhhh', '2021-07-17', '2021-07-10', '', '', '', '', '', '', '', '', '', 'hhhhhhhh', 'hhhhhhhh', 'hhhhhhhhh'),
 (666, 'gggggggg', 'bbbbbbbbbbbb', 'Drâa-Tafilalet', 'Midelt', 'bbbbbbbbbbbbb', 514, 154, 154, 'bbbbbb', 'hhhhhhhhhhh', 1500, 'gggggggg', '2021-07-10', '2021-07-10', 'bbbbbbbb', '2021-07-10', '2021-07-10', '', '', '', '', '', '', '', '', '', 'ggggg', 'ggggg', 'ggggggggggg'),
@@ -247,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `region_eo_auto` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_eo_auto`
@@ -278,7 +278,7 @@ CREATE TABLE IF NOT EXISTS `region_eo_cours` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_eo_cours`
@@ -309,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `region_eo_refus` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_eo_refus`
@@ -340,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `region_hyd_auto` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_hyd_auto`
@@ -371,7 +371,7 @@ CREATE TABLE IF NOT EXISTS `region_hyd_cours` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_hyd_cours`
@@ -402,7 +402,7 @@ CREATE TABLE IF NOT EXISTS `region_hyd_refus` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_hyd_refus`
@@ -433,7 +433,7 @@ CREATE TABLE IF NOT EXISTS `region_sol_auto` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_sol_auto`
@@ -464,7 +464,7 @@ CREATE TABLE IF NOT EXISTS `region_sol_cours` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_sol_cours`
@@ -495,7 +495,7 @@ CREATE TABLE IF NOT EXISTS `region_sol_refus` (
   `nom` varchar(50) NOT NULL,
   `nbr` int NOT NULL,
   PRIMARY KEY (`nom`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Dumping data for table `region_sol_refus`
