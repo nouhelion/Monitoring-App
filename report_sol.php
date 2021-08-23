@@ -120,7 +120,7 @@ $result4=mysqli_query($link,$quer4);
                 <li><a href="home.php" class="smoothScroll">Accueil</a></li>
                 <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
                 <li><a href="sol_search.php" class="smoothScroll">Rechercher</a></li>
-                <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
+                <li> <a href="report_sol.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
                 <li><a href="#report" class="smoothScroll">Reporting</a></li>
                 <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>

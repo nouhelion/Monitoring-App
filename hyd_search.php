@@ -161,9 +161,8 @@
 
 			<?php
 	  require_once('db.php');
-	  $sql="SELECT *  FROM `energiehydroelectrique`";
+            $sql="SELECT * FROM `energiehydroelectrique` LEFT JOIN local_hyd ON energiehydroelectrique.Numero = local_hyd.Numero";
 	  $result = mysqli_query($link,$sql);
-	 
 	  if (mysqli_num_rows($result) > 0) {
 		  while ($row = mysqli_fetch_assoc($result)) {
 			  echo "<tr>";

@@ -29,12 +29,15 @@
         $AvisAgenceBassin= mysqli_real_escape_string($link, $_REQUEST['AvisAgenceBassin']);
         $AvisMEME = mysqli_real_escape_string($link, $_REQUEST['AvisMEME']);
         $Observations= mysqli_real_escape_string($link, $_REQUEST['Observations']);
-        $sql = "INSERT INTO `energiehydroelectrique`(`Numero`, `Demandeur`, `Nom du projet`, `Region`, `Province`, `Localite`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Envoi du dossier au departement eau`, `Reponse Departement de l'eau`, `Depot du complement du dossier par le developpeur/ABH`, `Envoi du complement du dossier a l'ABH`, `Avis Agence Bassin`, `Avis MEME`, `Observations`) VALUES 
-         ('$Numero','$Demandeur','$Nomduprojet','$Region','$province','$Localite','$Puissance','$Productibleprevisionnel',
+        $sql = "INSERT INTO `energiehydroelectrique`(`Numero`, `Demandeur`, `Nom du projet`, `Puissance`, `Productible previsionnel`, `Co2 evite TCO2/an`, `Source energie`, `Coordonnees Geographique/Coordonnees Lambert`, `Investissement du projet`, `Etat avancement`, `Depot a la DEREE`, `Envoi du dossier a l'ONEE`, `Reponse ONEE`, `Depot du complement du dossier par le developpeur`, `Envoi du complement du dossier a l'ONEE`, `Avis de l'ONEE`, `Envoi du dossier au departement eau`, `Reponse Departement de l'eau`, `Depot du complement du dossier par le developpeur/ABH`, `Envoi du complement du dossier a l'ABH`, `Avis Agence Bassin`, `Avis MEME`, `Observations`) VALUES 
+         ('$Numero','$Demandeur','$Nomduprojet','$Puissance','$Productibleprevisionnel',
          '$Co2eviteTCO2an','$Sourceenergie','$CoordonneesGeographiqueCoordonneesLambert','$Investissementduprojet','$Etatavancement','$DepotalaDEREE','$EnvoidudossieraONEE','$ReponseONEE',
           '$Depotducomplement','$EnvoiducomplementdudossieraONEE','$AvisdeONEE','$Envoidudossieraudepartementeau',
           '$ReponseDepartementdeeau','$DepotducomplementdudossierparledeveloppeurABH', 
           '$EnvoiducomplementdudossieraABH','$AvisAgenceBassin','$AvisMEME','$Observations')";
+        $link->query($sql);
+        $sql ="INSERT INTO `local_hyd`(`Numero`,`Region`, `Province`, `Localite`) 
+        VALUES ('$Numero','$Region','$province','$Localite')";
         /*graphe pour regions */
         if(strpos($AvisMEME, 'refus') !== false)
         {$req_m = "update region_hyd_refus set nbr = nbr +1 where nom = '$Region'";}

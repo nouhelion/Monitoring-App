@@ -1,6 +1,5 @@
 <?php include("auth.php");?>
 <?php
-require('db.php');
      if (isset($_POST['sus'])) {
          $keyword = mysqli_real_escape_string($link, $_POST['search']);
           //Numero
@@ -26,21 +25,21 @@ require('db.php');
           $Nomduprojet=$value['Nom du projet'];
           //region 
           $sql="SELECT Region as Region
-        FROM `energiehydroelectrique`
+        FROM `local_hyd`
            where Numero='$keyword'";
           $result = mysqli_query($link,$sql);
           $value=mysqli_fetch_assoc($result);
           $Region=$value['Region'];
           //province 
           $sql="SELECT `Province` as `Province`
-         FROM `energiehydroelectrique`
+         FROM `local_hyd`
            where Numero='$keyword'";
           $result = mysqli_query($link,$sql);
           $value=mysqli_fetch_assoc($result);
           $Province=$value['Province'];
           //localite
           $sql="SELECT Localite as Localite
-          FROM `energiehydroelectrique`
+          FROM `local_hyd`
            where Numero='$keyword'";
           $result = mysqli_query($link,$sql);
           $value=mysqli_fetch_assoc($result);
@@ -358,9 +357,6 @@ require('db.php');
         $sql = "UPDATE  `energiehydroelectrique` SET 
         `Demandeur`='$Demandeur',
         `Nom du projet`='$Nomduprojet',
-        `Region`='$Region',
-        `Province`='$province',
-        `Localite`='$Localite',
         `Puissance`='$Puissance',
         `Productible previsionnel`='$Productibleprevisionnel',
         `Co2 evite TCO2/an`='$Co2eviteTCO2an',
@@ -390,6 +386,12 @@ require('db.php');
         `Avis Agence Bassin`='$AvisAgenceBassin',
         `Avis MEME`='$AvisMEME',
         `Observations`='$Observations' 
+        WHERE Numero='$Numero'";
+        $link->query($sql);
+        $sql=" UPDATE `local_hyd` SET 
+          `Region`='$Region',
+        `Province`='$province',
+        `Localite`='$Localite'
         WHERE Numero='$Numero'";
         /*graphe pour regions */
         if(strpos($AvisMEME, 'refus') !== false)

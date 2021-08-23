@@ -1,6 +1,6 @@
 <?php include("auth.php");?>
 <?php
-require('db.php');
+
      if (isset($_POST['sus'])) {
          $keyword = mysqli_real_escape_string($link, $_POST['search']);
           //Numero
@@ -26,21 +26,21 @@ require('db.php');
           $Nomduprojet=$value['Nom du projet'];
           //region 
           $sql="SELECT Region as Region
-          FROM energieeolienne
+          FROM local_eo
            where Numero='$keyword'";
           $result = mysqli_query($link,$sql);
           $value=mysqli_fetch_assoc($result);
           $Region=$value['Region'];
           //province 
           $sql="SELECT `Province` as `Province`
-          FROM energieeolienne
+          FROM local_eo
            where Numero='$keyword'";
           $result = mysqli_query($link,$sql);
           $value=mysqli_fetch_assoc($result);
           $Province=$value['Province'];
           //localite
           $sql="SELECT Localite as Localite
-          FROM energieeolienne
+          FROM local_eo
            where Numero='$keyword'";
           $result = mysqli_query($link,$sql);
           $value=mysqli_fetch_assoc($result);
@@ -252,9 +252,6 @@ require('db.php');
         $sql = "UPDATE `energieeolienne` SET 
         `Developpeur`='$Developpeur',
         `Nom du projet`='$Nomduprojet',
-        `Region`='$Region',
-        `Province`='$province',
-        `Localite`='$Localite',
         `Puissance`='$Puissance',
         `Productible previsionnel`='$Productibleprevisionnel',
         `Co2 evite TCO2/an`='$Co2eviteTCO2an',
@@ -279,6 +276,12 @@ require('db.php');
         `Avis de l'ONEE`='$AvisdeONEE',
         `Avis MEME`='$AvisMEME',
         `Observations`='$Observations' 
+        WHERE Numero='$Numero'";
+        $link->query($sql);
+        $sql=" UPDATE `local_eo` SET 
+          `Region`='$Region',
+        `Province`='$province',
+        `Localite`='$Localite'
         WHERE Numero='$Numero'";
         /*graphe pour regions */
         if(strpos($AvisMEME, 'refus') !== false)
@@ -525,7 +528,7 @@ require('db.php');
                     <li><a href="energieEolienne.php" class="smoothScroll">Ajouter Un Projet</a></li>
                     <li><a href="eo_search.php" class="smoothScroll">Rechercher</a></li>
                     <li><a href="#modifier" class="smoothScroll">Modifier</a></li>
-                    <li> <a href="#speakers"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
+                    <li> <a href="alertes_eo.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>
                     <li><a href="report_eo.php" class="smoothScroll">Reporting</a></li>
                     <li><a href="logout.php" class="smoothScroll">Se Déconnecter</a></li>

@@ -119,7 +119,7 @@ $result4=mysqli_query($link,$quer4);
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.php" class="smoothScroll">Accueil</a></li>
-                <li><a href="#ajouter" class="smoothScroll">Ajouter Un Projet</a></li>
+                <li><a href="EnergieHydro.php" class="smoothScroll">Ajouter Un Projet</a></li>
                 <li><a href="hyd_search.php" class="smoothScroll">Rechercher</a></li>
                 <li> <a href="alertes_hyd.php"  class="smoothScroll">Alertes <span class="badge"><i class="fa fa-bell" aria-hidden="true"></i>
 </span></a></li>

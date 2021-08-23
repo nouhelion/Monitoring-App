@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/sol.css">
 	<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse"></body>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 <!-- partial:index.partial.html -->
 <div class="preloader">
 
@@ -145,9 +145,8 @@
 		
 			<?php
 	  require_once('db.php');
-	  $sql="SELECT *  FROM `energiesolaire`";
+      $sql="SELECT * FROM `energiesolaire` LEFT JOIN local_sol ON energiesolaire.Numero = local_sol.Numero";
 	  $result = mysqli_query($link,$sql);
-	 
 	  if (mysqli_num_rows($result) > 0) {
 		  while ($row = mysqli_fetch_assoc($result)) {
 			echo "<tr>";

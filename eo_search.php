@@ -194,14 +194,13 @@
 		</tr>
 	</thead>
 	<tbody>
-		
+
 			<?php
 	  require_once('db.php');
-	  $sql="SELECT *  FROM `energieeolienne`";
+	  $sql="SELECT * FROM energieeolienne LEFT JOIN local_eo ON energieeolienne.Numero = local_eo.Numero";
 	  $result = mysqli_query($link,$sql);
-	 
-	  if (mysqli_num_rows($result) > 0) {
-		  while ($row = mysqli_fetch_assoc($result)) {
+	  if (mysqli_num_rows($result) > 0 ) {
+		  while ($row = mysqli_fetch_assoc($result) ) {
 			echo "<tr>";
               echo '<td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>';
               if(strpos($row['Avis MEME'], 'refus') !== false)
